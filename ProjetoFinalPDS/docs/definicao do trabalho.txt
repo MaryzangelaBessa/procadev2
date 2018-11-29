@@ -1,0 +1,27 @@
+﻿FAZER
+*interface grafica
+regras de movimentação
+cada casa_do_tabuleiro tem uma ação (essa casa do tabuleiro é cada posição do tabuleiro, não é o imóvel)
+
+compra de companhias 
+compra de terrenos
+compra de casinhas (imóveis)
+regra de aquisição dos terrenos
+
+pedágio para casas e companhias
+
+ir pra prisão
+sair da prisão
+
+cartas sorte ou revéz
+
+bônus de 200$ a cada volta completa no tabuleiro(passar pela largada)
+
+controlar jogador da vez
+
+escolher quantos jogadores vai participar
+
+
+NAO PRECISA FAZER
+hipotecar propriedades
+limitar numeros de hoteis
