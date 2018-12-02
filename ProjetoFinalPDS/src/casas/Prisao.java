@@ -9,5 +9,4 @@ public class Prisao extends CasaTabuleiro {
 		// TODO Auto-generated method stub
 		
 	}
-
 }

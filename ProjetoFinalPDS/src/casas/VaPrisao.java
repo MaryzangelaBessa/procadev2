@@ -1,5 +1,5 @@
 package casas;
 
-public class VaPrisao {
+public class VaPrisao extends CasaTabuleiro{
 
 }

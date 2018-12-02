@@ -9,5 +9,4 @@ public class PontoPartida extends CasaTabuleiro{
 		// TODO Auto-generated method stub
 		
 	}
-
 }
