@@ -1,14 +1,16 @@
 package base;
 
-import casas.Casa;
+import JGamePlay.Sprite;
+import casas.CasaTabuleiro;
 
 public class Jogador {
 	private String nome;
 	private int saldo;
-	private Casa posicaoAtual;
+	private CasaTabuleiro posicaoAtual;
 	private int duplasSeguidas;
 	private boolean estaPreso;
 	private int rodadasPreso;
+	private Sprite personagem;
 
 	public int getDuplasSeguidas() {
 		return duplasSeguidas;
@@ -34,7 +36,7 @@ public class Jogador {
 		this.rodadasPreso = rodadasPreso;
 	}
 
-	public Jogador(String nome, Casa posicaoAtual) {
+	public Jogador(String nome, CasaTabuleiro posicaoAtual) {
 		this.nome = nome;
 		this.saldo = 2000;
 		this.posicaoAtual = posicaoAtual;
@@ -51,7 +53,7 @@ public class Jogador {
 		return saldo;
 	}
 
-	public Casa getPosicaoAtual() {
+	public CasaTabuleiro getPosicaoAtual() {
 		return posicaoAtual;
 	}
 
@@ -63,8 +65,16 @@ public class Jogador {
 		this.saldo = saldo;
 	}
 
-	public void setPosicaoAtual(Casa posicaoAtual) {
+	public void setPosicaoAtual(CasaTabuleiro posicaoAtual) {
 		this.posicaoAtual = posicaoAtual;
+	}
+	
+	public Sprite getPersonagem() {
+		return this.personagem;
+	}
+	
+	public void setPersonagem(Sprite personagem) {
+		this.personagem = personagem;
 	}
 
 	@Override
