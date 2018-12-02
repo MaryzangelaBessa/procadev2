@@ -1,6 +1,6 @@
 package casas;
 
-public class Casa {
+public class CasaTabuleiro {
 
 	public void calcularAluguel() {
 

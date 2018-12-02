@@ -1,11 +1,11 @@
 package interfaces;
 
 import base.Jogador;
-import casas.Casa;
+import casas.CasaTabuleiro;
 import casas.Prisao;
 
 public class AcaoVaPrisao implements Acao {
-	private Casa casa;
+	private CasaTabuleiro casa;
 	public  AcaoVaPrisao(Prisao casa) {
 		this.casa = casa;
 	}
@@ -13,10 +13,10 @@ public class AcaoVaPrisao implements Acao {
 	public void executarAcao(Jogador jogador) {
 		jogador.setPosicaoAtual(casa);
 	}
-	public Casa getCasa() {
+	public CasaTabuleiro getCasa() {
 		return casa;
 	}
-	public void setCasa(Casa casa) {
+	public void setCasa(CasaTabuleiro casa) {
 		this.casa = casa;
 	}
 }

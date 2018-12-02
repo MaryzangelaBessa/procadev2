@@ -1,30 +1,30 @@
 package cartoes;
 
-import casas.PontoPartida;
+import casas.Prisao;
 import interfaces.Acao;
-import interfaces.AcaoMover;
-import interfaces.AcaoPagar;
 
-public abstract class CartoesReves extends Cartoes {
+import interfaces.AcaoPagar;
+import interfaces.AcaoVaPrisao;
+
+public class CartoesReves extends Cartoes {
 
 	private Acao acao;
 
-	public CartoesReves(String desc, int value) {
+	public CartoesReves(String desc) {
 		super(desc);
-		this.setAcao(new AcaoPagar(value));
-	}
 
-	public CartoesReves(String desc, PontoPartida casa) {
-		super(desc);
-		this.setAcao(new AcaoMover(casa));
 	}
 
 	public Acao getAcao() {
 		return acao;
 	}
 
-	public void setAcao(Acao acao) {
-		this.acao = acao;
+	public void setAcaoPagar(int value) {
+		this.acao = new AcaoPagar(value);
+	}
+
+	public void setAcaoPrender(Prisao casa) {
+		this.acao = new AcaoVaPrisao(casa);
 	}
 
 }

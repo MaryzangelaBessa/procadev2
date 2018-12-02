@@ -1,5 +1,5 @@
 package casas;
 
-public class SorteReves {
+public class SorteReves extends CasaTabuleiro {
 
 }

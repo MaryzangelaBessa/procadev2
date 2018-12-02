@@ -10,7 +10,7 @@ public class Tabuleiro {
 	private String filepath = JogoMain.filepath;
 	private GameImage background = new GameImage(filepath + "assets/background.png");
 	
-	private ArrayList<Casa> casas = new ArrayList<Casa>();
+	private ArrayList<CasaTabuleiro> casas = new ArrayList<CasaTabuleiro>();
 	private ArrayList<Cartoes> cartoes = new ArrayList<Cartoes>();
 	
 	private Tabuleiro() {
@@ -26,10 +26,10 @@ public class Tabuleiro {
 		background.draw();
 	}
 	
-	public ArrayList<Casa> getCasas() {
+	public ArrayList<CasaTabuleiro> getCasas() {
 		return casas;
 	}
-	public void setCasas(ArrayList<Casa> casas) {
+	public void setCasas(ArrayList<CasaTabuleiro> casas) {
 		this.casas = casas;
 	}
 	public ArrayList<Cartoes> getCartoes() {

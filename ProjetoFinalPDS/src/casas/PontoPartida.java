@@ -1,5 +1,5 @@
 package casas;
 
-public class PontoPartida extends Casa{
+public class PontoPartida extends CasaTabuleiro{
 
 }

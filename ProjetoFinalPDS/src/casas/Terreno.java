@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import base.Jogador;
 
-public class Terreno {
+public class Terreno extends CasaTabuleiro{
 	private boolean comprado; // titulo
 	private int aluguelTerreno;
 	private Jogador proprietario;

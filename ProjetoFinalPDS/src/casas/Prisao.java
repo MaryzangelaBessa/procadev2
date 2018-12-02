@@ -1,5 +1,5 @@
 package casas;
 
-public class Prisao extends Casa {
-
+public class Prisao extends CasaTabuleiro {
+	
 }
