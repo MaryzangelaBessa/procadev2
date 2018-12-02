@@ -1,4 +1,7 @@
+package casas;
 import java.util.Arrays;
+import base.Jogador;
+
 
 public class Propriedade extends Casa{
 	private Jogador proprietario;
@@ -11,8 +14,8 @@ public class Propriedade extends Casa{
 		this.aluguel = aluguel;
 	}
 	
-	public float calcularAluguel() {
-		return aluguel[qtdCasas];
+	public void calcularAluguel() {
+	//	return aluguel[qtdCasas];
 	}
 
 	public Jogador getProprietario() {

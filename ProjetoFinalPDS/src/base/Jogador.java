@@ -1,11 +1,14 @@
+package base;
+import casas.Casa;
+
 public class Jogador {
 	private String nome;
-	private float saldo;
+	private int saldo;
 	private Casa posicaoAtual;
 	
-	public Jogador(String nome, float saldo, Casa posicaoAtual) {
+	public Jogador(String nome,  Casa posicaoAtual) {
 		this.nome = nome;
-		this.saldo = saldo;
+		this.saldo = 2000;
 		this.posicaoAtual = posicaoAtual;
 	}
 
@@ -13,7 +16,7 @@ public class Jogador {
 		return nome;
 	}
 
-	public float getSaldo() {
+	public int getSaldo() {
 		return saldo;
 	}
 
@@ -25,12 +28,17 @@ public class Jogador {
 		this.nome = nome;
 	}
 
-	public void setSaldo(float saldo) {
+	public void setSaldo(int saldo) {
 		this.saldo = saldo;
 	}
 
 	public void setPosicaoAtual(Casa posicaoAtual) {
 		this.posicaoAtual = posicaoAtual;
+	}
+
+	@Override
+	public String toString() {
+		return "Jogador [nome=" + nome + "]\n";
 	}
 	
 	
