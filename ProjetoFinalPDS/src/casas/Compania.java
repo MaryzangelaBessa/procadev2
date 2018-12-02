@@ -56,4 +56,10 @@ public class Compania extends CasaTabuleiro {
 		this.precoCompania = precoCompania;
 	}
 
+	@Override
+	public void addJogador(Jogador jogador) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

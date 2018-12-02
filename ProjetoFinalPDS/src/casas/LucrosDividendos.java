@@ -7,4 +7,10 @@ public class LucrosDividendos extends CasaTabuleiro {
 		int novoSaldo = jogador.getSaldo() + 200;
 		jogador.setSaldo(novoSaldo);
 	}
+
+	@Override
+	public void addJogador(Jogador jogador) {
+		// TODO Auto-generated method stub
+		
+	}
 }

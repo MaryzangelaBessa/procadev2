@@ -94,4 +94,10 @@ public class Terreno extends CasaTabuleiro{
 		this.hotel = hotel;
 	}
 
+	@Override
+	public void addJogador(Jogador jogador) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
