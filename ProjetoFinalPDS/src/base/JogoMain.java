@@ -16,7 +16,6 @@ public class JogoMain {
 		
 		while(true) {
 			tabuleiro.mostraTabuleiro();
-			
 			janela.display();
 		}
 

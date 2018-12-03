@@ -1,18 +1,19 @@
 package cartoes;
 
 public class FabricaCartoes {
-	public Cartoes criarCartao(String tipo, String desc) {
-		Cartoes cartao = null;
+	private Cartao cartao;
+	public Cartao criarCartao(String tipo, String desc) {
+		
 		switch (tipo) {
 		case "Sorte":
-			cartao = new CartoesSorte(desc);
+			cartao = new CartaoSorte(desc);
 			break;
 		case "Reves":
-			cartao = new CartoesReves(desc);
+			cartao = new CartaoReves(desc);
 			break;
 		default:
 			break;
 		}
-		return cartao;
+		return this.cartao;
 	}
 }

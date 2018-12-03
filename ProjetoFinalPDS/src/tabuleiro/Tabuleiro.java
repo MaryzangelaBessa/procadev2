@@ -11,7 +11,7 @@ public class Tabuleiro {
 	private GameImage background = new GameImage(filepath + "assets/background.png");
 	
 	private ArrayList<CasaTabuleiro> casas = new ArrayList<CasaTabuleiro>();
-	private ArrayList<Cartoes> cartoes = new ArrayList<Cartoes>();
+	private ArrayList<Cartao> cartoes = new ArrayList<Cartao>();
 	
 	private Tabuleiro() {
 		background.x = 0;
@@ -32,10 +32,10 @@ public class Tabuleiro {
 	public void setCasas(ArrayList<CasaTabuleiro> casas) {
 		this.casas = casas;
 	}
-	public ArrayList<Cartoes> getCartoes() {
+	public ArrayList<Cartao> getCartoes() {
 		return cartoes;
 	}
-	public void setCartoes(ArrayList<Cartoes> cartoes) {
+	public void setCartoes(ArrayList<Cartao> cartoes) {
 		this.cartoes = cartoes;
 	}
 	

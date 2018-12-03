@@ -6,11 +6,11 @@ import interfaces.Acao;
 import interfaces.AcaoPagar;
 import interfaces.AcaoVaPrisao;
 
-public class CartoesReves extends Cartoes {
+public class CartaoReves extends Cartao {
 
 	private Acao acao;
 
-	public CartoesReves(String desc) {
+	public CartaoReves(String desc) {
 		super(desc);
 
 	}

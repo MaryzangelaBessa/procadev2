@@ -1,9 +1,11 @@
 package cartoes;
 
-public abstract class Cartoes {
-	private String descricao;
 
-	public Cartoes(String desc) {
+
+public abstract class Cartao {
+	private String descricao;
+	
+	public Cartao(String desc) {
 		this.descricao = desc;
 	}
 

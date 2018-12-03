@@ -5,23 +5,23 @@ import interfaces.Acao;
 import interfaces.AcaoReceber;
 import interfaces.AcaoMover;
 
-public  class CartoesSorte extends Cartoes {
+public class CartaoSorte extends Cartao {
 	private Acao acao;
 
-	public CartoesSorte(String desc) {
+	public CartaoSorte(String desc) {
 		super(desc);
-		
+	}
+
+	public void setAcaoRecebe(int value) {
+		this.acao = new AcaoReceber(value);
+	}
+
+	public void setAcaoMove(PontoPartida casa) {
+		this.acao = new AcaoMover(casa);
 	}
 
 	public Acao getAcao() {
 		return acao;
 	}
 
-	public void setAcaoRecebe(int value) {
-		this.acao = new AcaoReceber(value);
-	}
-	public void setAcaoMove(PontoPartida casa) {
-		this.acao = new AcaoMover(casa);
-	}
-	
 }
