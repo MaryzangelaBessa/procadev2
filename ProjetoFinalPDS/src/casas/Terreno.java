@@ -2,7 +2,9 @@ package casas;
 
 import java.util.ArrayList;
 
+import JGamePlay.GameImage;
 import base.Jogador;
+import util.Posicao;
 
 public class Terreno extends CasaTabuleiro{
 	private boolean comprado; // titulo
@@ -14,6 +16,11 @@ public class Terreno extends CasaTabuleiro{
 	private ArrayList<CasaPropriedade> casas = new ArrayList<CasaPropriedade>();
 	private Hotel hotel = new Hotel();
 
+	public Terreno(GameImage imagem, Posicao posicao, ArrayList<Posicao> lugaresJogadores) {
+		super(imagem, posicao, lugaresJogadores);
+		// TODO Auto-generated constructor stub
+	}
+	
 	public void comprarTerreno(Jogador novoProprietario) {
 		int novoSaldo = novoProprietario.getSaldo() - this.precoTerreno;
 		novoProprietario.setSaldo(novoSaldo);

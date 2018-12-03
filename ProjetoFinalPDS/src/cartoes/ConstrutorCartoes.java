@@ -86,8 +86,8 @@ public class ConstrutorCartoes {
 		cartoes.add(c15);
 		
 		CartaoSorte c16 = (CartaoSorte) f.criarCartao("Sorte", "Avance até a muralha e receba 200");
-		PontoPartida casa = new PontoPartida();
-		c16.setAcaoMove(casa);
+		//PontoPartida casa = new PontoPartida();
+		//c16.setAcaoMove(casa);
 		cartoes.add(c16);
 		
 		CartaoSorte c17 = (CartaoSorte) f.criarCartao("Sorte", "Você trocou sua carroça usada com"
@@ -113,8 +113,8 @@ public class ConstrutorCartoes {
 		
 		CartaoReves c21 = (CartaoReves) f.criarCartao("Reves", "Vá para o calabouço sem receber "
 				+ "nada, talvez eu lhe faça uma visita");
-		Prisao prisao = new Prisao();
-		c21.setAcaoPrender(prisao);
+		//Prisao prisao = new Prisao();
+		//c21.setAcaoPrender(prisao);
 		cartoes.add(c21);
 		
 		

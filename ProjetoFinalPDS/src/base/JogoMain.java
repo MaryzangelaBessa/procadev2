@@ -12,10 +12,14 @@ public class JogoMain {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+		tabuleiro.criarCasas();
 		
 		while(true) {
 			tabuleiro.mostraTabuleiro();
+//<<<<<<< HEAD
+//=======
+			tabuleiro.desenharCasas();
+//>>>>>>> branch 'master' of https://github.com/MaryzangelaBessa/procadev2.git
 			janela.display();
 		}
 
