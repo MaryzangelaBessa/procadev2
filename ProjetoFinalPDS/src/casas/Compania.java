@@ -1,12 +1,21 @@
 package casas;
 
+import java.util.ArrayList;
+
+import JGamePlay.GameImage;
 import base.Jogador;
+import util.Posicao;
 
 public class Compania extends CasaTabuleiro {
 	private int taxa;
 	private Jogador proprietario;
 	private boolean comprado;
 	private int precoCompania;
+	
+	public Compania(GameImage imagem, Posicao posicao, ArrayList<Posicao> lugaresJogadores) {
+		super(imagem, posicao, lugaresJogadores);
+		// TODO Auto-generated constructor stub
+	}
 
 	public void comprarCompania(Jogador novoProprietario) {
 		int novoSaldo = novoProprietario.getSaldo() - this.precoCompania;

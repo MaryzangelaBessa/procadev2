@@ -12,11 +12,11 @@ public class JogoMain {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+		tabuleiro.criarCasas();
 		
 		while(true) {
 			tabuleiro.mostraTabuleiro();
-			
+			tabuleiro.desenharCasas();
 			janela.display();
 		}
 
