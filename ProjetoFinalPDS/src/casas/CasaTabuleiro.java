@@ -3,21 +3,18 @@ package casas;
 import java.util.ArrayList;
 
 import JGamePlay.GameImage;
+import JGamePlay.Text;
 import base.Jogador;
 import util.Posicao;
 
 public abstract class CasaTabuleiro {
 
-	private GameImage imagem;
-	private ArrayList<Posicao> lugaresJogadores;
-	private Posicao posicao;
+	protected GameImage imagem;
+	protected ArrayList<Posicao> lugaresJogadores;
+	protected Posicao posicao;
 	
-	public CasaTabuleiro(GameImage imagem, Posicao posicao, ArrayList<Posicao> lugaresJogadores) {
-		this.imagem = imagem;
+	public CasaTabuleiro(Posicao posicao) {
 		this.posicao = posicao;
-		this.imagem.x = posicao.x;
-		this.imagem.y = posicao.y;
-		this.lugaresJogadores = lugaresJogadores;
 	}
 	
 	

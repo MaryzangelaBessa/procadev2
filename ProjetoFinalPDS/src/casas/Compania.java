@@ -12,8 +12,8 @@ public class Compania extends CasaTabuleiro {
 	private boolean comprado;
 	private int precoCompania;
 	
-	public Compania(GameImage imagem, Posicao posicao, ArrayList<Posicao> lugaresJogadores) {
-		super(imagem, posicao, lugaresJogadores);
+	public Compania(Posicao posicao) {
+		super(posicao);
 		// TODO Auto-generated constructor stub
 	}
 

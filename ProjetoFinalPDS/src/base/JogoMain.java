@@ -1,7 +1,8 @@
 package base;
 
+import java.awt.Font;
+
 import JGamePlay.*;
-import tabuleiro.Tabuleiro;
 
 public class JogoMain {
 
@@ -16,10 +17,8 @@ public class JogoMain {
 		
 		while(true) {
 			tabuleiro.mostraTabuleiro();
-//<<<<<<< HEAD
-//=======
 			tabuleiro.desenharCasas();
-//>>>>>>> branch 'master' of https://github.com/MaryzangelaBessa/procadev2.git
+
 			janela.display();
 		}
 

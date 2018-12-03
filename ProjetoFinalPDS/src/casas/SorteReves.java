@@ -8,8 +8,8 @@ import util.Posicao;
 
 public class SorteReves extends CasaTabuleiro {
 
-	public SorteReves(GameImage imagem, Posicao posicao, ArrayList<Posicao> lugaresJogadores) {
-		super(imagem, posicao, lugaresJogadores);
+	public SorteReves(Posicao posicao) {
+		super(posicao);
 		// TODO Auto-generated constructor stub
 	}
 
