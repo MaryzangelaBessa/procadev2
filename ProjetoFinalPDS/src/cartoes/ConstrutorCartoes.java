@@ -118,15 +118,49 @@ public class ConstrutorCartoes {
 		cartoes.add(c21);
 		
 		
+		CartaoReves c22 = (CartaoReves) f.criarCartao("Reves", "Um amigo pediu-lhe um empréstimo"
+				+ "Você não pode recusar.");
+		c22.setAcaoPagar(15);
+		cartoes.add(c22);
 		
+		CartaoSorte c23 = (CartaoSorte) f.criarCartao("Sorte", "Inesperadamente você recebeu"
+				+ "uma herança que já estava esquecida");
+		c23.setAcaoRecebe(100);
+		cartoes.add(c23);
 		
+		CartaoReves c24 = (CartaoReves) f.criarCartao("Reves", "VocÊ achou interresante assistir "
+				+ "a estreia da temporada de ballet. Compre os ingressos");
+		c24.setAcaoPagar(30);
+		cartoes.add(c24);
 		
+		CartaoSorte c25 = (CartaoSorte) f.criarCartao("Sorte", "Você apostou com os parceiros"
+				+ "deste jogo e ganhou");
+		c25.setAcaoRecebe(50); // <--------------- DE CADA UM -------------------------
+		cartoes.add(c25);
 		
+		CartaoSorte c26 = (CartaoSorte) f.criarCartao("Sorte", "Saida livre da prisao");
+		//c26.se <--- SAIDA LIVRE DA PRISAO
+  		cartoes.add(c26);
 		
+		CartaoSorte c27 = (CartaoSorte) f.criarCartao("Sorte", "Você está com sorte, suas acoes na"
+				+ " bolsa estao em alta");
+		c27.setAcaoRecebe(200);
+		cartoes.add(c27);
 		
+		CartaoReves c28 = (CartaoReves) f.criarCartao("Reves", "Renove a tempo a licença de seu"
+				+ "altomovel");
+		c28.setAcaoPagar(30);
+		cartoes.add(c28);
 		
+		CartaoSorte c29 = (CartaoSorte) f.criarCartao("Sorte", "Você acaba de receber uma parcela"
+				+ "do seu 13 salario");
+		c29.setAcaoRecebe(50);
+		cartoes.add(c29);
 		
-		
+		CartaoSorte c30 = (CartaoSorte) f.criarCartao("Sorte", "Você tirou o primeiro lugar no"
+				+ "torneio de tênis do seu clube. Parabéns!");
+		c30.setAcaoRecebe(100);
+		cartoes.add(c30);
 		
 		
 		return this.cartoes;
