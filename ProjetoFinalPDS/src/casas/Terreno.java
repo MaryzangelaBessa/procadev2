@@ -26,7 +26,7 @@ public class Terreno extends CasaTabuleiro {
 		super(posicao);
 		this.font = new Font("Gothic Pixel", Font.TRUETYPE_FONT, 15);
 		this.imagem = new GameImage(JogoMain.filepath + "assets/land.png");
-		this.imagem.setDimension(52, 143);
+		this.imagem.setDimension(125, 125);
 		this.imagem.x = posicao.x;
 		this.imagem.y = posicao.y;
 	}
@@ -37,6 +37,7 @@ public class Terreno extends CasaTabuleiro {
 		this.comprado = true;
 		this.proprietario = novoProprietario;
 	}
+
 
 	public void cobrarAluguel(Jogador jogador) {
 		if (this.casas.size() == 0 && this.hotel == null) {
@@ -64,6 +65,7 @@ public class Terreno extends CasaTabuleiro {
 		this.imagem.draw();
 		this.txtNome.draw();
 	}
+
 
 	public void setNome(String nome) {
 		int tx = (int) this.imagem.x;

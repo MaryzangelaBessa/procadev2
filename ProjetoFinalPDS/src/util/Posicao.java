@@ -1,10 +1,10 @@
 package util;
 
 public class Posicao {
-	public int x;
-	public int y;
+	public double x;
+	public double y;
 	
-	public Posicao(int x, int y) {
+	public Posicao(double x, double y) {
 		this.x = x;
 		this.y = y;
 	}

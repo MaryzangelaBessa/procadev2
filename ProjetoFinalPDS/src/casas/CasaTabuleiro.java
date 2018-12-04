@@ -52,6 +52,8 @@ public abstract class CasaTabuleiro implements Acao {
 
 	public void setPosicao(Posicao posicao) {
 		this.posicao = posicao;
+		this.imagem.x = posicao.x;
+		this.imagem.y = posicao.y;
 	}
 
 

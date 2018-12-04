@@ -7,7 +7,7 @@ import JGamePlay.*;
 public class JogoMain {
 
 	public static String filepath = "src/";
-	private static Window janela = new Window(1000, 700);
+	public static Window janela = new Window(1000, 700);
 	private static Tabuleiro tabuleiro = Tabuleiro.getInstance();
 	
 	
