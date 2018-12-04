@@ -38,6 +38,10 @@ public class Main {
 				System.out.println(jogador.getNome() + " jogou o dado novamente e saiu "
 						+ valorDado2);
 				entrada.nextLine();
+				
+				
+				
+				
 				/*
 				 * 
 				 * */

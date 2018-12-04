@@ -7,8 +7,8 @@ import base.Jogador;
 import util.Posicao;
 
 public class LucrosDividendos extends CasaTabuleiro {
-	public LucrosDividendos(GameImage imagem, Posicao posicao, ArrayList<Posicao> lugaresJogadores) {
-		super(imagem, posicao, lugaresJogadores);
+	public LucrosDividendos(Posicao posicao) {
+		super(posicao);
 		// TODO Auto-generated constructor stub
 	}
 

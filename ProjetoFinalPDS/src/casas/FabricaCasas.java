@@ -1,8 +1,5 @@
 package casas;
 
-import java.util.ArrayList;
-
-import JGamePlay.GameImage;
 import util.Posicao;
 
 public class FabricaCasas {
@@ -16,37 +13,36 @@ public class FabricaCasas {
 			return fabricaCasas;
 		}
 	
-		public CasaTabuleiro construirCasa(String tipo, GameImage imagem, Posicao posicao, 
-			                            ArrayList<Posicao> lugaresJogadores) {
+		public CasaTabuleiro construirCasa(String tipo, Posicao posicao) {
 		CasaTabuleiro casa = null;
 		
 		switch (tipo) {
 		case "PontoPartida":
-			casa = new PontoPartida(imagem, posicao, lugaresJogadores);
+			casa = new PontoPartida(posicao);
 			break;
 		case "Terreno":
-			casa = new Terreno(imagem, posicao, lugaresJogadores);
+			casa = new Terreno(posicao);
 			break;
 		case "SorteReves":
-			casa = new SorteReves(imagem, posicao, lugaresJogadores);
+			casa = new SorteReves(posicao);
 			break;
 		case "Compania":
-			casa = new Compania(imagem, posicao, lugaresJogadores);
+			casa = new Compania(posicao);
 			break;
 		case "Prisao":
-			casa = new Prisao(imagem, posicao, lugaresJogadores);
+			casa = new Prisao(posicao);
 			break;
 		case "LucrosDividendos":
-			casa = new LucrosDividendos(imagem, posicao, lugaresJogadores);
+			casa = new LucrosDividendos(posicao);
 			break;
 		case "ParadaLivre":
-			casa = new ParadaLivre(imagem, posicao, lugaresJogadores);
+			casa = new ParadaLivre(posicao);
 			break;
 		case "ImpostoRenda":
-			casa = new ImpostoRenda(imagem, posicao, lugaresJogadores);
+			casa = new ImpostoRenda(posicao);
 			break;
 		case "VaPrisao":
-			casa = new VaPrisao(imagem, posicao, lugaresJogadores);
+			casa = new VaPrisao(posicao);
 			break;
 		default:
 			break;

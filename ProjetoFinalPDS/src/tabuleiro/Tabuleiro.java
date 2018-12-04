@@ -51,7 +51,8 @@ public class Tabuleiro {
 		Posicao p6 = new Posicao(0,0);
 		ArrayList<Posicao> lugaresJogadores = new ArrayList<>(Arrays.asList(p1, p2, p3, p4, p5, p6)); 
 		PontoPartida wall; 
-		wall = (PontoPartida) fabricaCasas.construirCasa("PontoPartida", theWall, posicao, lugaresJogadores);
+		//wall = (PontoPartida) fabricaCasas.construirCasa("PontoPartida", theWall, posicao, lugaresJogadores);
+		wall = (PontoPartida) fabricaCasas.construirCasa("PontoPartida", posicao);
 		casas.add(wall);
 	}
 	

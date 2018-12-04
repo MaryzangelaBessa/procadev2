@@ -8,8 +8,8 @@ import util.Posicao;
 
 public class ParadaLivre extends CasaTabuleiro{
 
-	public ParadaLivre(GameImage imagem, Posicao posicao, ArrayList<Posicao> lugaresJogadores) {
-		super(imagem, posicao, lugaresJogadores);
+	public ParadaLivre(Posicao posicao) {
+		super(posicao);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -17,6 +17,10 @@ public class ParadaLivre extends CasaTabuleiro{
 	public void addJogador(Jogador jogador) {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	public void desenhar() {
+		this.imagem.draw();
 	}
 
 }

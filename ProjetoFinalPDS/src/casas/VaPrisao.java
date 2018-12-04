@@ -1,15 +1,13 @@
 package casas;
 
-import java.util.ArrayList;
-
 import JGamePlay.GameImage;
 import base.Jogador;
 import util.Posicao;
 
 public class VaPrisao extends CasaTabuleiro{
 
-	public VaPrisao(GameImage imagem, Posicao posicao, ArrayList<Posicao> lugaresJogadores) {
-		super(imagem, posicao, lugaresJogadores);
+	public VaPrisao(Posicao posicao) {
+		super(posicao);
 		// TODO Auto-generated constructor stub
 	}
 

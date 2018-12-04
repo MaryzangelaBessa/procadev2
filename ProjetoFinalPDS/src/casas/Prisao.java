@@ -8,8 +8,8 @@ import util.Posicao;
 
 public class Prisao extends CasaTabuleiro {
 
-	public Prisao(GameImage imagem, Posicao posicao, ArrayList<Posicao> lugaresJogadores) {
-		super(imagem, posicao, lugaresJogadores);
+	public Prisao(Posicao posicao) {
+		super(posicao);
 		// TODO Auto-generated constructor stub
 	}
 
