@@ -47,8 +47,12 @@ public class Tabuleiro {
 		Posicao cbPos = new Posicao(62, 12); 
 		Terreno castleBlack; 
 		castleBlack = (Terreno) fabricaCasas.construirCasa("Terreno", cbPos);
-		castleBlack.setNome("CASTLE BLACK");
 		casas.add(castleBlack);
+		
+		Posicao pSR1 = new Posicao(189, 12); 
+		SorteReves sr1; 
+		sr1 = (SorteReves) fabricaCasas.construirCasa("SorteReves", pSR1);
+		casas.add(sr1);
 		
 		
 	}
