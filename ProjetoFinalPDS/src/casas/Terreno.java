@@ -26,7 +26,7 @@ public class Terreno extends CasaTabuleiro{
 		super(posicao);
 		this.font = new Font("Gothic Pixel", Font.TRUETYPE_FONT, 15);
 		this.imagem = new GameImage(JogoMain.filepath + "assets/land.png");
-		this.imagem.setDimension(52, 143);
+		this.imagem.setDimension(125, 125);
 		this.imagem.x = posicao.x;
 		this.imagem.y = posicao.y;
 	}
@@ -36,11 +36,6 @@ public class Terreno extends CasaTabuleiro{
 		novoProprietario.setSaldo(novoSaldo);
 		this.comprado = true;
 		this.proprietario = novoProprietario;
-	}
-	
-	public void desenhar() {
-		this.imagem.draw();
-		this.txtNome.draw();
 	}
 
 	public void setNome(String nome) {

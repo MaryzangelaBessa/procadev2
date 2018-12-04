@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import JGamePlay.GameImage;
 import base.Jogador;
+import base.JogoMain;
 import util.Posicao;
 
 public class Compania extends CasaTabuleiro {
@@ -14,7 +15,10 @@ public class Compania extends CasaTabuleiro {
 	
 	public Compania(Posicao posicao) {
 		super(posicao);
-		// TODO Auto-generated constructor stub
+		this.imagem = new GameImage(JogoMain.filepath + "assets/company.png");
+		this.imagem.setDimension(105, 114);
+		this.imagem.x = posicao.x;
+		this.imagem.y = posicao.y;
 	}
 
 	public void comprarCompania(Jogador novoProprietario) {
