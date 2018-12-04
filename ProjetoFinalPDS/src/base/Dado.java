@@ -1,5 +1,12 @@
 package base;
 
-public class Dado {
+import java.util.Random;
 
+public class Dado {
+	private Random r = new Random();
+	
+	public int jogarDado() {
+		return r.nextInt(6 - 1) + 1;
+	}
+	
 }

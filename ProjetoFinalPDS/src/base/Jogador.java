@@ -12,30 +12,7 @@ public class Jogador {
 	private int rodadasPreso;
 	private Sprite personagem;
 
-	public int getDuplasSeguidas() {
-		return duplasSeguidas;
-	}
-
-	public void setDuplasSeguidas(int duplasSeguidas) {
-		this.duplasSeguidas = duplasSeguidas;
-	}
-
-	public boolean isEstaPreso() {
-		return estaPreso;
-	}
-
-	public void setEstaPreso(boolean estaPreso) {
-		this.estaPreso = estaPreso;
-	}
-
-	public int getRodadasPreso() {
-		return rodadasPreso;
-	}
-
-	public void setRodadasPreso(int rodadasPreso) {
-		this.rodadasPreso = rodadasPreso;
-	}
-
+	
 	public Jogador(String nome, CasaTabuleiro posicaoAtual) {
 		this.nome = nome;
 		this.saldo = 2000;
@@ -76,6 +53,31 @@ public class Jogador {
 	public void setPersonagem(Sprite personagem) {
 		this.personagem = personagem;
 	}
+	
+	public int getDuplasSeguidas() {
+		return duplasSeguidas;
+	}
+
+	public void setDuplasSeguidas(int duplasSeguidas) {
+		this.duplasSeguidas = duplasSeguidas;
+	}
+
+	public boolean isEstaPreso() {
+		return estaPreso;
+	}
+
+	public void setEstaPreso(boolean estaPreso) {
+		this.estaPreso = estaPreso;
+	}
+
+	public int getRodadasPreso() {
+		return rodadasPreso;
+	}
+
+	public void setRodadasPreso(int rodadasPreso) {
+		this.rodadasPreso = rodadasPreso;
+	}
+
 
 	@Override
 	public String toString() {

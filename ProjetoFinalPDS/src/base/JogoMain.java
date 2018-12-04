@@ -17,7 +17,12 @@ public class JogoMain {
 		while(true) {
 			tabuleiro.mostraTabuleiro();
 			tabuleiro.desenharCasas();
-
+			
+			
+			
+			
+			
+			
 			janela.display();
 		}
 

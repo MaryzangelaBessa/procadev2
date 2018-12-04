@@ -74,6 +74,13 @@ public class Tabuleiro {
 		this.cartoes = cartoes;
 	}
 	
-	
+	public CasaTabuleiro getCasaI() {
+		for (CasaTabuleiro casa : casas) {
+			if(casa.getClass() == PontoPartida.class) {
+				return casa;
+			}
+		}
+		return null;
+	}
 	
 }

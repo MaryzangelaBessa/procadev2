@@ -24,7 +24,7 @@ public class Compania extends CasaTabuleiro {
 		this.proprietario = novoProprietario;
 	}
 
-	public void cobrarTaxa(Jogador jogador) {
+	public void cobrarTaxa(Jogador jogador) { // rever
 		jogador.setSaldo(jogador.getSaldo() - this.taxa);
 	}
 	
