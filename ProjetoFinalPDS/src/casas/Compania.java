@@ -1,6 +1,6 @@
 package casas;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
 import JGamePlay.GameImage;
 import base.Jogador;
@@ -11,10 +11,10 @@ public class Compania extends CasaTabuleiro {
 	private Jogador proprietario;
 	private boolean comprado;
 	private int precoCompania;
-	
+
 	public Compania(Posicao posicao) {
 		super(posicao);
-		// TODO Auto-generated constructor stub
+		this.comprado = false;
 	}
 
 	public void comprarCompania(Jogador novoProprietario) {
@@ -25,14 +25,20 @@ public class Compania extends CasaTabuleiro {
 	}
 
 	public void cobrarTaxa(Jogador jogador) { // rever
+
 		jogador.setSaldo(jogador.getSaldo() - this.taxa);
+		int novoSaldo = this.proprietario.getSaldo();
+		novoSaldo += this.taxa;
+		this.proprietario.setSaldo(novoSaldo);
 	}
-	
-	public void executaAcao(Jogador jogador) {
-		if(!comprado) this.comprarCompania(jogador);
-		else this.cobrarTaxa(jogador);
+
+	public void executarAcao(Jogador jogador) {
+		if (!comprado)
+			this.comprarCompania(jogador);
+		else
+			this.cobrarTaxa(jogador);
 	}
-	
+
 	public int getTaxa() {
 		return taxa;
 	}
@@ -68,7 +74,7 @@ public class Compania extends CasaTabuleiro {
 	@Override
 	public void addJogador(Jogador jogador) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

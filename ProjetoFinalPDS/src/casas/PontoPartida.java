@@ -21,4 +21,10 @@ public class PontoPartida extends CasaTabuleiro{
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void executarAcao(Jogador jogador) {
+		int novoSaldo = jogador.getSaldo() + 200;
+		jogador.setSaldo(novoSaldo);
+	}
 }

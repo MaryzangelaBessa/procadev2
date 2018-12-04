@@ -15,7 +15,7 @@ public class Jogador {
 	
 	public Jogador(String nome, CasaTabuleiro posicaoAtual) {
 		this.nome = nome;
-		this.saldo = 2000;
+		this.saldo = 2458;
 		this.posicaoAtual = posicaoAtual;
 		this.duplasSeguidas = 0;
 		this.estaPreso = false;

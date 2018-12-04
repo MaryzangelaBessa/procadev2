@@ -10,7 +10,7 @@ import base.Jogador;
 import base.JogoMain;
 import util.Posicao;
 
-public class Terreno extends CasaTabuleiro{
+public class Terreno extends CasaTabuleiro {
 	private boolean comprado; // titulo
 	private int aluguelTerreno;
 	private Jogador proprietario;
@@ -21,7 +21,7 @@ public class Terreno extends CasaTabuleiro{
 	private Hotel hotel = new Hotel();
 	private Text txtNome;
 	private Font font;
-	
+
 	public Terreno(Posicao posicao) {
 		super(posicao);
 		this.font = new Font("Gothic Pixel", Font.TRUETYPE_FONT, 15);
@@ -30,14 +30,36 @@ public class Terreno extends CasaTabuleiro{
 		this.imagem.x = posicao.x;
 		this.imagem.y = posicao.y;
 	}
-	
+
 	public void comprarTerreno(Jogador novoProprietario) {
 		int novoSaldo = novoProprietario.getSaldo() - this.precoTerreno;
 		novoProprietario.setSaldo(novoSaldo);
 		this.comprado = true;
 		this.proprietario = novoProprietario;
 	}
-	
+
+	public void cobrarAluguel(Jogador jogador) {
+		if (this.casas.size() == 0 && this.hotel == null) {
+			int novoSaldo = jogador.getSaldo() - this.aluguelTerreno;
+			jogador.setSaldo(novoSaldo);
+		} else if (this.casas.size() == 1) {
+			int novoSaldo = jogador.getSaldo() - this.casas.get(0).getAluguel1();
+			jogador.setSaldo(novoSaldo);
+		} else if (this.casas.size() == 2) {
+			int novoSaldo = jogador.getSaldo() - this.casas.get(0).getAluguel2();
+			jogador.setSaldo(novoSaldo);
+		} else if (this.casas.size() == 3) {
+			int novoSaldo = jogador.getSaldo() - this.casas.get(0).getAluguel3();
+			jogador.setSaldo(novoSaldo);
+		}else if (this.casas.size() == 4) {
+			int novoSaldo = jogador.getSaldo() - this.casas.get(0).getAluguel4();
+			jogador.setSaldo(novoSaldo);
+		}else if (this.hotel != null) {
+			int novoSaldo = jogador.getSaldo() - this.hotel.getAluguelHotel();
+			jogador.setSaldo(novoSaldo);
+		}
+	}
+
 	public void desenhar() {
 		this.imagem.draw();
 		this.txtNome.draw();
@@ -50,7 +72,7 @@ public class Terreno extends CasaTabuleiro{
 		this.txtNome.setFont(font);
 		this.txtNome.setColor(Color.BLACK);
 	}
-	
+
 	public void adicionarCasa(CasaPropriedade novaCasa) {
 		if (this.casas.size() == 4) {
 			return;
@@ -126,6 +148,12 @@ public class Terreno extends CasaTabuleiro{
 
 	@Override
 	public void addJogador(Jogador jogador) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void executarAcao(Jogador jogador) {
 		// TODO Auto-generated method stub
 		
 	}

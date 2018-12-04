@@ -57,6 +57,8 @@ public class ConstrutorCasas {
 		p.x = 310;
 		p.y = 12;
 		comp = (Compania) fc.construirCasa("Compania", p);
+		comp.setPrecoCompania(200);
+		comp.setTaxa(50);
 		casas.add(comp);
 		
 		p.x = 372;
@@ -68,6 +70,8 @@ public class ConstrutorCasas {
 		p.x = 434;
 		p.y = 12;
 		comp = (Compania) fc.construirCasa("Compania", p);
+		comp.setPrecoCompania(-200);
+		comp.setTaxa(50);
 		casas.add(comp);
 		
 		p.x = 496;
@@ -116,6 +120,8 @@ public class ConstrutorCasas {
 		p.x = 372;
 		p.y = 74;
 		comp = (Compania) fc.construirCasa("Compania", p);
+		comp.setPrecoCompania(150);
+		comp.setTaxa(40);
 		//castel.setNome("Castel Winterfel");
 		casas.add(comp);
 		
@@ -180,6 +186,8 @@ public class ConstrutorCasas {
 		p.x = 310;
 		p.y = 136;
 		comp = (Compania) fc.construirCasa("Compania", p);
+		comp.setPrecoCompania(150);
+		comp.setTaxa(40);
 		//castel.setNome("Castel Winterfel");
 		casas.add(comp);
 		
@@ -229,6 +237,8 @@ public class ConstrutorCasas {
 		p.x = 496;
 		p.y = 198;
 		comp = (Compania) fc.construirCasa("Compania", p);
+		comp.setPrecoCompania(200);
+		comp.setTaxa(50);
 		//castel.setNome("Castel Winterfel");
 		casas.add(comp);
 		
@@ -247,6 +257,8 @@ public class ConstrutorCasas {
 		p.x = 310;
 		p.y = 198;
 		comp = (Compania) fc.construirCasa("Compania", p);
+		comp.setPrecoCompania(200);
+		comp.setTaxa(50);
 		//castel.setNome("Castel Winterfel");
 		casas.add(comp);
 		

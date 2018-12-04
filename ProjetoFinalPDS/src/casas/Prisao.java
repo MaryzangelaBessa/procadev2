@@ -18,4 +18,10 @@ public class Prisao extends CasaTabuleiro {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void executarAcao(Jogador jogador) {
+		// TODO Auto-generated method stub
+		
+	}
 }

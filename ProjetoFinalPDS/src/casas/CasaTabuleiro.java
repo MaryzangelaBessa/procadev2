@@ -5,9 +5,10 @@ import java.util.ArrayList;
 import JGamePlay.GameImage;
 import JGamePlay.Text;
 import base.Jogador;
+import interfaces.Acao;
 import util.Posicao;
 
-public abstract class CasaTabuleiro {
+public abstract class CasaTabuleiro implements Acao {
 
 	protected GameImage imagem;
 	protected ArrayList<Posicao> lugaresJogadores;
@@ -18,7 +19,7 @@ public abstract class CasaTabuleiro {
 	}
 	
 	public String euSou() {
-		return "Eu sou :" + this.getClass();
+		return "" + this.getClass();
 	}
 	
 	
@@ -57,6 +58,8 @@ public abstract class CasaTabuleiro {
 	public void setImagem(GameImage imagem) {
 		this.imagem = imagem;
 	}
+
+	
 	
 	
 

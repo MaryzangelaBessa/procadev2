@@ -4,19 +4,32 @@ import java.util.*;
 
 import base.*;
 import cartoes.*;
+import casas.*;
+import iterador.IteradorCasa;
 import tabuleiro.Tabuleiro;
 
 public class Main {
 
 	public static void main(String[] args) {
-		ConstrutorCartoes cc = new ConstrutorCartoes();
-		Tabuleiro tab = Tabuleiro.getInstance();
-		ArrayList<Cartao> cart = cc.construirCartoes();
-		boolean jogar = true;
+		ConstrutorCasas ccas = new ConstrutorCasas();
+		ArrayList<CasaTabuleiro> casas = ccas.construirCasas();
 		ArrayList<Jogador> jogadores = new ArrayList<Jogador>();
+		Dado d = new Dado();
+		IteradorCasa ic = IteradorCasa.getInstance();		
+		ic.setCasas(casas);
+		ConstrutorCartoes cc = new ConstrutorCartoes();
+		ArrayList<Cartao> cart = cc.construirCartoes();
+		IteradorCartoes icar = IteradorCartoes.getInstance();
+		icar.setCartoes(cart);
+		
+		Tabuleiro tab = Tabuleiro.getInstance();
+		
+		
+		boolean jogar = true;
 		int qtd_jogadores, valorDado1, valorDado2;
 		Scanner entrada = new Scanner(System.in);
-		Dado d = new Dado();
+		
+		
 		
 		System.out.println("Quantas pessoas vao jogar?");
 		qtd_jogadores = entrada.nextInt();
@@ -28,6 +41,8 @@ public class Main {
 			jogadores.add(new Jogador(n, tab.getCasaI()));
 		}
 		
+		ic.inicializar((PontoPartida) casas.get(0), jogadores);
+				
 
 		while (jogar) {
 			for (Jogador jogador : jogadores) {
@@ -39,13 +54,16 @@ public class Main {
 						+ valorDado2);
 				entrada.nextLine();
 				
+				ic.andar(jogador, casas, valorDado1 + valorDado2);
+				
+				System.out.println("O jogador " + jogador.getNome() + " está agora na casa "
+						+ jogador.getPosicaoAtual().euSou());
+				entrada.nextLine();
+				
+				jogador.getPosicaoAtual().executarAcao(jogador);
+				System.out.println(jogador.getNome() + " " + jogador.getSaldo() + "\n");
 				
 				
-				
-				/*
-				 * 
-				 * */
-				// Andar para a casa correrta
 				// realizar acao
 				// casos de testes
 				
