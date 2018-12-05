@@ -29,7 +29,7 @@ public class ParadaLivre extends CasaTabuleiro{
 
 	@Override
 	public void executarAcao(Jogador jogador) {
-		System.out.println("Olá" + jogador.getNome() + " você está na Parada Livre! "
+		System.out.println("Olá " + jogador.getNome() + " você está na Parada Livre! "
 				+ "Nada de mais Acontece aqui!");
 		
 	}

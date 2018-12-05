@@ -39,8 +39,8 @@ public class Main {
 		}
 
 		ic.inicializar((PontoPartida) casas.get(0), jogadores);
-
-		while (jogadores.size() > 1) {
+		Jogador perdeu = null;
+		while (jogadores.size() != 1) {
 			for (Jogador jogador : jogadores) {
 				entrada.nextLine();
 				
@@ -60,10 +60,16 @@ public class Main {
 				System.out.println(jogador.getId() + " " + jogador.getSaldo() + "\n");
 
 				// 
+				if(jogador.getSaldo() <= 0) {
+					perdeu = jogador;
+					break;
+				}
 				
-
 			}
+			jogadores.remove(perdeu);
 		}
+		
+		System.out.println("Parabéns " + jogadores.get(0).getId() + " você ganhou!");
 		entrada.close();
 	}
 

@@ -22,6 +22,7 @@ public class IteradorCasa {
 	public void andar(Jogador j, ArrayList<CasaTabuleiro> casas, int x){
 		int atual = this.getCasaAtual(j.getPosicaoAtual(), casas);
 		int novaPosicao = (atual + x) % casas.size();
+		// casas.get(atual).getLugaresJogadores().remove()
 		CasaTabuleiro novaCasa = casas.get(novaPosicao);
 		j.setPosicaoAtual(novaCasa);
 	}

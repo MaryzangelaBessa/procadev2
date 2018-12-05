@@ -6,6 +6,8 @@ import java.util.Scanner;
 import JGamePlay.GameImage;
 import base.Jogador;
 import base.JogoMain;
+import iterador.IteradorCasa;
+import sun.security.provider.certpath.DistributionPointFetcher;
 import util.Posicao;
 
 public class Terreno extends CasaTabuleiro {
@@ -13,7 +15,7 @@ public class Terreno extends CasaTabuleiro {
 	private int aluguel2;
 	private int aluguel3;
 	private int aluguel4;
-	
+
 	private boolean comprado; // titulo
 	private boolean compravel;
 	private String grupo;
@@ -27,6 +29,7 @@ public class Terreno extends CasaTabuleiro {
 
 	public Terreno(Posicao posicao) {
 		super(posicao);
+		this.compravel = true;
 		this.qtd_casas = 0;
 		this.imagem = new GameImage(JogoMain.filepath + "assets/land.png");
 		this.imagem.setDimension(125, 125);
@@ -38,18 +41,24 @@ public class Terreno extends CasaTabuleiro {
 		int novoSaldo = novoProprietario.getSaldo() - this.precoTerreno;
 		novoProprietario.setSaldo(novoSaldo);
 		this.comprado = true;
+		this.compravel = false;
 		this.proprietario = novoProprietario;
+		
+		ArrayList<Terreno> ter = this.getGrupoTerreno();
+		for (Terreno terreno : ter) {
+			terreno.setProprietario(novoProprietario);
+		}
+		
 	}
-
 
 	public void cobrarAluguel(Jogador jogador) {
 		if (this.qtd_casas == 0 && this.hotel == null) {
 			int novoSaldoJog = jogador.getSaldo() - this.aluguelTerreno;
 			jogador.setSaldo(novoSaldoJog);
-			
+
 			int novoSaldoProp = this.proprietario.getSaldo() + this.aluguelTerreno;
 			this.proprietario.setSaldo(novoSaldoProp);
-			
+
 		} else if (this.qtd_casas == 1) {
 			int novoSaldo = jogador.getSaldo() - aluguel1;
 			jogador.setSaldo(novoSaldo);
@@ -62,17 +71,23 @@ public class Terreno extends CasaTabuleiro {
 		} else if (this.qtd_casas == 4) {
 			int novoSaldo = jogador.getSaldo() - aluguel4;
 			jogador.setSaldo(novoSaldo);
-		} 
-		else if (this.hotel != null) {
+		} else if (this.hotel != null) {
 			int novoSaldo = jogador.getSaldo() - this.hotel.getAluguelHotel();
 			jogador.setSaldo(novoSaldo);
 		}
 	}
 
+	public boolean isCompravel() {
+		return compravel;
+	}
+
+	public void setCompravel(boolean compravel) {
+		this.compravel = compravel;
+	}
+
 	public void desenhar() {
 		this.imagem.draw();
 	}
-
 
 	public void setNome(String nome) {
 
@@ -157,17 +172,117 @@ public class Terreno extends CasaTabuleiro {
 
 	@Override
 	public void executarAcao(Jogador jogador) {
-		if(!this.comprado) {
+		if (!this.comprado & this.compravel) {
 			Scanner enter = new Scanner(System.in);
-			System.out.println("Gostaria de comprar este terreno?\n |1| Sim \n |2| Nao" );
+			System.out.println("Gostaria de comprar este terreno?\n |1| Sim \n |2| Nao");
 			String e = enter.nextLine();
-			if(e.equals("1")) {
+			if (e.equals("1")) {
+				this.comprarTerreno(jogador);
+				this.compravel = false;
+				ArrayList<Terreno> terrenosAgrupados = getGrupoTerreno();
+				reservarGrupoTerreno(terrenosAgrupados);
+			}
+		} else if (!this.comprado & ehDono(jogador)) {
+			Scanner enter = new Scanner(System.in);
+			System.out.println("Gostaria de comprar este terreno?\n |1| Sim \n |2| Nao");
+			String e = enter.nextLine();
+			if (e.equals("1")) {
 				this.comprarTerreno(jogador);
 				this.compravel = false;
 			}
-		}else if(this.comprado && jogador != this.proprietario) {
+		} else if (this.comprado && jogador != this.proprietario) {
 			System.out.println("Pague " + this.aluguelTerreno + " Para " + this.proprietario.getNome());
-		this.cobrarAluguel(jogador);
+			this.cobrarAluguel(jogador);
+		} else if (this.comprado & jogador == this.proprietario) {
+			Scanner enter = new Scanner(System.in);
+			System.out.println("Gostaria de adicionar uma casa?\n |1| Sim \n |2| Nao");
+			String e = enter.nextLine();
+			if (e.equals("1")) {
+				this.addPropriedade(jogador);
+			}
+		}
+	}
+
+	public void addPropriedade(Jogador jogador) {
+		if(ehDonoTudo(jogador) & difrencaPossivel(jogador)) {
+			if(this.getQtd_casas() == 4) this.setHotel(new Hotel());
+			this.adicionarCasa();
+		}
+	}
+	public boolean difrencaPossivel(Jogador jogador) {
+		Terreno maior = this.Max(jogador);
+		Terreno menor = this.Min(jogador);
+		if(maior.getQtd_casas() - menor.getQtd_casas() > 1) return false; 
+		return true;
+	}
+	
+	public boolean ehDonoTudo(Jogador jogador) {
+		boolean res = false;
+		int terrenos = 0;
+		ArrayList<Terreno> agrupamentoTerreno = getGrupoTerreno();
+		for (Terreno terreno : agrupamentoTerreno) {
+			if (terreno.getProprietario().equals(jogador))
+				terrenos++;
+		}
+		if (terrenos == agrupamentoTerreno.size())
+			res = true;
+		return res;
+	}
+
+	public Terreno Max(Jogador jogador) {
+		ArrayList<Terreno> agrupamentoTerreno = getGrupoTerreno();
+		Terreno menor = agrupamentoTerreno.get(0);
+		for (int i = 0; i < agrupamentoTerreno.size(); i++) {
+			if (menor.getQtd_casas() > agrupamentoTerreno.get(i).getQtd_casas()) {
+				menor = agrupamentoTerreno.get(i);
+			}
+		}
+		return menor;
+
+	}
+
+	public Terreno Min(Jogador jogador) {
+		ArrayList<Terreno> agrupamentoTerreno = getGrupoTerreno();
+		Terreno maior = agrupamentoTerreno.get(0);
+		for (int i = 0; i < agrupamentoTerreno.size(); i++) {
+			if (maior.getQtd_casas() > agrupamentoTerreno.get(i).getQtd_casas()) {
+				maior = agrupamentoTerreno.get(i);
+			}
+		}
+		return maior;
+
+	}
+
+	public boolean ehDono(Jogador jogador) {
+		
+		ArrayList<Terreno> agrupamentoTerreno = getGrupoTerreno();
+		for (Terreno terreno : agrupamentoTerreno) {
+			if(terreno.getProprietario() == null) return true;
+			if (terreno.getProprietario().equals(jogador) & terreno != this)
+				return true;
+		}
+		return false;
+	}
+
+	public ArrayList<Terreno> getGrupoTerreno() {
+
+		ArrayList<Terreno> mesmoGrupo = new ArrayList<>();
+		IteradorCasa ic = IteradorCasa.getInstance();
+
+		for (CasaTabuleiro casa : ic.getCasas()) {
+			if (casa instanceof Terreno) {
+				Terreno T = (Terreno) casa;
+				if (T.grupo.equals(this.grupo))
+					mesmoGrupo.add(T);
+			}
+
+		}
+		return mesmoGrupo;
+	}
+
+	public void reservarGrupoTerreno(ArrayList<Terreno> grupoTerreno) {
+		for (Terreno terreno : grupoTerreno) {
+			terreno.setCompravel(false);
 		}
 	}
 
@@ -209,6 +324,14 @@ public class Terreno extends CasaTabuleiro {
 
 	public void setGrupo(String grupo) {
 		this.grupo = grupo;
+	}
+
+	public int getQtd_casas() {
+		return qtd_casas;
+	}
+
+	public void setQtd_casas(int qtd_casas) {
+		this.qtd_casas = qtd_casas;
 	}
 
 }
