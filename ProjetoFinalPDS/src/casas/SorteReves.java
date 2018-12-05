@@ -1,12 +1,12 @@
 package casas;
 
 import JGamePlay.GameImage;
-import base.Jogador;
-import base.JogoMain;
+import atores.Jogador;
 import cartoes.Cartao;
 import cartoes.CartaoReves;
 import cartoes.CartaoSorte;
 import cartoes.IteradorCartoes;
+import telas.JogoMain;
 import util.Posicao;
 import java.util.Random;
 
@@ -48,8 +48,7 @@ public class SorteReves extends CasaTabuleiro {
 				jogador.getPersonagem().y = this.lugaresJogadores.get(i).y;
 				break;
 			}
-		}
-		
+		}	
 	}
 
 	@Override
@@ -64,8 +63,7 @@ public class SorteReves extends CasaTabuleiro {
 		Cartao c =  ic.getCartao(id_cartao);
 		if(c instanceof CartaoReves) {
 			System.out.println("Reves");
-			((CartaoReves) c).executarAcao(jogador);
-			
+			((CartaoReves) c).executarAcao(jogador);		
 		}else if(c instanceof CartaoSorte) {
 			System.out.println("Sorte");
 			((CartaoSorte) c).executarAcao(jogador);

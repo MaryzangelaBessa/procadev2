@@ -1,4 +1,4 @@
-package base;
+package atores;
 
 import JGamePlay.Sprite;
 import casas.CasaTabuleiro;
@@ -16,7 +16,6 @@ public class Jogador {
 	public Jogador(int id) {
 		this.id = id;
 		this.saldo = 2458;
-//		this.posicaoAtual = posicaoAtual;
 		this.duplasSeguidas = 0;
 		this.estaPreso = false;
 		this.rodadasPreso = 0;
@@ -85,7 +84,6 @@ public class Jogador {
 	public void setRodadasPreso(int rodadasPreso) {
 		this.rodadasPreso = rodadasPreso;
 	}
-
 
 	@Override
 	public String toString() {

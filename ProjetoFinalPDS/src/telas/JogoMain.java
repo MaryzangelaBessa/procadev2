@@ -1,10 +1,14 @@
-package base;
+package telas;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 import JGamePlay.*;
-import iterador.IteradorCasa;
+import atores.Jogador;
+import atores.Tabuleiro;
+import cartoes.Cartao;
+import cartoes.ConstrutorCartoes;
+import cartoes.IteradorCartoes;
+import casas.IteradorCasa;
 
 public class JogoMain {
 
@@ -16,9 +20,9 @@ public class JogoMain {
 	private static ArrayList<Jogador> jogadores;
 	public static ArrayList<Sprite> personagens;
 	private static MenuDado menuDado;
-	private static Scanner entrada = new Scanner(System.in);
 	
 	public static void main(String[] args) {
+		
 		tabuleiro.criarCasas();
 		criarPersonagens();
 		selecionarJogadores();
@@ -46,8 +50,13 @@ public class JogoMain {
 	}
 	
 	public static void iniciarJogo() {
-		
 		IteradorCasa ic = IteradorCasa.getInstance();
+		ic.setCasas(tabuleiro.getCasas());
+		
+		ConstrutorCartoes cc = new ConstrutorCartoes();
+		ArrayList<Cartao> cart = cc.construirCartoes();
+		IteradorCartoes icar = IteradorCartoes.getInstance();
+		icar.setCartoes(cart);
 		
 	    while(true) {
 			for (Jogador jogador : jogadores) {
@@ -60,28 +69,19 @@ public class JogoMain {
 						menuDado.desenhar();
 						obterDados = menuDado.lancarDados();
 						janela.display();
-						janela.delay(1000);
+						janela.delay(500);
 					}
 					ic.andar(jogador, tabuleiro.getCasas(), obterDados);
 					showTabuleiro();
 					janela.display();
-					janela.delay(1000);
+					janela.delay(1500);
 					
-					showTabuleiro();
 					jogador.getPosicaoAtual().executarAcao(jogador);
-					janela.display();
-					while(!terminouVez) {
-						entrada.nextLine();
-						terminouVez = true;
-					}
 					
-					
+					terminouVez = true;
 				}		
-				
 			}
-			
-		}
-		
+		}	
 	}
 	
 	public static void showTabuleiro() {

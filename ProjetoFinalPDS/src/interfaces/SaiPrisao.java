@@ -1,11 +1,8 @@
 package interfaces;
 
-import base.Jogador;
-import iterador.IteradorCasa;
+import atores.Jogador;
 
 public class SaiPrisao implements Acao {
-
-	private IteradorCasa ic = IteradorCasa.getInstance();
 
 	public  SaiPrisao() {	
 	}

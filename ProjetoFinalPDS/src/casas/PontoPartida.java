@@ -1,8 +1,8 @@
 package casas;
 
 import JGamePlay.GameImage;
-import base.Jogador;
-import base.JogoMain;
+import atores.Jogador;
+import telas.JogoMain;
 import util.Posicao;
 
 public class PontoPartida extends CasaTabuleiro{
@@ -14,8 +14,6 @@ public class PontoPartida extends CasaTabuleiro{
 		this.imagem.x = posicao.x;
 		this.imagem.y = posicao.y;
 		this.setLugares();
-		
-
 	}
 	
 	private void setLugares() {
@@ -44,7 +42,6 @@ public class PontoPartida extends CasaTabuleiro{
 				break;
 			}
 		}
-		
 	}
 
 	@Override

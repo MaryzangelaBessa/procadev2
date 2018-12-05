@@ -1,6 +1,6 @@
 package interfaces;
 
-import base.Jogador;
+import atores.Jogador;
 
 public class AcaoPagar implements Acao {
 	private int valor;

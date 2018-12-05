@@ -1,9 +1,8 @@
 package cartoes;
-import interfaces.Fabrica;
-public class FabricaCartoes implements Fabrica {
+public class FabricaCartoes{
 	private Cartao cartao;
-	public Cartao criarCartao(String tipo, String desc) {
-		
+	
+	public Cartao criarCartao(String tipo, String desc) {	
 		switch (tipo) {
 		case "Sorte":
 			cartao = new CartaoSorte(desc);

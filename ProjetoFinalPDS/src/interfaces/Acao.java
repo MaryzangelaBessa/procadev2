@@ -1,6 +1,6 @@
 package interfaces;
 
-import base.Jogador;
+import atores.Jogador;
 
 public interface Acao {
 	void executarAcao(Jogador jogador);
