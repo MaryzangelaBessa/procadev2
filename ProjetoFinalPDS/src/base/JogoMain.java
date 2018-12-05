@@ -14,7 +14,7 @@ public class JogoMain {
 	private static Tabuleiro tabuleiro = Tabuleiro.getInstance();
 	private static int numJogadores;
 	private static ArrayList<Jogador> jogadores;
-	private static ArrayList<Sprite> personagens;
+	public static ArrayList<Sprite> personagens;
 	
 	
 	public static void main(String[] args) {
@@ -47,16 +47,6 @@ public class JogoMain {
 		while(true) {
 			tabuleiro.mostraTabuleiro();
 			tabuleiro.desenharCasas();
-//<<<<<<< HEAD
-			
-			
-			
-			
-			
-			
-//=======
-
-///>>>>>>> branch 'master' of https://github.com/MaryzangelaBessa/procadev2.git
 			janela.display();
 		}
 		
@@ -93,7 +83,7 @@ public class JogoMain {
 	public static void selecionarPesonagem() {
 		int i = 0;
 		while(i < numJogadores) {
-			TelaSelecionarPersonagem telaPersonagem = new TelaSelecionarPersonagem(personagens, jogadores.get(i));
+			TelaSelecionarPersonagem telaPersonagem = new TelaSelecionarPersonagem(jogadores.get(i));
 			telaPersonagem.desenharTela();
 			janela.display();
 			

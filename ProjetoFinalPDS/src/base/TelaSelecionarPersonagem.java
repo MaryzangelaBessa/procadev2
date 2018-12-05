@@ -7,14 +7,14 @@ import JGamePlay.Sprite;
 
 public class TelaSelecionarPersonagem {
 	private GameImage bgCharacters;
-	private ArrayList<Sprite> personagens;
+//	private ArrayList<Sprite> personagens;
 	private ArrayList<GameImage> lugaresPersons;
 	
-	public TelaSelecionarPersonagem(ArrayList<Sprite> personagens, Jogador jogador) {
-		this.personagens = personagens;
+	public TelaSelecionarPersonagem(Jogador jogador) {
+	//	this.personagens = personagens;
 		this.bgCharacters = new GameImage(JogoMain.filepath + "assets/character-selection.png");
 		this.setBackcground();
-		this.setLugarPersonagem(this.personagens.size());
+		this.setLugarPersonagem(JogoMain.personagens.size());
 		this.setPersonagemPadding();
 	}
 	
@@ -56,7 +56,7 @@ public class TelaSelecionarPersonagem {
 		int padding = 28;
 		for (int i = 0; i < this.lugaresPersons.size(); i++) {
 			GameImage lugar = this.lugaresPersons.get(i);
-			Sprite personagem = this.personagens.get(i);
+			Sprite personagem = JogoMain.personagens.get(i);
 			personagem.x = lugar.x + padding;
 			personagem.y = lugar.y + padding;
 		}
@@ -67,7 +67,7 @@ public class TelaSelecionarPersonagem {
 		this.bgCharacters.draw();
 		for (int i = 0; i < this.lugaresPersons.size(); i++) {
 			this.lugaresPersons.get(i).draw();
-			this.personagens.get(i).draw();
+			JogoMain.personagens.get(i).draw();
 		}
 	}
 	
