@@ -1,6 +1,6 @@
 package cartoes;
-
-public class FabricaCartoes {
+import interfaces.Fabrica;
+public class FabricaCartoes implements Fabrica {
 	private Cartao cartao;
 	public Cartao criarCartao(String tipo, String desc) {
 		

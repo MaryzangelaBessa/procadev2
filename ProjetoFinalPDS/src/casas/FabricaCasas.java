@@ -1,8 +1,9 @@
 package casas;
 
+import interfaces.Fabrica;
 import util.Posicao;
 
-public class FabricaCasas {
+public class FabricaCasas implements Fabrica {
 		private static FabricaCasas fabricaCasas = new FabricaCasas(); 
 	
 		private FabricaCasas() {
