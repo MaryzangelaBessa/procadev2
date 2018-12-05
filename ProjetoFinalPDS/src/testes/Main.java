@@ -53,8 +53,7 @@ public class Main {
 
 				ic.andar(jogador, casas, valorDado1 + valorDado2);
 
-				System.out.println(
-						"O jogador " + jogador.getId() + " est� agora na casa " + jogador.getPosicaoAtual().euSou());
+				System.out.println("O jogador " + jogador.getId() + " est� agora na casa " + jogador.getPosicaoAtual().euSou());
 
 				entrada.nextLine();
 

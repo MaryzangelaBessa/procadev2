@@ -11,7 +11,6 @@ public class ConstrutorCasas {
 
 	public ArrayList<CasaTabuleiro> construirCasas() {
 
-	
 		int tabuleiroWidth = JogoMain.janela.getWidth();
 		int vypadding = 12;
 
@@ -34,6 +33,8 @@ public class ConstrutorCasas {
 		castleBlack.setAluguel2(90);
 		castleBlack.setAluguel3(270);
 		castleBlack.setAluguel4(400);
+		castleBlack.setPrecoCasa(50);
+		castleBlack.setPrecoHotel(50);
 		castleBlack.setHotel(new Hotel(500));
 		casas.add(castleBlack);
 
@@ -52,6 +53,8 @@ public class ConstrutorCasas {
 		winterfel.setAluguel2(30);
 		winterfel.setAluguel3(90);
 		winterfel.setAluguel4(160);
+		winterfel.setPrecoCasa(50);
+		winterfel.setPrecoHotel(50);
 		winterfel.setHotel(new Hotel(250));
 		casas.add(winterfel);
 
@@ -66,6 +69,8 @@ public class ConstrutorCasas {
 		bolton.setAluguel2(60);
 		bolton.setAluguel3(180);
 		bolton.setAluguel4(320);
+		bolton.setPrecoCasa(50);
+		bolton.setPrecoHotel(50);
 		bolton.setHotel(new Hotel(450));
 		casas.add(bolton);
 
@@ -98,7 +103,7 @@ public class ConstrutorCasas {
 		Posicao pikePos = new Posicao(co2Pos.x + comp2.getImagem().width + l1xpadding, vypadding);
 		// Terreno nom;
 		Terreno pike = (Terreno) fc.construirCasa("Terreno", pikePos);
-		// nom.setNome("");
+		pike.setNome("");
 		pike.setGrupo("Greyjoy");
 		pike.setPrecoTerreno(220);
 		pike.setAluguelTerreno(18);
