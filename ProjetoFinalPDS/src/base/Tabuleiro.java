@@ -1,6 +1,5 @@
 package base;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 import JGamePlay.GameImage;
 import casas.*;
@@ -13,6 +12,7 @@ public class Tabuleiro {
 	
 	private ArrayList<CasaTabuleiro> casas;
 	private ArrayList<Cartao> cartoes;
+	private ArrayList<Jogador> jogadores;
 	
 	private FabricaCasas fabricaCasas;
 	
@@ -269,6 +269,21 @@ public class Tabuleiro {
 	public void desenharCasas() {
 		for (CasaTabuleiro casa : casas) {
 			casa.desenhar();
+		}
+	}
+	
+	public void receberJogadores(ArrayList<Jogador> jogadores) {
+		this.jogadores = jogadores;
+		PontoPartida pp = (PontoPartida) casas.get(0);
+		for (Jogador jogador : this.jogadores) {
+			System.out.println("ID em Tabuleiro: " + jogador.getId());
+			pp.addJogador(jogador);
+		}
+	}
+	
+	public void desenharJogadores() {
+		for (Jogador jogador : this.jogadores) {
+			jogador.getPersonagem().draw();
 		}
 	}
 	

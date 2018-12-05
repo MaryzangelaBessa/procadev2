@@ -1,6 +1,5 @@
 package base;
 
-import java.awt.Font;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -14,7 +13,7 @@ public class JogoMain {
 	private static Tabuleiro tabuleiro = Tabuleiro.getInstance();
 	private static int numJogadores;
 	private static ArrayList<Jogador> jogadores;
-	private static ArrayList<Sprite> personagens;
+	public static ArrayList<Sprite> personagens;
 	
 	
 	public static void main(String[] args) {
@@ -22,6 +21,7 @@ public class JogoMain {
 		criarPersonagens();
 		selecionarJogadores();
 		selecionarPesonagem();
+		tabuleiro.receberJogadores(jogadores);
 		iniciarJogo();
 		
 	}
@@ -47,16 +47,7 @@ public class JogoMain {
 		while(true) {
 			tabuleiro.mostraTabuleiro();
 			tabuleiro.desenharCasas();
-//<<<<<<< HEAD
-			
-			
-			
-			
-			
-			
-//=======
-
-///>>>>>>> branch 'master' of https://github.com/MaryzangelaBessa/procadev2.git
+			tabuleiro.desenharJogadores();
 			janela.display();
 		}
 		
@@ -64,22 +55,22 @@ public class JogoMain {
 	
 	public static void criarPersonagens() {
 		personagens = new ArrayList<>();
-		Sprite adventure = new Sprite(filepath + "assests/characters/adventure.png", 13);
+		Sprite adventure = new Sprite(filepath + "assets/characters/adventure.png", 13);
 		adventure.setDimension(32, 32);
 		adventure.setCurrFrame(0);
-		Sprite gabe = new Sprite(filepath + "assests/characters/gabe.png", 7);
+		Sprite gabe = new Sprite(filepath + "assets/characters/gabe.png", 7);
 		gabe.setDimension(32, 32);
 		gabe.setCurrFrame(0);
-		Sprite gladiator = new Sprite(filepath + "assests/characters/gladiator.png", 5);
+		Sprite gladiator = new Sprite(filepath + "assets/characters/gladiator.png", 5);
 		gladiator.setDimension(32, 32);
 		gladiator.setCurrFrame(0);
-		Sprite mani = new Sprite(filepath + "assests/characters/mani.png", 5);
+		Sprite mani = new Sprite(filepath + "assets/characters/mani.png", 5);
 		mani.setDimension(32, 32);
 		mani.setCurrFrame(0);
-		Sprite master = new Sprite(filepath + "assests/characters/master.png", 2);
+		Sprite master = new Sprite(filepath + "assets/characters/master.png", 2);
 		master.setDimension(32, 32);
 		master.setCurrFrame(0);
-		Sprite wizard = new Sprite(filepath + "assests/characters/wizard.png", 2);
+		Sprite wizard = new Sprite(filepath + "assets/characters/wizard.png", 2);
 		wizard.setDimension(32, 32);
 		wizard.setCurrFrame(0);
 		personagens.add(adventure);
@@ -91,13 +82,26 @@ public class JogoMain {
 	}
 	
 	public static void selecionarPesonagem() {
-		int i = 0;
-		while(i < numJogadores) {
-			TelaSelecionarPersonagem telaPersonagem = new TelaSelecionarPersonagem(personagens, jogadores.get(i));
-			telaPersonagem.desenharTela();
-			janela.display();
-			
+		for(int i = 0; (i < jogadores.size()) & (personagens.size() > 1); i++) {
+			boolean selecionou = false;
+			while(!selecionou) {
+				TelaSelecionarPersonagem telaPersonagem;
+				telaPersonagem = new TelaSelecionarPersonagem(personagens, jogadores.get(i));
+				telaPersonagem.desenharTela();
+				selecionou = telaPersonagem.obterPersonagem();
+				janela.display();
+			}
 		}
+		if(personagens.size() == 1) {
+			int size = jogadores.size();
+			Jogador ultimo  = jogadores.get(size - 1);
+			int sizep = personagens.size();
+			Sprite personagem = personagens.get(sizep - 1);
+			ultimo.setPersonagem(personagem);
+		}
+		
 	}
+	
+	
 
 }

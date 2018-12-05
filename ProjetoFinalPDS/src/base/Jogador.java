@@ -15,7 +15,6 @@ public class Jogador {
 
 	public Jogador(int id) {
 		this.id = id;
-		this.nome = nome;
 		this.saldo = 2458;
 //		this.posicaoAtual = posicaoAtual;
 		this.duplasSeguidas = 0;
