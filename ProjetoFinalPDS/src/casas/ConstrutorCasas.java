@@ -11,15 +11,6 @@ public class ConstrutorCasas {
 
 	public ArrayList<CasaTabuleiro> construirCasas() {
 
-		// <------------- VARIAVEIS
-		ParadaLivre pl;
-		Posicao p = new Posicao(0, 0);
-		Compania comp;
-		Prisao pris;
-		LucrosDividendos lc;
-		ImpostoRenda ip;
-		VaPrisao vp;
-
 		int tabuleiroWidth = JogoMain.janela.getWidth();
 		int vypadding = 12;
 
