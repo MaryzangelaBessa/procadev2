@@ -98,6 +98,8 @@ public class Terreno extends CasaTabuleiro {
 			return;
 		}
 		this.qtd_casas++;
+		int newSaldo = this.proprietario.getSaldo() - this.precoCasa;
+		this.proprietario.setSaldo(newSaldo);
 	}
 
 	public void adicionarHotel() {
