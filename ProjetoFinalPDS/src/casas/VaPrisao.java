@@ -3,6 +3,9 @@ package casas;
 import JGamePlay.GameImage;
 import base.Jogador;
 import base.JogoMain;
+
+import interfaces.Acao;
+import interfaces.AcaoVaPrisao;
 import util.Posicao;
 
 public class VaPrisao extends CasaTabuleiro{
@@ -19,6 +22,13 @@ public class VaPrisao extends CasaTabuleiro{
 	public void addJogador(Jogador jogador) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public void executarAcao(Jogador jogador) {
+		System.out.println("O jogador " + jogador.getNome() + " ir� para a prisao!");
+		Acao act = new AcaoVaPrisao();
+		act.executarAcao(jogador);
 	}
 
 }

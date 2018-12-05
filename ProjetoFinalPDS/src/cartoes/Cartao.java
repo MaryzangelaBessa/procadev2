@@ -17,4 +17,11 @@ public abstract class Cartao {
 		this.descricao = descricao;
 	}
 
+	@Override
+	public String toString() {
+		return "Cartao [descricao=" + descricao + "]\n";
+	}
+	
+	
+
 }

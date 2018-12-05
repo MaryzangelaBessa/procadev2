@@ -47,7 +47,16 @@ public class JogoMain {
 		while(true) {
 			tabuleiro.mostraTabuleiro();
 			tabuleiro.desenharCasas();
+//<<<<<<< HEAD
+			
+			
+			
+			
+			
+			
+//=======
 
+///>>>>>>> branch 'master' of https://github.com/MaryzangelaBessa/procadev2.git
 			janela.display();
 		}
 		

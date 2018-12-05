@@ -1,5 +1,6 @@
 package cartoes;
 
+import base.Jogador;
 import casas.Prisao;
 import interfaces.Acao;
 
@@ -14,8 +15,14 @@ public class CartaoReves extends Cartao {
 		super(desc);
 
 	}
-
+	
+	public void executarAcao(Jogador j) {
+		System.out.println(this.getDescricao());
+		acao.executarAcao(j);
+	}
+	
 	public Acao getAcao() {
+		System.out.println(this.getDescricao());
 		return acao;
 	}
 
@@ -23,8 +30,8 @@ public class CartaoReves extends Cartao {
 		this.acao = new AcaoPagar(value);
 	}
 
-	public void setAcaoPrender(Prisao casa) {
-		this.acao = new AcaoVaPrisao(casa);
+	public void setAcaoPrender() {
+		this.acao = new AcaoVaPrisao();
 	}
 
 }

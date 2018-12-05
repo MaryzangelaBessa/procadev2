@@ -1,6 +1,6 @@
 package casas;
 
-import java.util.ArrayList;
+
 
 import JGamePlay.GameImage;
 import base.Jogador;
@@ -16,7 +16,7 @@ public class LucrosDividendos extends CasaTabuleiro {
 		this.imagem.y = posicao.y;
 	}
 
-	public void executaAcao(Jogador jogador) {
+	public void executarAcao(Jogador jogador) {
 		int novoSaldo = jogador.getSaldo() + 200;
 		jogador.setSaldo(novoSaldo);
 	}
