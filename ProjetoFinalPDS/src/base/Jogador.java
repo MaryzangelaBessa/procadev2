@@ -4,6 +4,7 @@ import JGamePlay.Sprite;
 import casas.CasaTabuleiro;
 
 public class Jogador {
+	private int id;
 	private String nome;
 	private int saldo;
 	private CasaTabuleiro posicaoAtual;
@@ -11,6 +12,22 @@ public class Jogador {
 	private boolean estaPreso;
 	private int rodadasPreso;
 	private Sprite personagem;
+
+	public Jogador(int id) {
+		this.id = id;
+		this.saldo = 2000;
+		this.duplasSeguidas = 0;
+		this.estaPreso = false;
+		this.rodadasPreso = 0;
+	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	public int getDuplasSeguidas() {
 		return duplasSeguidas;
@@ -34,15 +51,6 @@ public class Jogador {
 
 	public void setRodadasPreso(int rodadasPreso) {
 		this.rodadasPreso = rodadasPreso;
-	}
-
-	public Jogador(String nome, CasaTabuleiro posicaoAtual) {
-		this.nome = nome;
-		this.saldo = 2000;
-		this.posicaoAtual = posicaoAtual;
-		this.duplasSeguidas = 0;
-		this.estaPreso = false;
-		this.rodadasPreso = 0;
 	}
 
 	public String getNome() {
