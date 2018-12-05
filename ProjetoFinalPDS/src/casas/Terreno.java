@@ -6,8 +6,10 @@ import java.util.Scanner;
 import JGamePlay.GameImage;
 import base.Jogador;
 import base.JogoMain;
+
+import base.TerrenoMenu;
 import iterador.IteradorCasa;
-import sun.security.provider.certpath.DistributionPointFetcher;
+
 import util.Posicao;
 
 public class Terreno extends CasaTabuleiro {
@@ -26,6 +28,7 @@ public class Terreno extends CasaTabuleiro {
 	private int precoHotel;
 	private int qtd_casas;
 	private Hotel hotel = new Hotel();
+	private TerrenoMenu terrenoMenu;
 
 	public Terreno(Posicao posicao) {
 		super(posicao);
@@ -35,6 +38,8 @@ public class Terreno extends CasaTabuleiro {
 		this.imagem.setDimension(125, 125);
 		this.imagem.x = posicao.x;
 		this.imagem.y = posicao.y;
+		this.setLugares();
+		this.terrenoMenu = new TerrenoMenu(this);
 	}
 
 	public void comprarTerreno(Jogador novoProprietario) {
@@ -47,6 +52,35 @@ public class Terreno extends CasaTabuleiro {
 		ArrayList<Terreno> ter = this.getGrupoTerreno();
 		for (Terreno terreno : ter) {
 			terreno.setProprietario(novoProprietario);
+		}
+		
+	}
+	
+	private void setLugares() {
+		Posicao p1 = new Posicao(this.imagem.x, this.imagem.y + 35);
+		Posicao p2 = new Posicao(this.imagem.x, this.imagem.y + 62);
+		Posicao p3 = new Posicao(this.imagem.x, this.imagem.y + 87);
+		Posicao p4 = new Posicao(this.imagem.x + 95, this.imagem.y + 35);
+		Posicao p5 = new Posicao(this.imagem.x + 95, this.imagem.y + 62);
+		Posicao p6 = new Posicao(this.imagem.x + 95, this.imagem.y + 87);
+		this.lugaresJogadores.add(p1);
+		this.lugaresJogadores.add(p2);
+		this.lugaresJogadores.add(p3);
+		this.lugaresJogadores.add(p4);
+		this.lugaresJogadores.add(p5);
+		this.lugaresJogadores.add(p6);
+	}
+
+	@Override
+	public void addJogador(Jogador jogador) {
+		jogador.setPosicaoAtual(this);
+		for (int i = 0; i < lugaresJogadores.size(); i++) {
+			if(this.lugaresOcupados[i] == null) {
+				this.lugaresOcupados[i] = jogador;
+				jogador.getPersonagem().x = this.lugaresJogadores.get(i).x;
+				jogador.getPersonagem().y = this.lugaresJogadores.get(i).y;
+				break;
+			}
 		}
 		
 	}
@@ -167,23 +201,18 @@ public class Terreno extends CasaTabuleiro {
 	}
 
 	@Override
-	public void addJogador(Jogador jogador) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
 	public void executarAcao(Jogador jogador) {
 		if (!this.comprado & this.compravel) {
-			Scanner enter = new Scanner(System.in);
-			System.out.println("Gostaria de comprar este terreno?\n |1| Sim \n |2| Nao");
-			String e = enter.nextLine();
-			if (e.equals("1")) {
-				this.comprarTerreno(jogador);
-				this.compravel = false;
-				ArrayList<Terreno> terrenosAgrupados = getGrupoTerreno();
-				reservarGrupoTerreno(terrenosAgrupados);
-			}
+			this.terrenoMenu.desenharBuy();
+//			Scanner enter = new Scanner(System.in);
+//			System.out.println("Gostaria de comprar este terreno?\n |1| Sim \n |2| Nao");
+//			String e = enter.nextLine();
+//			if (e.equals("1")) {
+//				this.comprarTerreno(jogador);
+//				this.compravel = false;
+//				ArrayList<Terreno> terrenosAgrupados = getGrupoTerreno();
+//				reservarGrupoTerreno(terrenosAgrupados);
+//			}
 		} else if (!this.comprado & ehDono(jogador)) {
 			Scanner enter = new Scanner(System.in);
 			System.out.println("Gostaria de comprar este terreno?\n |1| Sim \n |2| Nao");

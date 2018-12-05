@@ -35,6 +35,7 @@ public class PontoPartida extends CasaTabuleiro{
 
 	@Override
 	public void addJogador(Jogador jogador) {
+		jogador.setPosicaoAtual(this);
 		for (int i = 0; i < lugaresJogadores.size(); i++) {
 			if(this.lugaresOcupados[i] == null) {
 				this.lugaresOcupados[i] = jogador;

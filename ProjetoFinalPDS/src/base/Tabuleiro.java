@@ -276,7 +276,6 @@ public class Tabuleiro {
 		this.jogadores = jogadores;
 		PontoPartida pp = (PontoPartida) casas.get(0);
 		for (Jogador jogador : this.jogadores) {
-			System.out.println("ID em Tabuleiro: " + jogador.getId());
 			pp.addJogador(jogador);
 		}
 	}

@@ -25,11 +25,12 @@ public class IteradorCasa {
 		// casas.get(atual).getLugaresJogadores().remove()
 		CasaTabuleiro novaCasa = casas.get(novaPosicao);
 		j.setPosicaoAtual(novaCasa);
+		novaCasa.addJogador(j);
 	}
 
 	public int getCasaAtual(CasaTabuleiro casaAtual, ArrayList<CasaTabuleiro> casas) {
 		for (int i = 0; i < casas.size(); i++) {
-			if (casas.get(i) == casaAtual) {
+			if (casas.get(i).equals(casaAtual)) {
 				return i;
 			}
 		}

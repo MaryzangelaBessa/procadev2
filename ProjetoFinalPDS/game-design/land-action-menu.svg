@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1000"
+   height="700"
+   viewBox="0 0 264.58333 185.20834"
+   version="1.1"
+   id="svg4747"
+   inkscape:version="0.92.3 (5aff6ba, 2018-11-25)"
+   sodipodi:docname="land-action-menu.svg"
+   inkscape:export-filename="/home/abilio/build-castle-btn.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs4741" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="263.2524"
+     inkscape:cy="454.08039"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-page="true"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1301"
+     inkscape:window-height="744"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1">
+    <sodipodi:guide
+       position="44.303126,21.354752"
+       orientation="0,1"
+       id="guide5502"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="65.243986,125.8575"
+       orientation="1,0"
+       id="guide5537"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="43.375643,162.71703"
+       orientation="1,0"
+       id="guide5601"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="65.392988,108.86113"
+       orientation="0,1"
+       id="guide5603"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="64.066965,97.895142"
+       orientation="0,1"
+       id="guide5605"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="145.23757,95.530572"
+       orientation="1,0"
+       id="guide5607"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="206.41423,92.707034"
+       orientation="1,0"
+       id="guide5611"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="119.66766,40.171923"
+       orientation="0,1"
+       id="guide5622"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="45.460876,165.0903"
+       orientation="0,1"
+       id="guide5882"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="39.309523,154.30879"
+       orientation="1,0"
+       id="guide5884"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="61.781041,76.881106"
+       orientation="1,0"
+       id="guide5886"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata4744">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-111.79165)">
+    <rect
+       style="opacity:1;fill:#6df7b1;fill-opacity:1;stroke:none;stroke-width:0.35357374;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect6486"
+       width="264.58334"
+       height="185.20833"
+       x="2.0507815e-07"
+       y="111.79166"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/home/abilio/character-selection.png" />
+    <rect
+       style="opacity:1;fill:#fbd09e;fill-opacity:1;stroke:none;stroke-width:1.07890928;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect10280"
+       width="176.59537"
+       height="143.73555"
+       x="43.993973"
+       y="132.52803"
+       inkscape:export-filename="/home/abilio/Dropbox/eclipse-workspace/procadev2/ProjetoFinalPDS/src/assets/land-action-menu.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       y="132.00777"
+       x="44.710388"
+       height="0.42218056"
+       width="175.16252"
+       id="rect10288"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.19615686;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+       inkscape:export-filename="/home/abilio/Dropbox/eclipse-workspace/procadev2/ProjetoFinalPDS/src/assets/land-action-menu.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       y="132.73137"
+       x="44.197296"
+       height="0.21166231"
+       width="0.21166231"
+       id="rect10290"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.40667513;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+       inkscape:export-filename="/home/abilio/Dropbox/eclipse-workspace/procadev2/ProjetoFinalPDS/src/assets/land-action-menu.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.40667513;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect10292"
+       width="0.21166231"
+       height="0.21166231"
+       x="220.17436"
+       y="132.73137"
+       inkscape:export-filename="/home/abilio/Dropbox/eclipse-workspace/procadev2/ProjetoFinalPDS/src/assets/land-action-menu.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.36455426;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect10294"
+       width="0.18973964"
+       height="0.18973964"
+       x="44.176235"
+       y="271.18341"
+       inkscape:export-filename="/home/abilio/Dropbox/eclipse-workspace/procadev2/ProjetoFinalPDS/src/assets/land-action-menu.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.19615686;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect10296"
+       width="175.16252"
+       height="0.42218056"
+       x="44.710388"
+       y="276.36166"
+       inkscape:export-filename="/home/abilio/Dropbox/eclipse-workspace/procadev2/ProjetoFinalPDS/src/assets/land-action-menu.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       y="275.84857"
+       x="220.17436"
+       height="0.21166231"
+       width="0.21166231"
+       id="rect10298"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.40667513;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+       inkscape:export-filename="/home/abilio/Dropbox/eclipse-workspace/procadev2/ProjetoFinalPDS/src/assets/land-action-menu.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       y="133.45518"
+       x="43.684444"
+       height="141.88124"
+       width="0.00072825851"
+       id="rect10300"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.617603;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+       inkscape:export-filename="/home/abilio/Dropbox/eclipse-workspace/procadev2/ProjetoFinalPDS/src/assets/land-action-menu.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <g
+       id="g13998"
+       transform="translate(-7.19057,123.20993)">
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.39419669;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect13971"
+         width="18.53161"
+         height="18.53161"
+         x="105.89617"
+         y="211.33585" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:9.8777771px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+         x="111.89019"
+         y="224.80823"
+         id="text13975"><tspan
+           sodipodi:role="line"
+           id="tspan13973"
+           x="111.89019"
+           y="224.80823"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.95673084px;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';fill:#ff0000;stroke-width:0.26458335">1</tspan></text>
+    </g>
+    <g
+       id="g14006"
+       transform="translate(-34.89196,123.20993)">
+      <rect
+         y="211.33585"
+         x="105.89617"
+         height="18.53161"
+         width="18.53161"
+         id="rect14000"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.39419669;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill" />
+      <text
+         id="text14004"
+         y="224.80823"
+         x="111.89019"
+         style="font-style:normal;font-weight:normal;font-size:9.8777771px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.95673084px;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';fill:#ff0000;stroke-width:0.26458335"
+           y="224.80823"
+           x="111.89019"
+           id="tspan14002"
+           sodipodi:role="line">1</tspan></text>
+    </g>
+    <g
+       transform="translate(-34.89196,141.74155)"
+       id="g14060"
+       inkscape:export-filename="/home/abilio/dice.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.39419669;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect14054"
+         width="18.53161"
+         height="18.53161"
+         x="105.89617"
+         y="211.33585" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:9.8777771px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+         x="111.89019"
+         y="224.80823"
+         id="text14058"><tspan
+           sodipodi:role="line"
+           id="tspan14056"
+           x="111.89019"
+           y="224.80823"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.95673084px;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';fill:#ff0000;stroke-width:0.26458335">1</tspan></text>
+    </g>
+    <g
+       id="g14068"
+       transform="translate(-16.36036,141.74155)"
+       inkscape:export-filename="/home/abilio/dice.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         y="211.33585"
+         x="105.89617"
+         height="18.53161"
+         width="18.53161"
+         id="rect14062"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.39419669;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill" />
+      <text
+         id="text14066"
+         y="224.80823"
+         x="115.16197"
+         style="font-style:normal;font-weight:normal;font-size:9.8777771px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.95673084px;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#ff0000;stroke-width:0.26458335"
+           y="224.80823"
+           x="115.16197"
+           id="tspan14064"
+           sodipodi:role="line">2</tspan></text>
+    </g>
+    <g
+       transform="translate(2.17125,141.74155)"
+       id="g14076"
+       inkscape:export-filename="/home/abilio/dice.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.39419669;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect14070"
+         width="18.53161"
+         height="18.53161"
+         x="105.89617"
+         y="211.33585" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:9.8777771px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+         x="115.16197"
+         y="224.80823"
+         id="text14074"><tspan
+           sodipodi:role="line"
+           id="tspan14072"
+           x="115.16197"
+           y="224.80823"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.95673084px;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#ff0000;stroke-width:0.26458335">3</tspan></text>
+    </g>
+    <g
+       id="g14084"
+       transform="translate(20.70286,141.74155)"
+       inkscape:export-filename="/home/abilio/dice.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         y="211.33585"
+         x="105.89617"
+         height="18.53161"
+         width="18.53161"
+         id="rect14078"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.39419669;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill" />
+      <text
+         id="text14082"
+         y="224.80823"
+         x="115.16197"
+         style="font-style:normal;font-weight:normal;font-size:9.8777771px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.95673084px;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#ff0000;stroke-width:0.26458335"
+           y="224.80823"
+           x="115.16197"
+           id="tspan14080"
+           sodipodi:role="line">4</tspan></text>
+    </g>
+    <g
+       transform="translate(39.23447,141.74155)"
+       id="g14092"
+       inkscape:export-filename="/home/abilio/dice.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.39419669;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect14086"
+         width="18.53161"
+         height="18.53161"
+         x="105.89617"
+         y="211.33585" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:9.8777771px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+         x="111.89019"
+         y="224.80823"
+         id="text14090"><tspan
+           sodipodi:role="line"
+           id="tspan14088"
+           x="111.89019"
+           y="224.80823"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.95673084px;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';fill:#ff0000;stroke-width:0.26458335">5</tspan></text>
+    </g>
+    <g
+       id="g14100"
+       transform="translate(57.76608,141.74155)"
+       inkscape:export-filename="/home/abilio/dice.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         y="211.33585"
+         x="105.89617"
+         height="18.53161"
+         width="18.53161"
+         id="rect14094"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.39419669;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill" />
+      <text
+         id="text14098"
+         y="224.80823"
+         x="111.89019"
+         style="font-style:normal;font-weight:normal;font-size:9.8777771px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.95673084px;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';fill:#ff0000;stroke-width:0.26458335"
+           y="224.80823"
+           x="111.89019"
+           id="tspan14096"
+           sodipodi:role="line">6</tspan></text>
+    </g>
+    <rect
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       inkscape:export-filename="/home/abilio/Dropbox/eclipse-workspace/procadev2/ProjetoFinalPDS/src/assets/land-action-menu.png"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.617603;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect5504"
+       width="0.00072825851"
+       height="141.88124"
+       x="220.89815"
+       y="133.45518" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.34851265px;line-height:1.25;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5718351"
+       x="102.60388"
+       y="158.65317"
+       id="text10286"><tspan
+         sodipodi:role="line"
+         id="tspan10282"
+         x="102.60388"
+         y="158.65317"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.5718351">Castle Tal</tspan><tspan
+         id="tspan10284"
+         sodipodi:role="line"
+         x="102.60388"
+         y="185.33881"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.5718351" /></text>
+    <text
+       id="text5510"
+       y="182.05972"
+       x="132.9588"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.34851265px;line-height:1.25;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.5718351"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke-width:0.5718351"
+         y="182.05972"
+         x="132.9588"
+         id="tspan5506"
+         sodipodi:role="line">Owner: Iron Bank</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke-width:0.5718351"
+         y="208.74536"
+         x="132.9588"
+         sodipodi:role="line"
+         id="tspan5508" /></text>
+    <g
+       id="g5627"
+       transform="translate(-3.6119486,5.318913)"
+       inkscape:export-filename="/home/abilio/buy-land-btn.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         y="238.29645"
+         x="145.23756"
+         height="18.53161"
+         width="61.176666"
+         id="rect13950"
+         style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.22195964;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill" />
+      <text
+         id="text13954"
+         y="249.43184"
+         x="166.94534"
+         style="font-style:normal;font-weight:normal;font-size:14.95673084px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.40062675"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';fill:#ffffff;stroke-width:0.40062675"
+           y="249.43184"
+           x="166.94534"
+           id="tspan13952"
+           sodipodi:role="line">buy</tspan></text>
+    </g>
+    <g
+       id="g5866">
+      <text
+         id="text5535"
+         y="199.10484"
+         x="81.388947"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.03924656px;line-height:1.25;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26890835"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.26890835"
+           y="199.10484"
+           x="81.388947"
+           id="tspan5531"
+           sodipodi:role="line">Price: 200</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.26890835"
+           y="211.6539"
+           x="81.388947"
+           sodipodi:role="line"
+           id="tspan5533" /></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.03924656px;line-height:1.25;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.26890835"
+         x="87.349747"
+         y="209.61186"
+         id="text5543"><tspan
+           sodipodi:role="line"
+           id="tspan5539"
+           x="87.349747"
+           y="209.61186"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke-width:0.26890835">Land Rent: 22</tspan><tspan
+           id="tspan5541"
+           sodipodi:role="line"
+           x="87.349747"
+           y="222.16092"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke-width:0.26890835" /></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.03924656px;line-height:1.25;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.26890835"
+         x="92.683098"
+         y="220.11888"
+         id="text5561"><tspan
+           sodipodi:role="line"
+           id="tspan5557"
+           x="92.683098"
+           y="220.11888"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke-width:0.26890835">1 House Rent: 22</tspan><tspan
+           id="tspan5559"
+           sodipodi:role="line"
+           x="92.683098"
+           y="232.66794"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke-width:0.26890835" /></text>
+      <text
+         id="text5567"
+         y="230.62592"
+         x="94.565453"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.03924656px;line-height:1.25;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.26890835"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke-width:0.26890835"
+           y="230.62592"
+           x="94.565453"
+           id="tspan5563"
+           sodipodi:role="line">2 Houses Rent: 22</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke-width:0.26890835"
+           y="243.17497"
+           x="94.565453"
+           sodipodi:role="line"
+           id="tspan5565" /></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.03924656px;line-height:1.25;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.26890835"
+         x="94.565453"
+         y="241.13293"
+         id="text5573"><tspan
+           sodipodi:role="line"
+           id="tspan5569"
+           x="94.565453"
+           y="241.13293"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke-width:0.26890835">3 Houses Rent: 22</tspan><tspan
+           id="tspan5571"
+           sodipodi:role="line"
+           x="94.565453"
+           y="253.68199"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke-width:0.26890835" /></text>
+      <text
+         id="text5579"
+         y="251.63995"
+         x="94.565453"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.03924656px;line-height:1.25;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.26890835"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke-width:0.26890835"
+           y="251.63995"
+           x="94.565453"
+           id="tspan5575"
+           sodipodi:role="line">4 Houses Rent: 22</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke-width:0.26890835"
+           y="264.18903"
+           x="94.565453"
+           sodipodi:role="line"
+           id="tspan5577" /></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.03924656px;line-height:1.25;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.26890835"
+         x="89.232101"
+         y="262.14697"
+         id="text5585"><tspan
+           sodipodi:role="line"
+           id="tspan5581"
+           x="89.232101"
+           y="262.14697"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke-width:0.26890835">Castle Rent: 22</tspan><tspan
+           id="tspan5583"
+           sodipodi:role="line"
+           x="89.232101"
+           y="274.69604"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke-width:0.26890835" /></text>
+    </g>
+    <g
+       id="g5875">
+      <g
+         transform="translate(-3.6119486,5.3189089)"
+         id="g5635">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.9090414px;line-height:1.25;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.31899214"
+           x="176.13963"
+           y="193.78593"
+           id="text5591"><tspan
+             sodipodi:role="line"
+             id="tspan5587"
+             x="176.13963"
+             y="193.78593"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.03924656px;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.31899214">House Price: 150</tspan><tspan
+             id="tspan5589"
+             sodipodi:role="line"
+             x="176.13963"
+             y="208.67224"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.31899214" /></text>
+        <text
+           id="text5597"
+           y="204.29295"
+           x="176.13963"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.9090414px;line-height:1.25;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.31899214"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.03924656px;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.31899214"
+             y="204.29295"
+             x="176.13963"
+             id="tspan5593"
+             sodipodi:role="line">Castle Price: 150</tspan><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.31899214"
+             y="219.17926"
+             x="176.13963"
+             sodipodi:role="line"
+             id="tspan5595" /></text>
+      </g>
+    </g>
+    <g
+       id="g5641"
+       transform="translate(-3.6119486,8.2583505)"
+       inkscape:export-filename="/home/abilio/Dropbox/eclipse-workspace/procadev2/ProjetoFinalPDS/src/assets/land-action-menu.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="opacity:1;fill:none;fill-opacity:1;stroke:none;stroke-width:0.33947164;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect5620"
+         width="61.176666"
+         height="18.950176"
+         x="145.23756"
+         y="208.88017" />
+      <rect
+         y="227.21202"
+         x="145.23756"
+         height="0.61833125"
+         width="61.176666"
+         id="rect5609"
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.06132075;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill" />
+      <text
+         id="text5615"
+         y="220.11734"
+         x="175.8259"
+         style="font-style:normal;font-weight:normal;font-size:14.09665775px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.37758905"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#000000;stroke-width:0.37758905"
+           y="220.11734"
+           x="175.8259"
+           id="tspan5613"
+           sodipodi:role="line">Options</tspan></text>
+    </g>
+    <rect
+       y="287.73419"
+       x="145.23756"
+       height="18.53161"
+       width="61.176666"
+       id="rect5643"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.22195964;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+       inkscape:export-filename="/home/abilio/build-house-btn.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <text
+       id="text5647"
+       y="301.20657"
+       x="148.71683"
+       style="font-style:normal;font-weight:normal;font-size:14.95673084px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.40062675"
+       xml:space="preserve"
+       inkscape:export-filename="/home/abilio/build-house-btn.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';fill:#ffffff;stroke-width:0.40062675"
+         y="301.20657"
+         x="148.71683"
+         id="tspan5645"
+         sodipodi:role="line">build house</tspan></text>
+    <rect
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.22195964;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect5654"
+       width="61.176666"
+       height="18.53161"
+       x="145.23756"
+       y="313.92661"
+       inkscape:export-filename="/home/abilio/build-castle-btn.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:14.95673084px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.40062675"
+       x="148.24942"
+       y="327.39899"
+       id="text5658"
+       inkscape:export-filename="/home/abilio/build-castle-btn.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan5656"
+         x="148.24942"
+         y="327.39899"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';fill:#ffffff;stroke-width:0.40062675">build castle</tspan></text>
+  </g>
+</svg>

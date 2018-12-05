@@ -12,7 +12,7 @@ import casas.CasaTabuleiro;
 import casas.ConstrutorCasas;
 import casas.PontoPartida;
 import iterador.IteradorCasa;
-import tabuleiro.Tabuleiro;
+import base.Tabuleiro;
 
 public class Controle {
 	public static void main(String[] args) {
@@ -33,12 +33,12 @@ public class Controle {
 		int qtd_jogadores, valorDado1, valorDado2;
 		Scanner entrada = new Scanner(System.in);
 
-		System.out.println("Quantas pessoas vão jogar?");
+		System.out.println("Quantas pessoas vï¿½o jogar?");
 		qtd_jogadores = entrada.nextInt();
 		entrada.nextLine();
 
 		for (int i = 1; i <= qtd_jogadores; i++) {
-			System.out.println("Qual é o nome do " + i + "º jogador?");
+			System.out.println("Qual ï¿½ o nome do " + i + "ï¿½ jogador?");
 			int n = entrada.nextInt();
 			jogadores.add(new Jogador(n));
 		}
