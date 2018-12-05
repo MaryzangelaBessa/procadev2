@@ -2,13 +2,13 @@ package casas;
 
 import JGamePlay.GameImage;
 import atores.Jogador;
-import telas.JogoMain;
+import telas.ControladorJogo;
 import util.Posicao;
 
 public class ImpostoRenda extends CasaTabuleiro {
 	public ImpostoRenda(Posicao posicao) {
 		super(posicao);
-		this.imagem = new GameImage(JogoMain.filepath + "assets/not-today-tax.png");
+		this.imagem = new GameImage(ControladorJogo.filepath + "assets/not-today-tax.png");
 		this.imagem.setDimension(111, 118);
 		this.imagem.x = posicao.x;
 		this.imagem.y = posicao.y;

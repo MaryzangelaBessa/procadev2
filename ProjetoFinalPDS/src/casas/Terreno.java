@@ -8,8 +8,9 @@ import JGamePlay.GameImage;
 
 import JGamePlay.Text;
 import atores.Jogador;
-import telas.JogoMain;
+import telas.ControladorJogo;
 import telas.TerrenoMenu;
+
 import util.Posicao;
 
 public class Terreno extends CasaTabuleiro {
@@ -32,12 +33,12 @@ public class Terreno extends CasaTabuleiro {
 	private TerrenoMenu terrenoMenu;
 	private Font fontNome = new Font("Gothic Pixel", Font.TRUETYPE_FONT, 20);
 	private Text txtNome;
-	
+
 	public Terreno(Posicao posicao) {
 		super(posicao);
 		this.compravel = true;
 		this.qtd_casas = 0;
-		this.imagem = new GameImage(JogoMain.filepath + "assets/land.png");
+		this.imagem = new GameImage(ControladorJogo.filepath + "assets/land.png");
 		this.imagem.setDimension(125, 125);
 		this.imagem.x = posicao.x;
 		this.imagem.y = posicao.y;
@@ -227,24 +228,25 @@ public class Terreno extends CasaTabuleiro {
 			// reservarGrupoTerreno(terrenosAgrupados);
 			// }
 			boolean escolheu = false;
-			while(!escolheu) {
-				JogoMain.showTabuleiro();
+			while (!escolheu) {
+				ControladorJogo.getInstance().showTabuleiro();
 				this.terrenoMenu.desenharBuy();
-				
-				//boolean buy = this.terrenoMenu.buyClicked();
-				boolean pass = this.terrenoMenu.passClicked();
-//				if(buy) {
-//					this.comprarTerreno(jogador);
-//					this.compravel = false;
-//					ArrayList<Terreno> terrenosAgrupados = getGrupoTerreno();
-//					reservarGrupoTerreno(terrenosAgrupados);
-//					escolheu = true;
-//				}
-				if(pass) {
+
+				int choose = this.terrenoMenu.obterEscolha();
+				if (choose == 1) {
+					this.comprarTerreno(jogador);
+					this.compravel = false;
+					ArrayList<Terreno> terrenosAgrupados = getGrupoTerreno();
+					reservarGrupoTerreno(terrenosAgrupados);
 					escolheu = true;
 				}
-				JogoMain.janela.display();
+
+				if (choose == 2) {
+					escolheu = true;
+				}
+				ControladorJogo.janela.display();
 			}
+
 		} else if (!this.comprado & ehDono(jogador)) {
 			Scanner enter = new Scanner(System.in);
 			System.out.println("Gostaria de comprar este terreno?\n |1| Sim \n |2| Nao");

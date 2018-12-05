@@ -10,29 +10,31 @@ import cartoes.ConstrutorCartoes;
 import cartoes.IteradorCartoes;
 import casas.IteradorCasa;
 
-public class JogoMain {
+public class ControladorJogo {
 
 	public static String filepath = "src/";
 	public static Window janela = new Window(1000, 700);
-	private static TelaSelecionarJogadores telaSelecionar = new TelaSelecionarJogadores();
-	private static Tabuleiro tabuleiro = Tabuleiro.getInstance();
-	private static int numJogadores;
-	private static ArrayList<Jogador> jogadores;
-	public static ArrayList<Sprite> personagens;
-	private static MenuDado menuDado;
+	private TelaSelecionarJogadores telaSelecionar = new TelaSelecionarJogadores();
+	private Tabuleiro tabuleiro = Tabuleiro.getInstance();
+	private int numJogadores;
+	private ArrayList<Jogador> jogadores;
+	public ArrayList<Sprite> personagens;
+	private MenuDado menuDado;
+	private static ControladorJogo controladorJogo = new ControladorJogo(); 
 	
-	public static void main(String[] args) {
-		
-		tabuleiro.criarCasas();
-		criarPersonagens();
-		selecionarJogadores();
-		selecionarPesonagem();
-		tabuleiro.receberJogadores(jogadores);
-		iniciarJogo();
+	private ControladorJogo() {
 		
 	}
 	
-	public static void selecionarJogadores() {
+	public static ControladorJogo getInstance() {
+		return controladorJogo;
+	}
+	
+	public void criarCasas() {	
+		tabuleiro.criarCasas();
+	}
+	
+	public void selecionarJogadores() {
 		boolean selNumJogadores = false;
 		while(!selNumJogadores) {
 			telaSelecionar.desenharTela();
@@ -49,7 +51,7 @@ public class JogoMain {
 		}
 	}
 	
-	public static void iniciarJogo() {
+	public void iniciarJogo() {
 		IteradorCasa ic = IteradorCasa.getInstance();
 		ic.setCasas(tabuleiro.getCasas());
 		
@@ -57,8 +59,8 @@ public class JogoMain {
 		ArrayList<Cartao> cart = cc.construirCartoes();
 		IteradorCartoes icar = IteradorCartoes.getInstance();
 		icar.setCartoes(cart);
-		
-	    while(true) {
+
+		while(true) {
 			for (Jogador jogador : jogadores) {
 				boolean terminouVez = false;
 				menuDado = new MenuDado(jogador);
@@ -84,13 +86,13 @@ public class JogoMain {
 		}	
 	}
 	
-	public static void showTabuleiro() {
+	public void showTabuleiro() {
 		tabuleiro.mostraTabuleiro();
 		tabuleiro.desenharCasas();
 		tabuleiro.desenharJogadores();
 	}
 	
-	public static void criarPersonagens() {
+	public void criarPersonagens() {
 		personagens = new ArrayList<>();
 		Sprite adventure = new Sprite(filepath + "assets/characters/adventure.png", 13);
 		adventure.setDimension(32, 32);
@@ -118,7 +120,7 @@ public class JogoMain {
 		personagens.add(wizard);
 	}
 	
-	public static void selecionarPesonagem() {
+	public void selecionarPesonagem() {
 		for(int i = 0; (i < jogadores.size()) & (personagens.size() > 1); i++) {
 			boolean selecionou = false;
 			while(!selecionou) {
@@ -136,9 +138,7 @@ public class JogoMain {
 			Sprite personagem = personagens.get(sizep - 1);
 			ultimo.setPersonagem(personagem);
 		}
-		
+		tabuleiro.receberJogadores(jogadores);
 	}
-	
-	
-
 }
+

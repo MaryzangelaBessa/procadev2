@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 import JGamePlay.GameImage;
 import casas.*;
-import telas.JogoMain;
+import telas.ControladorJogo;
 import cartoes.*;
 public class Tabuleiro {
 	private static Tabuleiro tabuleiro = new Tabuleiro();
@@ -16,7 +16,7 @@ public class Tabuleiro {
 	private ConstrutorCasas construtorCasas = ConstrutorCasas.getInstance();
 	
 	private Tabuleiro() {
-		this.filepath = JogoMain.filepath;
+		this.filepath = ControladorJogo.filepath;
 		background = new GameImage(filepath + "assets/background.png");
 		casas = new ArrayList<CasaTabuleiro>();
 		cartoes = new ArrayList<Cartao>();

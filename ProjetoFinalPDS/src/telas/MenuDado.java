@@ -15,11 +15,11 @@ public class MenuDado {
 	private Sprite dado2;
 	private Text txtPlayer;
 	private GameImage btnThrowDice;
-	private Mouse mouse = JogoMain.janela.getMouse();
+	private Mouse mouse = ControladorJogo.janela.getMouse();
 	private Dado dado;
 	
 	public MenuDado(Jogador jogador) {
-		this.bgDado = new GameImage(JogoMain.filepath + "assets/dice-menu.png");
+		this.bgDado = new GameImage(ControladorJogo.filepath + "assets/dice-menu.png");
 		this.bgDado.setDimension(672, 296);
 		this.bgDado.x = 164;
 		this.bgDado.y = 202;
@@ -28,7 +28,7 @@ public class MenuDado {
 		this.txtPlayer = new Text("Player " + jogador.getId() + " turn", tx, ty);
 		this.txtPlayer.setFont(new Font("Gothic Pixel", Font.TRUETYPE_FONT, 60));
 		this.setDados();
-		this.btnThrowDice = new GameImage(JogoMain.filepath + "assets/dice-button.png");
+		this.btnThrowDice = new GameImage(ControladorJogo.filepath + "assets/dice-button.png");
 		this.btnThrowDice.setDimension(254, 70);
 		this.btnThrowDice.x = (int) this.bgDado.x + 314;
 		this.btnThrowDice.y = (int) this.bgDado.y + 174;
@@ -68,11 +68,11 @@ public class MenuDado {
 	}
 	
 	private void setDados() {
-		this.dado1 = new Sprite(JogoMain.filepath + "assets/dice.png", 6);
+		this.dado1 = new Sprite(ControladorJogo.filepath + "assets/dice.png", 6);
 		this.dado1.setDimension(70, 70);
 		this.dado1.setCurrFrame(0);
 		this.dado1.setTimeChangeFrame(125);
-		this.dado2 = new Sprite(JogoMain.filepath + "assets/dice.png", 6);
+		this.dado2 = new Sprite(ControladorJogo.filepath + "assets/dice.png", 6);
 		this.dado2.setDimension(70, 70);
 		this.dado2.setCurrFrame(0);
 		this.dado2.setTimeChangeFrame(125);
