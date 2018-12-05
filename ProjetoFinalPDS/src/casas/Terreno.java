@@ -1,15 +1,14 @@
 package casas;
 
+import java.awt.Font;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 import JGamePlay.GameImage;
-import base.Jogador;
-import base.JogoMain;
-
-import base.TerrenoMenu;
-import iterador.IteradorCasa;
-
+import JGamePlay.Text;
+import atores.Jogador;
+import telas.JogoMain;
+import telas.TerrenoMenu;
 import util.Posicao;
 
 public class Terreno extends CasaTabuleiro {
@@ -20,6 +19,7 @@ public class Terreno extends CasaTabuleiro {
 
 	private boolean comprado; // titulo
 	private boolean compravel;
+	private String nome;
 	private String grupo;
 	private int aluguelTerreno;
 	private Jogador proprietario;
@@ -29,7 +29,9 @@ public class Terreno extends CasaTabuleiro {
 	private int qtd_casas;
 	private Hotel hotel = new Hotel();
 	private TerrenoMenu terrenoMenu;
-
+	private Font fontNome = new Font("Gothic Pixel", Font.TRUETYPE_FONT, 20);
+	private Text txtNome;
+	
 	public Terreno(Posicao posicao) {
 		super(posicao);
 		this.compravel = true;
@@ -39,7 +41,6 @@ public class Terreno extends CasaTabuleiro {
 		this.imagem.x = posicao.x;
 		this.imagem.y = posicao.y;
 		this.setLugares();
-		this.terrenoMenu = new TerrenoMenu(this);
 	}
 
 	public void comprarTerreno(Jogador novoProprietario) {
@@ -81,8 +82,7 @@ public class Terreno extends CasaTabuleiro {
 				jogador.getPersonagem().y = this.lugaresJogadores.get(i).y;
 				break;
 			}
-		}
-		
+		}	
 	}
 
 	public void cobrarAluguel(Jogador jogador) {
@@ -121,10 +121,19 @@ public class Terreno extends CasaTabuleiro {
 
 	public void desenhar() {
 		this.imagem.draw();
+		this.txtNome.draw();
+	}
+
+	public String getNome() {
+		return nome;
 	}
 
 	public void setNome(String nome) {
-
+		this.nome = nome;
+		int tx = (int) this.imagem.x + 16;
+		int ty = (int) this.imagem.y + 20;
+		this.txtNome = new Text(this.nome, tx, ty);
+		this.txtNome.setFont(fontNome);
 	}
 
 	public void adicionarCasa() {
@@ -198,21 +207,31 @@ public class Terreno extends CasaTabuleiro {
 
 	public void setHotel(Hotel hotel) {
 		this.hotel = hotel;
+		this.terrenoMenu = new TerrenoMenu(this);
 	}
 
 	@Override
 	public void executarAcao(Jogador jogador) {
 		if (!this.comprado & this.compravel) {
-			this.terrenoMenu.desenharBuy();
-//			Scanner enter = new Scanner(System.in);
-//			System.out.println("Gostaria de comprar este terreno?\n |1| Sim \n |2| Nao");
-//			String e = enter.nextLine();
-//			if (e.equals("1")) {
-//				this.comprarTerreno(jogador);
-//				this.compravel = false;
-//				ArrayList<Terreno> terrenosAgrupados = getGrupoTerreno();
-//				reservarGrupoTerreno(terrenosAgrupados);
-//			}
+			boolean escolheu = false;
+			while(!escolheu) {
+				JogoMain.showTabuleiro();
+				this.terrenoMenu.desenharBuy();
+				
+				//boolean buy = this.terrenoMenu.buyClicked();
+				boolean pass = this.terrenoMenu.passClicked();
+//				if(buy) {
+//					this.comprarTerreno(jogador);
+//					this.compravel = false;
+//					ArrayList<Terreno> terrenosAgrupados = getGrupoTerreno();
+//					reservarGrupoTerreno(terrenosAgrupados);
+//					escolheu = true;
+//				}
+				if(pass) {
+					escolheu = true;
+				}
+				JogoMain.janela.display();
+			}
 		} else if (!this.comprado & ehDono(jogador)) {
 			Scanner enter = new Scanner(System.in);
 			System.out.println("Gostaria de comprar este terreno?\n |1| Sim \n |2| Nao");
@@ -221,6 +240,7 @@ public class Terreno extends CasaTabuleiro {
 				this.comprarTerreno(jogador);
 				this.compravel = false;
 			}
+			enter.close();
 		} else if (this.comprado && jogador != this.proprietario) {
 			System.out.println("Pague " + this.aluguelTerreno + " Para " + this.proprietario.getNome());
 			this.cobrarAluguel(jogador);
@@ -231,6 +251,7 @@ public class Terreno extends CasaTabuleiro {
 			if (e.equals("1")) {
 				this.addPropriedade(jogador);
 			}
+			enter.close();
 		}
 	}
 
@@ -269,7 +290,6 @@ public class Terreno extends CasaTabuleiro {
 			}
 		}
 		return menor;
-
 	}
 
 	public Terreno Min(Jogador jogador) {
@@ -281,7 +301,6 @@ public class Terreno extends CasaTabuleiro {
 			}
 		}
 		return maior;
-
 	}
 
 	public boolean ehDono(Jogador jogador) {

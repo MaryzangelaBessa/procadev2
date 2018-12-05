@@ -1,8 +1,7 @@
-package base;
+package telas;
 
 import JGamePlay.GameImage;
 import JGamePlay.Mouse;
-import JGamePlay.Sprite;
 
 public class TelaSelecionarJogadores {
 

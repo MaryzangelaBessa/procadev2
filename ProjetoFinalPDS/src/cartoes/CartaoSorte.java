@@ -1,6 +1,6 @@
 package cartoes;
 
-import base.Jogador;
+import atores.Jogador;
 import casas.PontoPartida;
 import interfaces.Acao;
 import interfaces.AcaoReceber;

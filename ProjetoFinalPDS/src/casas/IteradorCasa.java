@@ -1,11 +1,8 @@
-package iterador;
+package casas;
 
 import java.util.ArrayList;
 
-import base.Jogador;
-//import cartoes.IteradorCartoes;
-import casas.CasaTabuleiro;
-import casas.PontoPartida;
+import atores.Jogador;
 
 public class IteradorCasa {
 	private ArrayList<CasaTabuleiro> casas = new ArrayList<CasaTabuleiro>();
@@ -22,7 +19,6 @@ public class IteradorCasa {
 	public void andar(Jogador j, ArrayList<CasaTabuleiro> casas, int x){
 		int atual = this.getCasaAtual(j.getPosicaoAtual(), casas);
 		int novaPosicao = (atual + x) % casas.size();
-		// casas.get(atual).getLugaresJogadores().remove()
 		CasaTabuleiro novaCasa = casas.get(novaPosicao);
 		j.setPosicaoAtual(novaCasa);
 		novaCasa.addJogador(j);

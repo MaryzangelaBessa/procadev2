@@ -1,7 +1,5 @@
 package cartoes;
 
-
-
 public abstract class Cartao {
 	private String descricao;
 	

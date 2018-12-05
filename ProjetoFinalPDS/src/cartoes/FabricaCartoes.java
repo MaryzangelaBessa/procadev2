@@ -2,8 +2,8 @@ package cartoes;
 
 public class FabricaCartoes {
 	private Cartao cartao;
-	public Cartao criarCartao(String tipo, String desc) {
-		
+	
+	public Cartao criarCartao(String tipo, String desc) {	
 		switch (tipo) {
 		case "Sorte":
 			cartao = new CartaoSorte(desc);

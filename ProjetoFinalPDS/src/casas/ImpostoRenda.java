@@ -1,10 +1,8 @@
 package casas;
 
-//import java.util.ArrayList;
-
 import JGamePlay.GameImage;
-import base.Jogador;
-import base.JogoMain;
+import atores.Jogador;
+import telas.JogoMain;
 import util.Posicao;
 
 public class ImpostoRenda extends CasaTabuleiro {

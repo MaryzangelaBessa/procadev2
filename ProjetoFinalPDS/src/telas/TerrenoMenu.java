@@ -1,4 +1,4 @@
-package base;
+package telas;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -25,8 +25,6 @@ public class TerrenoMenu {
 	private Text txtHousePrice;
 	private Text txtCastlePrice;
 	private GameImage buyBtn;
-	private GameImage buildHouseBtn;
-	private GameImage buildCastleBtn;
 	private GameImage passBtn;
 	private Mouse mouse;
 	
@@ -37,9 +35,11 @@ public class TerrenoMenu {
 		this.menuTerrenoBG.y = 76;
 		this.setTexts();
 		this.buyBtn = new GameImage(JogoMain.filepath + "assets/buy-land-btn.png");
+		this.buyBtn.setDimension(98, 70);
 		this.buyBtn.x = 164+371; 
 		this.buyBtn.y = 76+422;
 		this.passBtn = new GameImage(JogoMain.filepath + "assets/pass-btn.png");
+		this.passBtn.setDimension(118, 70);
 		this.passBtn.x = 164+485; 
 		this.passBtn.y = 76+422;
 		this.mouse = JogoMain.janela.getMouse();
@@ -49,7 +49,7 @@ public class TerrenoMenu {
 		int mtx = (int) this.menuTerrenoBG.x;
 		int mty = (int) this.menuTerrenoBG.y;
 		this.fontTops = new Font("Gothic Pixel", Font.TRUETYPE_FONT, 70);
-		this.txtNomeTerreno = new Text("Nome do terreno", mtx + 70, mty + 101); 
+		this.txtNomeTerreno = new Text(terreno.getNome(), mtx + 70, mty + 101); 
 		this.txtNomeTerreno.setColor(Color.BLACK);
 		this.txtNomeTerreno.setFont(fontTops);
 		
@@ -58,7 +58,7 @@ public class TerrenoMenu {
 		this.txtOwner.setFont(fontTops);
 		
 		this.fontPrices = new Font("Gothic Pixel", Font.TRUETYPE_FONT, 35);
-		this.txtPrice = new Text("Price 200", mtx + 70, mty + 254); 
+		this.txtPrice = new Text("Price " + terreno.getPrecoTerreno(), mtx + 70, mty + 254); 
 		this.txtPrice.setColor(Color.BLACK);
 		this.txtPrice.setFont(fontPrices);
 		
@@ -66,31 +66,31 @@ public class TerrenoMenu {
 		this.txtLandRent.setColor(Color.RED);
 		this.txtLandRent.setFont(fontPrices);
 		
-		this.txtOneHouseRent = new Text("One House Rent 22", mtx + 70, mty + 334); 
+		this.txtOneHouseRent = new Text("One House Rent " + terreno.getAluguel1(), mtx + 70, mty + 334); 
 		this.txtOneHouseRent.setColor(Color.RED);
 		this.txtOneHouseRent.setFont(fontPrices);
 		
-		this.txtTwoHouseRent = new Text("Two House Rent 22", mtx + 70, mty + 374); 
+		this.txtTwoHouseRent = new Text("Two House Rent " + terreno.getAluguel2(), mtx + 70, mty + 374); 
 		this.txtTwoHouseRent.setColor(Color.RED);
 		this.txtTwoHouseRent.setFont(fontPrices);
 		
-		this.txtTreeHouseRent = new Text("Three House Rent 22", mtx + 70, mty + 414); 
+		this.txtTreeHouseRent = new Text("Three House Rent " + terreno.getAluguel3(), mtx + 70, mty + 414); 
 		this.txtTreeHouseRent.setColor(Color.RED);
 		this.txtTreeHouseRent.setFont(fontPrices);
 		
-		this.txtFourHouseRent = new Text("Four House Rent 22", mtx + 70, mty + 454); 
+		this.txtFourHouseRent = new Text("Four House Rent " + terreno.getAluguel4(), mtx + 70, mty + 454); 
 		this.txtFourHouseRent.setColor(Color.RED);
 		this.txtFourHouseRent.setFont(fontPrices);
 		
-		this.txtCastleRent = new Text("Castle Rent 22", mtx + 70, mty + 494); 
+		this.txtCastleRent = new Text("Castle Rent " + terreno.getHotel().getAluguelHotel(), mtx + 70, mty + 494); 
 		this.txtCastleRent.setColor(Color.RED);
 		this.txtCastleRent.setFont(fontPrices);
 		
-		this.txtHousePrice = new Text("House Price 100", mtx + 371, mty + 254); 
+		this.txtHousePrice = new Text("House Price " + terreno.getPrecoCasa(), mtx + 371, mty + 254); 
 		this.txtHousePrice.setColor(Color.BLACK);
 		this.txtHousePrice.setFont(fontPrices);
 		
-		this.txtCastlePrice = new Text("Castle Price 100", mtx + 371, mty + 294); 
+		this.txtCastlePrice = new Text("Castle Price " + terreno.getPrecoHotel(), mtx + 371, mty + 294); 
 		this.txtCastlePrice.setColor(Color.BLACK);
 		this.txtCastlePrice.setFont(fontPrices);
 		
@@ -130,8 +130,15 @@ public class TerrenoMenu {
 		this.drawBtnActions();
 	}
 	
-	public boolean buyClicked() {
-		if(mouse.isOverObject(this.buyBtn) & mouse.isLeftButtonPressed()) {
+//	public boolean buyClicked() {
+//		if(mouse.isOverObject(this.buyBtn) & mouse.isLeftButtonPressed()) {
+//			return true;
+//		}
+//		return false;
+//	}
+	
+	public boolean passClicked() {
+		if(mouse.isOverObject(this.passBtn) & mouse.isLeftButtonPressed()) {
 			return true;
 		}
 		return false;

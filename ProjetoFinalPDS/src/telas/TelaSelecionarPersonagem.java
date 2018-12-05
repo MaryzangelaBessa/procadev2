@@ -1,4 +1,4 @@
-package base;
+package telas;
 
 import java.awt.Font;
 import java.util.ArrayList;
@@ -7,6 +7,7 @@ import JGamePlay.GameImage;
 import JGamePlay.Mouse;
 import JGamePlay.Sprite;
 import JGamePlay.Text;
+import atores.Jogador;
 
 public class TelaSelecionarPersonagem {
 	private GameImage bgCharacters;

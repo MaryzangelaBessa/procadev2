@@ -1,10 +1,8 @@
 package casas;
 
-import java.util.ArrayList;
-
 import JGamePlay.GameImage;
-import base.Jogador;
-import base.JogoMain;
+import atores.Jogador;
+import telas.JogoMain;
 import util.Posicao;
 
 public class ParadaLivre extends CasaTabuleiro{
@@ -29,7 +27,7 @@ public class ParadaLivre extends CasaTabuleiro{
 
 	@Override
 	public void executarAcao(Jogador jogador) {
-		System.out.println("Olá " + jogador.getNome() + " você está na Parada Livre! "
+		System.out.println("Olï¿½ " + jogador.getNome() + " vocï¿½ estï¿½ na Parada Livre! "
 				+ "Nada de mais Acontece aqui!");
 		
 	}

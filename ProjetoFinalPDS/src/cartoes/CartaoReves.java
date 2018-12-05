@@ -1,9 +1,7 @@
 package cartoes;
 
-import base.Jogador;
-import casas.Prisao;
+import atores.Jogador;
 import interfaces.Acao;
-
 import interfaces.AcaoPagar;
 import interfaces.AcaoVaPrisao;
 

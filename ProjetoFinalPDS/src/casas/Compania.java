@@ -1,10 +1,11 @@
 package casas;
 
-//import java.util.ArrayList;
+import java.awt.Font;
 
 import JGamePlay.GameImage;
-import base.Jogador;
-import base.JogoMain;
+import JGamePlay.Text;
+import atores.Jogador;
+import telas.JogoMain;
 import util.Posicao;
 
 public class Compania extends CasaTabuleiro {
@@ -12,12 +13,13 @@ public class Compania extends CasaTabuleiro {
 	private Jogador proprietario;
 	private boolean comprado;
 	private int precoCompania;
+	private String nome;
+	private Font fontNome = new Font("Gothic Pixel", Font.TRUETYPE_FONT, 20);
+	private Text txtNome;
 
 	public Compania(Posicao posicao) {
 		super(posicao);
-
 		this.comprado = false;
-
 		this.imagem = new GameImage(JogoMain.filepath + "assets/company.png");
 		this.imagem.setDimension(105, 114);
 		this.imagem.x = posicao.x;
@@ -51,8 +53,7 @@ public class Compania extends CasaTabuleiro {
 				jogador.getPersonagem().y = this.lugaresJogadores.get(i).y;
 				break;
 			}
-		}
-		
+		}	
 	}
 
 	public void comprarCompania(Jogador novoProprietario) {
@@ -74,6 +75,23 @@ public class Compania extends CasaTabuleiro {
 			this.comprarCompania(jogador);
 		else
 			this.cobrarTaxa(jogador);
+	}
+	
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+		int tx = (int) this.imagem.x + 16;
+		int ty = (int) this.imagem.y + 20;
+		this.txtNome = new Text(this.nome, tx, ty);
+		this.txtNome.setFont(fontNome);
+	}
+	
+	public void desenhar() {
+		this.imagem.draw();
+		this.txtNome.draw();
 	}
 
 	public int getTaxa() {

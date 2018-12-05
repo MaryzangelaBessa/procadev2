@@ -1,6 +1,6 @@
 package casas;
 
-import base.Jogador;
+import atores.Jogador;
 
 public abstract class TituloPosse {
 	private boolean comprado;

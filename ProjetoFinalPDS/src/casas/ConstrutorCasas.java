@@ -2,13 +2,22 @@ package casas;
 
 import java.util.ArrayList;
 
-import base.JogoMain;
+import telas.JogoMain;
 import util.Posicao;
 
 public class ConstrutorCasas {
 	ArrayList<CasaTabuleiro> casas = new ArrayList<CasaTabuleiro>();
 	FabricaCasas fc = FabricaCasas.getInstance();
-
+	private static ConstrutorCasas construtorCasas = new ConstrutorCasas();
+	
+	private ConstrutorCasas() {
+		
+	}
+	
+	public static ConstrutorCasas getInstance() {
+		return construtorCasas;
+	}
+	
 	public ArrayList<CasaTabuleiro> construirCasas() {
 
 		int tabuleiroWidth = JogoMain.janela.getWidth();
@@ -25,7 +34,7 @@ public class ConstrutorCasas {
 		Posicao cbPos = new Posicao(twPos.x + wall.getImagem().width + l1xpadding, vypadding);
 		Terreno castleBlack;
 		castleBlack = (Terreno) fc.construirCasa("Terreno", cbPos);
-		castleBlack.setNome("CASTLE BLACK");
+		castleBlack.setNome("Castle Black");
 		castleBlack.setGrupo("Stark");
 		castleBlack.setPrecoTerreno(100);
 		castleBlack.setAluguelTerreno(6);
@@ -43,7 +52,7 @@ public class ConstrutorCasas {
 		Posicao wiPos = new Posicao(pSR1.x + sr1.getImagem().width + l1xpadding, vypadding);
 		Terreno winterfel;
 		winterfel = (Terreno) fc.construirCasa("Terreno", wiPos);
-		winterfel.setNome("Winterfel");
+		winterfel.setNome("Winterfell");
 		winterfel.setGrupo("Stark");
 		winterfel.setPrecoTerreno(60);
 		winterfel.setAluguelTerreno(2);
@@ -57,7 +66,7 @@ public class ConstrutorCasas {
 		Posicao boPos = new Posicao(wiPos.x + winterfel.getImagem().width + l1xpadding, vypadding);
 		Terreno bolton;
 		bolton = (Terreno) fc.construirCasa("Terreno", boPos);
-		bolton.setNome("Castel Winterfel");
+		bolton.setNome("Bolton Castle");
 		bolton.setGrupo("Stark");
 		bolton.setPrecoTerreno(60);
 		bolton.setAluguelTerreno(4);
@@ -70,6 +79,7 @@ public class ConstrutorCasas {
 
 		Posicao co1Pos = new Posicao(boPos.x + bolton.getImagem().width + l1xpadding, vypadding);
 		Compania comp1 = (Compania) fc.construirCasa("Compania", co1Pos);
+		comp1.setNome("Stark Beer Co");
 		comp1.setPrecoCompania(200);
 		comp1.setTaxa(50);
 		casas.add(comp1);
@@ -77,7 +87,7 @@ public class ConstrutorCasas {
 		Posicao haPos = new Posicao(co1Pos.x + comp1.getImagem().width + l1xpadding, vypadding);
 		Terreno nom;
 		nom = (Terreno) fc.construirCasa("Terreno", haPos);
-		nom.setNome("");
+		nom.setNome("Hammer");
 		nom.setGrupo("Greyjoy");
 		nom.setPrecoTerreno(240);
 		nom.setAluguelTerreno(20);
@@ -90,14 +100,14 @@ public class ConstrutorCasas {
 
 		Posicao co2Pos = new Posicao(haPos.x + nom.getImagem().width + l1xpadding, vypadding);
 		Compania comp2 = (Compania) fc.construirCasa("Compania", co2Pos);
+		comp2.setNome("Greijoy Sail");
 		comp2.setPrecoCompania(-200);
 		comp2.setTaxa(50);
 		casas.add(comp2);
 
 		Posicao pikePos = new Posicao(co2Pos.x + comp2.getImagem().width + l1xpadding, vypadding);
-		// Terreno nom;
 		Terreno pike = (Terreno) fc.construirCasa("Terreno", pikePos);
-		// nom.setNome("");
+		pike.setNome("Pike");
 		pike.setGrupo("Greyjoy");
 		pike.setPrecoTerreno(220);
 		pike.setAluguelTerreno(18);
@@ -109,7 +119,6 @@ public class ConstrutorCasas {
 		casas.add(pike);
 
 		// <---------- segunda linha
-
 		double l2xpadding = 9.5;
 
 		Posicao ttPos = new Posicao(tabuleiroWidth - l2xpadding, pikePos.y + pike.getImagem().height + vypadding);
@@ -117,16 +126,16 @@ public class ConstrutorCasas {
 		ttPos = tenTowers.getPosicao();
 		ttPos.x = ttPos.x - tenTowers.getImagem().width;
 		tenTowers.setPosicao(ttPos);
-		Terreno Tentowers = (Terreno) fc.construirCasa("Terreno", ttPos);
-		Tentowers.setGrupo("Greyjoy");
-		Tentowers.setPrecoTerreno(220);
-		Tentowers.setAluguelTerreno(18);
-		Tentowers.setAluguel1(90);
-		Tentowers.setAluguel2(250);
-		Tentowers.setAluguel3(700);
-		Tentowers.setAluguel4(875);
-		Tentowers.setHotel(new Hotel(1050));
-		casas.add(Tentowers);
+		tenTowers.setNome("Ten Towers");
+		tenTowers.setGrupo("Greyjoy");
+		tenTowers.setPrecoTerreno(220);
+		tenTowers.setAluguelTerreno(18);
+		tenTowers.setAluguel1(90);
+		tenTowers.setAluguel2(250);
+		tenTowers.setAluguel3(700);
+		tenTowers.setAluguel4(875);
+		tenTowers.setHotel(new Hotel(1050));
+		casas.add(tenTowers);
 
 		Posicao duPos = new Posicao(ttPos.x - l2xpadding, ttPos.y);
 		Prisao dungeon = (Prisao) fc.construirCasa("Prisao", duPos);
@@ -140,6 +149,7 @@ public class ConstrutorCasas {
 		ssPos = strongSong.getPosicao();
 		ssPos.x = ssPos.x - strongSong.getImagem().width;
 		strongSong.setPosicao(ssPos);
+		strongSong.setNome("Strong Song");
 		strongSong.setGrupo("Ayrrin");
 		strongSong.setPrecoTerreno(200);
 		strongSong.setAluguelTerreno(16);
@@ -162,6 +172,7 @@ public class ConstrutorCasas {
 		tePos = theEyre.getPosicao();
 		tePos.x = tePos.x - theEyre.getImagem().width;
 		theEyre.setPosicao(tePos);
+		theEyre.setNome("The Eyre");
 		theEyre.setGrupo("Ayrrin");
 		theEyre.setPrecoTerreno(180);
 		theEyre.setAluguelTerreno(14);
@@ -177,6 +188,7 @@ public class ConstrutorCasas {
 		rfPos = redFort.getPosicao();
 		rfPos.x = rfPos.x - redFort.getImagem().width;
 		redFort.setPosicao(rfPos);
+		redFort.setNome("Red Fort");
 		redFort.setGrupo("Ayrrin");
 		redFort.setPrecoTerreno(180);
 		redFort.setAluguelTerreno(14);
@@ -192,6 +204,7 @@ public class ConstrutorCasas {
 		co3Pos = comp3.getPosicao();
 		co3Pos.x = co3Pos.x - comp3.getImagem().width;
 		comp3.setPosicao(co3Pos);
+		comp3.setNome("Fly Ayrrin");
 		comp3.setPrecoCompania(150);
 		comp3.setTaxa(40);
 		casas.add(comp3);
@@ -208,6 +221,7 @@ public class ConstrutorCasas {
 		dsPos = dragonStone.getPosicao();
 		dsPos.x = dsPos.x - dragonStone.getImagem().width;
 		dragonStone.setPosicao(dsPos);
+		dragonStone.setNome("Dragon Stone");
 		dragonStone.setGrupo("Targaryen");
 		dragonStone.setPrecoTerreno(350);
 		dragonStone.setAluguelTerreno(35);
@@ -229,6 +243,7 @@ public class ConstrutorCasas {
 		
 		Posicao rrPos = new Posicao(ldPos.x+profits.getImagem().width+l3xpadding, ldPos.y);
 		Terreno rooksRest = (Terreno) fc.construirCasa("Terreno", rrPos);
+		rooksRest.setNome("Rooks Rest");
 		rooksRest.setGrupo("Targaryen");
 		rooksRest.setPrecoTerreno(400);
 		rooksRest.setAluguelTerreno(50);
@@ -247,6 +262,7 @@ public class ConstrutorCasas {
 
 		Posicao crPos = new Posicao(fsPos.x+freeStop.getImagem().width+(2*l3xpadding)+283, ldPos.y);
 		Terreno casterlyRock = (Terreno) fc.construirCasa("Terreno", crPos);		
+		casterlyRock.setNome("Casterly Rock");
 		casterlyRock.setGrupo("Lennister");
 		casterlyRock.setPrecoTerreno(120);
 		casterlyRock.setAluguelTerreno(8);
@@ -263,6 +279,7 @@ public class ConstrutorCasas {
 
 		Posicao hvPos = new Posicao(pSR4.x+sr4.getImagem().width+l3xpadding, ldPos.y);
 		Terreno hornVale = (Terreno) fc.construirCasa("Terreno", hvPos);
+		hornVale.setNome("Horn Vale");
 		hornVale.setGrupo("Lennister");
 		hornVale.setPrecoTerreno(100);
 		hornVale.setAluguelTerreno(6);
@@ -275,7 +292,7 @@ public class ConstrutorCasas {
 		
 		// <----- asas quarta linha
 		
-double l4xpadding = 14.888;
+		double l4xpadding = 14.888;
 		
 		Posicao ntPos = new Posicao(tabuleiroWidth-l4xpadding, hvPos.y+hornVale.getImagem().height+vypadding); 
 		ImpostoRenda notToday = (ImpostoRenda) fc.construirCasa("ImpostoRenda", ntPos);
@@ -289,6 +306,7 @@ double l4xpadding = 14.888;
 		co4Pos = comp4.getPosicao();
 		co4Pos.x = co4Pos.x - comp4.getImagem().width;
 		comp4.setPosicao(co4Pos);
+		comp4.setNome("Lannister Loans");
 		casas.add(comp4);
 
 		Posicao shPos = new Posicao(co4Pos.x-l4xpadding, ntPos.y); 
@@ -296,6 +314,7 @@ double l4xpadding = 14.888;
 		shPos = sowsHorn.getPosicao();
 		shPos.x = shPos.x - sowsHorn.getImagem().width;
 		sowsHorn.setPosicao(shPos);
+		sowsHorn.setNome("Sows Horn");
 		sowsHorn.setGrupo("Baratheon");
 		sowsHorn.setPrecoTerreno(160);
 		sowsHorn.setAluguelTerreno(12);
@@ -318,6 +337,7 @@ double l4xpadding = 14.888;
 		hfPos = hayford.getPosicao();
 		hfPos.x = hfPos.x - hayford.getImagem().width;
 		hayford.setPosicao(hfPos);
+		hayford.setNome("Hayford");
 		hayford.setGrupo("Baratheon");
 		hayford.setPrecoTerreno(140);
 		hayford.setAluguelTerreno(10);
@@ -333,6 +353,7 @@ double l4xpadding = 14.888;
 		klPos = kingsLanding.getPosicao();
 		klPos.x = klPos.x - kingsLanding.getImagem().width;
 		kingsLanding.setPosicao(klPos);
+		kingsLanding.setNome("Kings Landing");
 		kingsLanding.setGrupo("Baratheon");
 		kingsLanding.setPrecoTerreno(140);
 		kingsLanding.setAluguelTerreno(10);
@@ -357,6 +378,7 @@ double l4xpadding = 14.888;
 		bbPos = bitterbridge.getPosicao();
 		bbPos.x = bbPos.x - bitterbridge.getImagem().width;
 		bitterbridge.setPosicao(bbPos);
+		bitterbridge.setNome("Bitter Bridge");
 		bitterbridge.setGrupo("Tyrell");
 		bitterbridge.setPrecoTerreno(260);
 		bitterbridge.setAluguelTerreno(22);
@@ -367,17 +389,18 @@ double l4xpadding = 14.888;
 		bitterbridge.setHotel(new Hotel(1150));
 		casas.add(bitterbridge);
 
-double l5xpadding = 15.555;
+		double l5xpadding = 15.555;
 		
 		Posicao co5Pos = new Posicao(l5xpadding, bbPos.y+bitterbridge.getImagem().height+vypadding);
 		Compania comp5 = (Compania) fc.construirCasa("Compania", co5Pos);
 		comp5.setPrecoCompania(200);
 		comp5.setTaxa(50);
-		// castel.setNome("Castel Winterfel");
+		comp5.setNome("Tyrell Foods");
 		casas.add(comp5);
 
 		Posicao ltPos = new Posicao(co5Pos.x + comp5.getImagem().width + l5xpadding, co5Pos.y);
 		Terreno longTable = (Terreno) fc.construirCasa("Terreno", ltPos);
+		longTable.setNome("Long Table");
 		longTable.setGrupo("Tyrell");
 		longTable.setPrecoTerreno(320);
 		longTable.setAluguelTerreno(28);
@@ -390,6 +413,7 @@ double l5xpadding = 15.555;
 
 		Posicao chPos = new Posicao(ltPos.x + longTable.getImagem().width + l5xpadding, co5Pos.y);
 		Terreno ciderHall = (Terreno) fc.construirCasa("Terreno", chPos);
+		ciderHall.setNome("Cider Hall");
 		ciderHall.setGrupo("Tyrell");
 		ciderHall.setPrecoTerreno(300);
 		ciderHall.setAluguelTerreno(26);
@@ -402,10 +426,12 @@ double l5xpadding = 15.555;
 
 		Posicao co6Pos = new Posicao(chPos.x + ciderHall.getImagem().width + l5xpadding, co5Pos.y);
 		Compania comp6 = (Compania) fc.construirCasa("Compania", co6Pos);
+		comp6.setNome("Tyrell Flowers");
 		casas.add(comp6);
 		
 		Posicao hgPos = new Posicao(co6Pos.x + comp6.getImagem().width + l5xpadding, co5Pos.y);
 		Terreno highGarden = (Terreno) fc.construirCasa("Terreno", hgPos);
+		highGarden.setNome("HighGarden");
 		highGarden.setGrupo("Tyrell");
 		highGarden.setPrecoTerreno(300);
 		highGarden.setAluguelTerreno(26);
@@ -422,6 +448,7 @@ double l5xpadding = 15.555;
 
 		Posicao ggPos = new Posicao(pSR6.x + sr6.getImagem().width + l5xpadding, co5Pos.y);
 		Terreno godsGrace = (Terreno) fc.construirCasa("Terreno", ggPos);
+		godsGrace.setNome("Gods Grace");
 		godsGrace.setGrupo("Martell");
 		godsGrace.setPrecoTerreno(280);
 		godsGrace.setAluguelTerreno(24);
@@ -434,6 +461,7 @@ double l5xpadding = 15.555;
 
 		Posicao spPos = new Posicao(ggPos.x + godsGrace.getImagem().width + l5xpadding, co5Pos.y);
 		Terreno sunspear = (Terreno) fc.construirCasa("Terreno", spPos);
+		sunspear.setNome("Sunspear");
 		sunspear.setGrupo("Martell");
 		sunspear.setPrecoTerreno(260);
 		sunspear.setAluguelTerreno(22);
