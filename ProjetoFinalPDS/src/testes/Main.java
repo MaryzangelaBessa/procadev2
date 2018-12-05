@@ -6,7 +6,7 @@ import base.*;
 import cartoes.*;
 import casas.*;
 import iterador.IteradorCasa;
-import tabuleiro.Tabuleiro;
+import base.Tabuleiro;
 
 public class Main {
 	
@@ -28,12 +28,12 @@ public class Main {
 		int qtd_jogadores, valorDado1, valorDado2;
 		Scanner entrada = new Scanner(System.in);
 
-		System.out.println("Quantas pessoas vão jogar?");
+		System.out.println("Quantas pessoas vï¿½o jogar?");
 		qtd_jogadores = entrada.nextInt();
 		entrada.nextLine();
 
 		for (int i = 1; i <= qtd_jogadores; i++) {
-			System.out.println("Qual é o nome do " + i + "º jogador?");
+			System.out.println("Qual ï¿½ o nome do " + i + "ï¿½ jogador?");
 			int n = entrada.nextInt();
 			jogadores.add(new Jogador(n));
 		}
@@ -53,7 +53,7 @@ public class Main {
 				ic.andar(jogador, casas, valorDado1 + valorDado2);
 
 				System.out.println(
-						"O jogador " + jogador.getNome() + " está agora na casa " + jogador.getPosicaoAtual().euSou());
+						"O jogador " + jogador.getNome() + " estï¿½ agora na casa " + jogador.getPosicaoAtual().euSou());
 				entrada.nextLine();
 
 				jogador.getPosicaoAtual().executarAcao(jogador);

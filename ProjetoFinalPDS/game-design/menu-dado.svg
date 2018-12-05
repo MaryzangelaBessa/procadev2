@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1000"
+   height="700"
+   viewBox="0 0 264.58333 185.20834"
+   version="1.1"
+   id="svg12926"
+   inkscape:version="0.92.3 (5aff6ba, 2018-11-25)"
+   sodipodi:docname="menu-dado.svg">
+  <defs
+     id="defs12920" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.73672131"
+     inkscape:cx="336.20764"
+     inkscape:cy="420.8732"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1301"
+     inkscape:window-height="744"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-page="true"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="50.312746,131.8284"
+       orientation="0,1"
+       id="guide14102"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="43.375604,129.33395"
+       orientation="1,0"
+       id="guide14113"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="79.587533,108.53667"
+       orientation="1,0"
+       id="guide14115"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="109.83237,99.196696"
+       orientation="0,1"
+       id="guide14117"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="71.004186,74.520776"
+       orientation="1,0"
+       id="guide14119"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="75.777749,85.863304"
+       orientation="0,1"
+       id="guide14121"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="98.705579,76.597498"
+       orientation="1,0"
+       id="guide14123"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata12923">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-111.79165)">
+    <rect
+       style="opacity:1;fill:#6df7b1;fill-opacity:1;stroke:none;stroke-width:0.35357377;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect6486"
+       width="264.58334"
+       height="185.20833"
+       x="-7.077288e-06"
+       y="111.79165"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/home/abilio/character-selection.png" />
+    <rect
+       style="opacity:1;fill:#fbd09e;fill-opacity:1;stroke:none;stroke-width:0.79075998;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect10280"
+       width="176.59538"
+       height="77.2118"
+       x="43.993961"
+       y="165.7899"
+       inkscape:export-filename="/home/abilio/dice-menu.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.34851265px;line-height:1.25;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.5718351"
+       x="132.95882"
+       y="191.13188"
+       id="text10286"><tspan
+         sodipodi:role="line"
+         id="tspan10282"
+         x="132.95882"
+         y="191.13188"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke-width:0.5718351">Player 1 Turn</tspan><tspan
+         id="tspan10284"
+         sodipodi:role="line"
+         x="132.95882"
+         y="217.81752"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke-width:0.5718351" /></text>
+    <rect
+       y="165.26967"
+       x="44.710373"
+       height="0.42218056"
+       width="175.16252"
+       id="rect10288"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.19615687;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+       inkscape:export-filename="/home/abilio/dice-menu.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       y="165.99326"
+       x="44.197289"
+       height="0.21166231"
+       width="0.21166231"
+       id="rect10290"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.40667513;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+       inkscape:export-filename="/home/abilio/dice-menu.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.40667513;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect10292"
+       width="0.21166231"
+       height="0.21166231"
+       x="220.17435"
+       y="165.99326"
+       inkscape:export-filename="/home/abilio/dice-menu.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.40667513;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect10294"
+       width="0.21166231"
+       height="0.21166231"
+       x="44.197289"
+       y="242.58672"
+       inkscape:export-filename="/home/abilio/dice-menu.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.19615687;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect10296"
+       width="175.16252"
+       height="0.42218056"
+       x="44.710373"
+       y="243.09978"
+       inkscape:export-filename="/home/abilio/dice-menu.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       y="242.58672"
+       x="220.17435"
+       height="0.21166231"
+       width="0.21166231"
+       id="rect10298"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.40667513;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+       inkscape:export-filename="/home/abilio/dice-menu.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       y="166.71671"
+       x="43.68409"
+       height="75.358116"
+       width="0.0013683231"
+       id="rect10300"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.61696911;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+       inkscape:export-filename="/home/abilio/dice-menu.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.61696911;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect10302"
+       width="0.0013683231"
+       height="75.358116"
+       x="220.89787"
+       y="166.71671"
+       inkscape:export-filename="/home/abilio/dice-menu.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <g
+       id="g14022"
+       transform="translate(-7.4656361,-0.1991621)"
+       inkscape:export-filename="/home/abilio/dice-button.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         y="211.33585"
+         x="133.8726"
+         height="18.53161"
+         width="67.17215"
+         id="rect13950"
+         style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.23258179;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill" />
+      <text
+         id="text13954"
+         y="224.80823"
+         x="143.15401"
+         style="font-style:normal;font-weight:normal;font-size:14.95673084px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.40062675"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';fill:#ffffff;stroke-width:0.40062675"
+           y="224.80823"
+           x="143.15401"
+           id="tspan13952"
+           sodipodi:role="line">throw dice</tspan></text>
+    </g>
+    <g
+       id="g13998"
+       transform="translate(-7.19059,-0.1991621)">
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.39419669;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect13971"
+         width="18.53161"
+         height="18.53161"
+         x="105.89617"
+         y="211.33585" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:9.8777771px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+         x="111.89019"
+         y="224.80823"
+         id="text13975"><tspan
+           sodipodi:role="line"
+           id="tspan13973"
+           x="111.89019"
+           y="224.80823"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.95673084px;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';fill:#ff0000;stroke-width:0.26458335">1</tspan></text>
+    </g>
+    <g
+       id="g14006"
+       transform="translate(-34.891984,-0.1991621)">
+      <rect
+         y="211.33585"
+         x="105.89617"
+         height="18.53161"
+         width="18.53161"
+         id="rect14000"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.39419669;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill" />
+      <text
+         id="text14004"
+         y="224.80823"
+         x="111.89019"
+         style="font-style:normal;font-weight:normal;font-size:9.8777771px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.95673084px;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';fill:#ff0000;stroke-width:0.26458335"
+           y="224.80823"
+           x="111.89019"
+           id="tspan14002"
+           sodipodi:role="line">1</tspan></text>
+    </g>
+    <g
+       transform="translate(-34.891984,58.208805)"
+       id="g14060"
+       inkscape:export-filename="/home/abilio/dice.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.39419669;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect14054"
+         width="18.53161"
+         height="18.53161"
+         x="105.89617"
+         y="211.33585" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:9.8777771px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+         x="111.89019"
+         y="224.80823"
+         id="text14058"><tspan
+           sodipodi:role="line"
+           id="tspan14056"
+           x="111.89019"
+           y="224.80823"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.95673084px;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';fill:#ff0000;stroke-width:0.26458335">1</tspan></text>
+    </g>
+    <g
+       id="g14068"
+       transform="translate(-16.360375,58.208805)"
+       inkscape:export-filename="/home/abilio/dice.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         y="211.33585"
+         x="105.89617"
+         height="18.53161"
+         width="18.53161"
+         id="rect14062"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.39419669;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill" />
+      <text
+         id="text14066"
+         y="224.80823"
+         x="115.16197"
+         style="font-style:normal;font-weight:normal;font-size:9.8777771px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.95673084px;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#ff0000;stroke-width:0.26458335"
+           y="224.80823"
+           x="115.16197"
+           id="tspan14064"
+           sodipodi:role="line">2</tspan></text>
+    </g>
+    <g
+       transform="translate(2.1712336,58.208805)"
+       id="g14076"
+       inkscape:export-filename="/home/abilio/dice.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.39419669;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect14070"
+         width="18.53161"
+         height="18.53161"
+         x="105.89617"
+         y="211.33585" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:9.8777771px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+         x="115.16197"
+         y="224.80823"
+         id="text14074"><tspan
+           sodipodi:role="line"
+           id="tspan14072"
+           x="115.16197"
+           y="224.80823"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.95673084px;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#ff0000;stroke-width:0.26458335">3</tspan></text>
+    </g>
+    <g
+       id="g14084"
+       transform="translate(20.702844,58.208805)"
+       inkscape:export-filename="/home/abilio/dice.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         y="211.33585"
+         x="105.89617"
+         height="18.53161"
+         width="18.53161"
+         id="rect14078"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.39419669;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill" />
+      <text
+         id="text14082"
+         y="224.80823"
+         x="115.16197"
+         style="font-style:normal;font-weight:normal;font-size:9.8777771px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.95673084px;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';text-align:center;text-anchor:middle;fill:#ff0000;stroke-width:0.26458335"
+           y="224.80823"
+           x="115.16197"
+           id="tspan14080"
+           sodipodi:role="line">4</tspan></text>
+    </g>
+    <g
+       transform="translate(39.234453,58.208805)"
+       id="g14092"
+       inkscape:export-filename="/home/abilio/dice.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.39419669;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect14086"
+         width="18.53161"
+         height="18.53161"
+         x="105.89617"
+         y="211.33585" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:9.8777771px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+         x="111.89019"
+         y="224.80823"
+         id="text14090"><tspan
+           sodipodi:role="line"
+           id="tspan14088"
+           x="111.89019"
+           y="224.80823"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.95673084px;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';fill:#ff0000;stroke-width:0.26458335">5</tspan></text>
+    </g>
+    <g
+       id="g14100"
+       transform="translate(57.766062,58.208805)"
+       inkscape:export-filename="/home/abilio/dice.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         y="211.33585"
+         x="105.89617"
+         height="18.53161"
+         width="18.53161"
+         id="rect14094"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.39419669;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill" />
+      <text
+         id="text14098"
+         y="224.80823"
+         x="111.89019"
+         style="font-style:normal;font-weight:normal;font-size:9.8777771px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.95673084px;font-family:'Gothic Pixel';-inkscape-font-specification:'Gothic Pixel';fill:#ff0000;stroke-width:0.26458335"
+           y="224.80823"
+           x="111.89019"
+           id="tspan14096"
+           sodipodi:role="line">6</tspan></text>
+    </g>
+    <rect
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.29799995;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect14127"
+       width="8.4060822"
+       height="45.965096"
+       x="62.598106"
+       y="165.17159" />
+    <rect
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.51660424;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:3.97077155;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect14129"
+       width="83.031364"
+       height="11.139588"
+       x="43.375603"
+       y="218.52872" />
+  </g>
+</svg>
