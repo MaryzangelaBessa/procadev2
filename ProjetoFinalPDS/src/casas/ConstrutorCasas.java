@@ -2,15 +2,16 @@ package casas;
 
 import java.util.ArrayList;
 
+import base.JogoMain;
 import util.Posicao;
 
 public class ConstrutorCasas {
 	ArrayList<CasaTabuleiro> casas = new ArrayList<CasaTabuleiro>();
 	FabricaCasas fc = FabricaCasas.getInstance();
-	public ArrayList<CasaTabuleiro> construirCasas(){
-		
+
+	public ArrayList<CasaTabuleiro> construirCasas() {
+
 		// <------------- VARIAVEIS
-		
 		ParadaLivre pl;
 		Posicao p = new Posicao(0, 0);
 		Compania comp;
@@ -18,19 +19,21 @@ public class ConstrutorCasas {
 		LucrosDividendos lc;
 		ImpostoRenda ip;
 		VaPrisao vp;
-		
-		
+
+		int tabuleiroWidth = JogoMain.janela.getWidth();
+		int vypadding = 12;
+
 		// <----------- PRIMEIRA LINHA
-		
-		
-		Posicao twPos = new Posicao(0, 0); 
-		PontoPartida wall; 
-		wall = (PontoPartida) fc.construirCasa("PontoPartida", twPos);
+		// Casas da primeira linha
+		int l1xpadding = 10;
+
+		Posicao twPos = new Posicao(0, 0);
+		PontoPartida wall = (PontoPartida) fc.construirCasa("PontoPartida", twPos);
 		casas.add(wall);
-		
-		Posicao cbPos = new Posicao(62, 12); 
-		Terreno castleBlack; 
-		castleBlack = (Terreno) fc.construirCasa("Terreno", cbPos);		
+
+		Posicao cbPos = new Posicao(twPos.x + wall.getImagem().width + l1xpadding, vypadding);
+		Terreno castleBlack;
+		castleBlack = (Terreno) fc.construirCasa("Terreno", cbPos);
 		castleBlack.setNome("CASTLE BLACK");
 		castleBlack.setGrupo("Stark");
 		castleBlack.setPrecoTerreno(100);
@@ -41,441 +44,416 @@ public class ConstrutorCasas {
 		castleBlack.setAluguel4(400);
 		castleBlack.setHotel(new Hotel(500));
 		casas.add(castleBlack);
+
+		Posicao pSR1 = new Posicao(cbPos.x + castleBlack.getImagem().width + l1xpadding, vypadding);
+		SorteReves sr1 = (SorteReves) fc.construirCasa("SorteReves", pSR1);
+		casas.add(sr1);
+
+		Posicao wiPos = new Posicao(pSR1.x + sr1.getImagem().width + l1xpadding, vypadding);
+		Terreno winterfel;
+		winterfel = (Terreno) fc.construirCasa("Terreno", wiPos);
+		winterfel.setNome("Winterfel");
+		winterfel.setGrupo("Stark");
+		winterfel.setPrecoTerreno(60);
+		winterfel.setAluguelTerreno(2);
+		winterfel.setAluguel1(10);
+		winterfel.setAluguel2(30);
+		winterfel.setAluguel3(90);
+		winterfel.setAluguel4(160);
+		winterfel.setHotel(new Hotel(250));
+		casas.add(winterfel);
+
+		Posicao boPos = new Posicao(wiPos.x + winterfel.getImagem().width + l1xpadding, vypadding);
+		Terreno bolton;
+		bolton = (Terreno) fc.construirCasa("Terreno", boPos);
+		bolton.setNome("Castel Winterfel");
+		bolton.setGrupo("Stark");
+		bolton.setPrecoTerreno(60);
+		bolton.setAluguelTerreno(4);
+		bolton.setAluguel1(20);
+		bolton.setAluguel2(60);
+		bolton.setAluguel3(180);
+		bolton.setAluguel4(320);
+		bolton.setHotel(new Hotel(450));
+		casas.add(bolton);
+
+		Posicao co1Pos = new Posicao(boPos.x + bolton.getImagem().width + l1xpadding, vypadding);
+		Compania comp1 = (Compania) fc.construirCasa("Compania", co1Pos);
+		comp1.setPrecoCompania(200);
+		comp1.setTaxa(50);
+		casas.add(comp1);
+
+		Posicao haPos = new Posicao(co1Pos.x + comp1.getImagem().width + l1xpadding, vypadding);
+		Terreno nom;
+		nom = (Terreno) fc.construirCasa("Terreno", haPos);
+		nom.setNome("");
+		nom.setGrupo("Greyjoy");
+		nom.setPrecoTerreno(240);
+		nom.setAluguelTerreno(20);
+		nom.setAluguel1(100);
+		nom.setAluguel2(300);
+		nom.setAluguel3(750);
+		nom.setAluguel4(925);
+		nom.setHotel(new Hotel(150));
+		casas.add(nom);
+
+		Posicao co2Pos = new Posicao(haPos.x + nom.getImagem().width + l1xpadding, vypadding);
+		Compania comp2 = (Compania) fc.construirCasa("Compania", co2Pos);
+		comp2.setPrecoCompania(-200);
+		comp2.setTaxa(50);
+		casas.add(comp2);
+
+		Posicao pikePos = new Posicao(co2Pos.x + comp2.getImagem().width + l1xpadding, vypadding);
+		// Terreno nom;
+		Terreno pike = (Terreno) fc.construirCasa("Terreno", pikePos);
+		// nom.setNome("");
+		pike.setGrupo("Greyjoy");
+		pike.setPrecoTerreno(220);
+		pike.setAluguelTerreno(18);
+		pike.setAluguel1(90);
+		pike.setAluguel2(250);
+		pike.setAluguel3(700);
+		pike.setAluguel4(875);
+		pike.setHotel(new Hotel(1050));
+		casas.add(pike);
+
+		// <---------- segunda linha
+
+		double l2xpadding = 9.5;
+
+		Posicao ttPos = new Posicao(tabuleiroWidth - l2xpadding, pikePos.y + pike.getImagem().height + vypadding);
+		Terreno tenTowers = (Terreno) fc.construirCasa("Terreno", ttPos);
+		ttPos = tenTowers.getPosicao();
+		ttPos.x = ttPos.x - tenTowers.getImagem().width;
+		tenTowers.setPosicao(ttPos);
+		Terreno Tentowers = (Terreno) fc.construirCasa("Terreno", ttPos);
+		Tentowers.setGrupo("Greyjoy");
+		Tentowers.setPrecoTerreno(220);
+		Tentowers.setAluguelTerreno(18);
+		Tentowers.setAluguel1(90);
+		Tentowers.setAluguel2(250);
+		Tentowers.setAluguel3(700);
+		Tentowers.setAluguel4(875);
+		Tentowers.setHotel(new Hotel(1050));
+		casas.add(Tentowers);
+
+		Posicao duPos = new Posicao(ttPos.x - l2xpadding, ttPos.y);
+		Prisao dungeon = (Prisao) fc.construirCasa("Prisao", duPos);
+		duPos = dungeon.getPosicao();
+		duPos.x = duPos.x - tenTowers.getImagem().width;
+		dungeon.setPosicao(duPos);
+		casas.add(dungeon);
+
+		Posicao ssPos = new Posicao(duPos.x - l2xpadding, ttPos.y);
+		Terreno strongSong = (Terreno) fc.construirCasa("Terreno", ssPos);
+		ssPos = strongSong.getPosicao();
+		ssPos.x = ssPos.x - strongSong.getImagem().width;
+		strongSong.setPosicao(ssPos);
+		strongSong.setGrupo("Ayrrin");
+		strongSong.setPrecoTerreno(200);
+		strongSong.setAluguelTerreno(16);
+		strongSong.setAluguel1(80);
+		strongSong.setAluguel2(220);
+		strongSong.setAluguel3(600);
+		strongSong.setAluguel4(800);
+		strongSong.setHotel(new Hotel(1000));
+		casas.add(strongSong);
+
+		Posicao pSR2 = new Posicao(ssPos.x - l2xpadding, ttPos.y);
+		SorteReves sr2 = (SorteReves) fc.construirCasa("SorteReves", pSR2);
+		pSR2 = sr2.getPosicao();
+		pSR2.x = pSR2.x - sr2.getImagem().width;
+		sr2.setPosicao(pSR2);
+		casas.add(sr2);
+
+		Posicao tePos = new Posicao(pSR2.x - l2xpadding, ttPos.y);
+		Terreno theEyre = (Terreno) fc.construirCasa("Terreno", tePos);
+		tePos = theEyre.getPosicao();
+		tePos.x = tePos.x - theEyre.getImagem().width;
+		theEyre.setPosicao(tePos);
+		theEyre.setGrupo("Ayrrin");
+		theEyre.setPrecoTerreno(180);
+		theEyre.setAluguelTerreno(14);
+		theEyre.setAluguel1(70);
+		theEyre.setAluguel2(200);
+		theEyre.setAluguel3(550);
+		theEyre.setAluguel4(750);
+		theEyre.setHotel(new Hotel(950));
+		casas.add(theEyre);
+
+		Posicao rfPos = new Posicao(tePos.x - l2xpadding, ttPos.y);
+		Terreno redFort = (Terreno) fc.construirCasa("Terreno", rfPos);
+		rfPos = redFort.getPosicao();
+		rfPos.x = rfPos.x - redFort.getImagem().width;
+		redFort.setPosicao(rfPos);
+		redFort.setGrupo("Ayrrin");
+		redFort.setPrecoTerreno(180);
+		redFort.setAluguelTerreno(14);
+		redFort.setAluguel1(70);
+		redFort.setAluguel2(200);
+		redFort.setAluguel3(550);
+		redFort.setAluguel4(750);
+		redFort.setHotel(new Hotel(950));
+		casas.add(redFort);
+
+		Posicao co3Pos = new Posicao(rfPos.x - l2xpadding, ttPos.y);
+		Compania comp3 = (Compania) fc.construirCasa("Compania", co3Pos);
+		co3Pos = comp3.getPosicao();
+		co3Pos.x = co3Pos.x - comp3.getImagem().width;
+		comp3.setPosicao(co3Pos);
+		comp3.setPrecoCompania(150);
+		comp3.setTaxa(40);
+		casas.add(comp3);
+
+		Posicao pSR3 = new Posicao(co3Pos.x - l2xpadding, ttPos.y);
+		SorteReves sr3 = (SorteReves) fc.construirCasa("SorteReves", pSR3);
+		pSR3 = sr3.getPosicao();
+		pSR3.x = pSR3.x - sr3.getImagem().width;
+		sr3.setPosicao(pSR3);
+		casas.add(sr3);
+
+		Posicao dsPos = new Posicao(pSR3.x - l2xpadding, ttPos.y);
+		Terreno dragonStone = (Terreno) fc.construirCasa("Terreno", dsPos);
+		dsPos = dragonStone.getPosicao();
+		dsPos.x = dsPos.x - dragonStone.getImagem().width;
+		dragonStone.setPosicao(dsPos);
+		dragonStone.setGrupo("Targaryen");
+		dragonStone.setPrecoTerreno(350);
+		dragonStone.setAluguelTerreno(35);
+		dragonStone.setAluguel1(175);
+		dragonStone.setAluguel2(500);
+		dragonStone.setAluguel3(1100);
+		dragonStone.setAluguel4(1300);
+		dragonStone.setHotel(new Hotel(1500));
+		casas.add(dragonStone);
 		
-		Posicao SR = new Posicao(124, 12);
-		SorteReves sortRev;
-		sortRev = (SorteReves) fc.construirCasa("SorteReves", SR);
-		casas.add(sortRev);
+		// tercaira linha
+
+		double l3xpadding = 17.875;
+
+		Posicao ldPos = new Posicao(l3xpadding, dsPos.y + dragonStone.getImagem().height + vypadding);
+		LucrosDividendos profits = (LucrosDividendos) fc.construirCasa("LucrosDividendos", ldPos);
+		casas.add(profits);
+
 		
-		
-		Posicao cbdPos = new Posicao(186, 12);
-		Terreno castelBoldon;
-		castelBoldon = (Terreno) fc.construirCasa("Terreno", cbdPos);
-		castelBoldon.setNome("Castel Boldon");
-		castelBoldon.setGrupo("Stark");
-		castelBoldon.setPrecoTerreno(60);
-		castelBoldon.setAluguelTerreno(2);
-		castelBoldon.setAluguel1(10);
-		castelBoldon.setAluguel2(30);
-		castelBoldon.setAluguel3(90);
-		castelBoldon.setAluguel4(160);
-		castelBoldon.setHotel(new Hotel(250));
-		casas.add(castelBoldon);
-		
-		
-		Posicao cwPos = new Posicao(248, 12);
-		Terreno castelWinterfel;
-		castelWinterfel = (Terreno) fc.construirCasa("Terreno", cwPos);
-		castelWinterfel.setNome("Castel Winterfel");
-		castelWinterfel.setGrupo("Stark");
-		castelWinterfel.setPrecoTerreno(60);
-		castelWinterfel.setAluguelTerreno(4);
-		castelWinterfel.setAluguel1(20);
-		castelWinterfel.setAluguel2(60);
-		castelWinterfel.setAluguel3(180);
-		castelWinterfel.setAluguel4(320);
-		castelWinterfel.setHotel(new Hotel(450));
-		casas.add(castelWinterfel);
-		
-		
-		Posicao comPos = new Posicao(310, 12);
-		comp = (Compania) fc.construirCasa("Compania", comPos);
-		comp.setPrecoCompania(200);
-		comp.setTaxa(50);
-		casas.add(comp);
-		
-		
-		Posicao pos = new Posicao(372, 12);
-		Terreno nomeT;
-		nomeT = (Terreno) fc.construirCasa("Terreno", pos);
-		nomeT.setNome("");
-		nomeT.setGrupo("Greyjoy");
-		nomeT.setPrecoTerreno(240);
-		nomeT.setAluguelTerreno(20);
-		nomeT.setAluguel1(100);
-		nomeT.setAluguel2(300);
-		nomeT.setAluguel3(750);
-		nomeT.setAluguel4(925);
-		nomeT.setHotel(new Hotel(150));
-		casas.add(nomeT);
-		
-		
-		comPos = new Posicao(434, 12);
-		comp = (Compania) fc.construirCasa("Compania", comPos);
-		comp.setPrecoCompania(-200);
-		comp.setTaxa(50);
-		casas.add(comp);
-		
-		
-		pos = new Posicao(496, 12);
-		//Terreno nomeT;
-		nomeT = (Terreno) fc.construirCasa("Terreno", pos);
-		//nomeT.setNome("");
-		nomeT.setGrupo("Greyjoy");
-		nomeT.setPrecoTerreno(220);
-		nomeT.setAluguelTerreno(18);
-		nomeT.setAluguel1(90);
-		nomeT.setAluguel2(250);
-		nomeT.setAluguel3(700);
-		nomeT.setAluguel4(875);
-		nomeT.setHotel(new Hotel(1050));
-		casas.add(nomeT);
-		
-		
-		pos = new Posicao(558, 12);
-		//Terreno nomeT;
-		nomeT = (Terreno) fc.construirCasa("Terreno", pos);
-		//nomeT.setNome("");
-		nomeT.setGrupo("Greyjoy");
-		nomeT.setPrecoTerreno(220);
-		nomeT.setAluguelTerreno(18);
-		nomeT.setAluguel1(90);
-		nomeT.setAluguel2(250);
-		nomeT.setAluguel3(700);
-		nomeT.setAluguel4(875);
-		nomeT.setHotel(new Hotel(1050));
-		casas.add(nomeT);
-		
-		p.x = 620;
-		p.y = 12;
-		pris = (Prisao) fc.construirCasa("Prisao", p);
-		casas.add(pris);
-		
-		// <-------------- SEGUNDA LINHA
-		
-		pos = new Posicao(620, 74);
-		//Terreno nomeT;
-		nomeT = (Terreno) fc.construirCasa("Terreno", pos);
-		//nomeT.setNome("");
-		nomeT.setGrupo("Ayrrin");
-		nomeT.setPrecoTerreno(200);
-		nomeT.setAluguelTerreno(16);
-		nomeT.setAluguel1(80);
-		nomeT.setAluguel2(220);
-		nomeT.setAluguel3(600);
-		nomeT.setAluguel4(800);
-		nomeT.setHotel(new Hotel(1000));
-		casas.add(nomeT);
-		
-		p.x = 558;
-		p.y = 74;
-		sortRev = (SorteReves) fc.construirCasa("SorteReves", p);
-		//castel.setNome("Castel Winterfel");
-		casas.add(sortRev);
-		
-		
-		pos = new Posicao(496, 74);
-		//Terreno nomeT;
-		nomeT = (Terreno) fc.construirCasa("Terreno", pos);
-		//nomeT.setNome("");
-		nomeT.setGrupo("Ayrrin");
-		nomeT.setPrecoTerreno(180);
-		nomeT.setAluguelTerreno(14);
-		nomeT.setAluguel1(70);
-		nomeT.setAluguel2(200);
-		nomeT.setAluguel3(550);
-		nomeT.setAluguel4(750);
-		nomeT.setHotel(new Hotel(950));
-		casas.add(nomeT);
-		
-		pos = new Posicao(434, 74);
-		//Terreno nomeT;
-		nomeT = (Terreno) fc.construirCasa("Terreno", pos);
-		//nomeT.setNome("");
-		nomeT.setGrupo("Ayrrin");
-		nomeT.setPrecoTerreno(180);
-		nomeT.setAluguelTerreno(14);
-		nomeT.setAluguel1(70);
-		nomeT.setAluguel2(200);
-		nomeT.setAluguel3(550);
-		nomeT.setAluguel4(750);
-		nomeT.setHotel(new Hotel(950));
-		casas.add(nomeT);
-		
-		
-		comPos = new Posicao(372, 74);
-		comp = (Compania) fc.construirCasa("Compania", comPos);
-		comp.setPrecoCompania(150);
-		comp.setTaxa(40);
-		//castel.setNome("Castel Winterfel");
-		casas.add(comp);
-		
-		
-		p.x = 310;
-		p.y = 74;
-		sortRev = (SorteReves) fc.construirCasa("SorteReves", p);
-		//castel.setNome("Castel Winterfel");
-		casas.add(sortRev);
-	
-		
-		pos = new Posicao(248, 74);
-		//Terreno nomeT;
-		nomeT = (Terreno) fc.construirCasa("Terreno", pos);
-		//nomeT.setNome("");
-		nomeT.setGrupo("Targaryen");
-		nomeT.setPrecoTerreno(350);
-		nomeT.setAluguelTerreno(35);
-		nomeT.setAluguel1(175);
-		nomeT.setAluguel2(500);
-		nomeT.setAluguel3(1100);
-		nomeT.setAluguel4(1300);
-		nomeT.setHotel(new Hotel(1500));
-		casas.add(nomeT);
-		
-		p.x = 186;
-		p.y = 74;
-		lc = (LucrosDividendos) fc.construirCasa("LucrosDividendos", p);
-		//castel.setNome("Castel Winterfel");
-		casas.add(lc);
-		
-		
-		pos = new Posicao(124, 74);
-		//Terreno nomeT;
-		nomeT = (Terreno) fc.construirCasa("Terreno", pos);
-		//nomeT.setNome("");
-		nomeT.setGrupo("Targaryen");
-		nomeT.setPrecoTerreno(400);
-		nomeT.setAluguelTerreno(50);
-		nomeT.setAluguel1(200);
-		nomeT.setAluguel2(600);
-		nomeT.setAluguel3(1400);
-		nomeT.setAluguel4(1700);
-		nomeT.setHotel(new Hotel(2000));
-		casas.add(nomeT);
-		
-		p.x = 62;
-		p.y = 74;
-		pl = (ParadaLivre) fc.construirCasa("ParadaLivre", p);
-		//castel.setNome("Castel Winterfel");
-		casas.add(pl);
-		
+		Posicao rrPos = new Posicao(ldPos.x+profits.getImagem().width+l3xpadding, ldPos.y);
+		Terreno rooksRest = (Terreno) fc.construirCasa("Terreno", rrPos);
+		rooksRest.setGrupo("Targaryen");
+		rooksRest.setPrecoTerreno(400);
+		rooksRest.setAluguelTerreno(50);
+		rooksRest.setAluguel1(200);
+		rooksRest.setAluguel2(600);
+		rooksRest.setAluguel3(1400);
+		rooksRest.setAluguel4(1700);
+		rooksRest.setHotel(new Hotel(2000));
+		casas.add(rooksRest);
+
+		Posicao fsPos = new Posicao(rrPos.x+rooksRest.getImagem().width+l3xpadding, ldPos.y);
+		ParadaLivre freeStop = (ParadaLivre) fc.construirCasa("ParadaLivre", fsPos);
+		casas.add(freeStop);
+
 		// <------- TERCEIRA LINHA
+
+		Posicao crPos = new Posicao(fsPos.x+freeStop.getImagem().width+(2*l3xpadding)+283, ldPos.y);
+		Terreno casterlyRock = (Terreno) fc.construirCasa("Terreno", crPos);		
+		casterlyRock.setGrupo("Lennister");
+		casterlyRock.setPrecoTerreno(120);
+		casterlyRock.setAluguelTerreno(8);
+		casterlyRock.setAluguel1(40);
+		casterlyRock.setAluguel2(100);
+		casterlyRock.setAluguel3(300);
+		casterlyRock.setAluguel4(450);
+		casterlyRock.setHotel(new Hotel(600));
+		casas.add(casterlyRock);
+
+		Posicao pSR4 = new Posicao(crPos.x+casterlyRock.getImagem().width+l3xpadding, ldPos.y); 
+		SorteReves sr4 = (SorteReves) fc.construirCasa("SorteReves", pSR4);
+		casas.add(sr4);
+
+		Posicao hvPos = new Posicao(pSR4.x+sr4.getImagem().width+l3xpadding, ldPos.y);
+		Terreno hornVale = (Terreno) fc.construirCasa("Terreno", hvPos);
+		hornVale.setGrupo("Lennister");
+		hornVale.setPrecoTerreno(100);
+		hornVale.setAluguelTerreno(6);
+		hornVale.setAluguel1(30);
+		hornVale.setAluguel2(90);
+		hornVale.setAluguel3(270);
+		hornVale.setAluguel4(400);
+		hornVale.setHotel(new Hotel(500));
+		casas.add(hornVale);
 		
-		pos = new Posicao(62, 136);
-		//Terreno nomeT;
-		nomeT = (Terreno) fc.construirCasa("Terreno", pos);
-		//nomeT.setNome("");
-		nomeT.setGrupo("Lennister");
-		nomeT.setPrecoTerreno(120);
-		nomeT.setAluguelTerreno(8);
-		nomeT.setAluguel1(40);
-		nomeT.setAluguel2(100);
-		nomeT.setAluguel3(300);
-		nomeT.setAluguel4(450);
-		nomeT.setHotel(new Hotel(600));
-		casas.add(nomeT);
+		// <----- asas quarta linha
 		
-		p.x = 124;
-		p.y = 136;
-		sortRev = (SorteReves) fc.construirCasa("SorteReves", p);
-		//castel.setNome("Castel Winterfel");
-		casas.add(sortRev);
+double l4xpadding = 14.888;
 		
-		
-		pos = new Posicao(186, 136);
-		//Terreno nomeT;
-		nomeT = (Terreno) fc.construirCasa("Terreno", pos);
-		//nomeT.setNome("");
-		nomeT.setGrupo("Lennister");
-		nomeT.setPrecoTerreno(100);
-		nomeT.setAluguelTerreno(6);
-		nomeT.setAluguel1(30);
-		nomeT.setAluguel2(90);
-		nomeT.setAluguel3(270);
-		nomeT.setAluguel4(400);
-		nomeT.setHotel(new Hotel(500));
-		casas.add(nomeT);
-		
-		p.x = 248;
-		p.y = 136;
-		ip = (ImpostoRenda) fc.construirCasa("ImpostoRenda", p);
-		//castel.setNome("Castel Winterfel");
-		casas.add(ip);
-		
-		
-		comPos = new Posicao(310, 136);
-		comp = (Compania) fc.construirCasa("Compania", comPos);
-		comp.setPrecoCompania(150);
-		comp.setTaxa(40);
-		//castel.setNome("Castel Winterfel");
-		casas.add(comp);
-		
-		
-		pos = new Posicao(372, 136);
-		//Terreno nomeT;
-		nomeT = (Terreno) fc.construirCasa("Terreno", pos);
-		//nomeT.setNome("");
-		nomeT.setGrupo("Baratheon");
-		nomeT.setPrecoTerreno(160);
-		nomeT.setAluguelTerreno(12);
-		nomeT.setAluguel1(60);
-		nomeT.setAluguel2(180);
-		nomeT.setAluguel3(500);
-		nomeT.setAluguel4(700);
-		nomeT.setHotel(new Hotel(900));
-		casas.add(nomeT);
-		
-		p.x = 434;
-		p.y = 136;
-		sortRev = (SorteReves) fc.construirCasa("SorteReves", p);
-		//castel.setNome("Castel Winterfel");
-		casas.add(sortRev);
-		
-		
-		pos = new Posicao(496, 136);
-		//Terreno nomeT;
-		nomeT = (Terreno) fc.construirCasa("Terreno", pos);
-		//nomeT.setNome("");
-		nomeT.setGrupo("Baratheon");
-		nomeT.setPrecoTerreno(140);
-		nomeT.setAluguelTerreno(10);
-		nomeT.setAluguel1(50);
-		nomeT.setAluguel2(150);
-		nomeT.setAluguel3(450);
-		nomeT.setAluguel4(625);
-		nomeT.setHotel(new Hotel(750));
-		casas.add(nomeT);
-		
-		
-		pos = new Posicao(558, 136);
-		//Terreno nomeT;
-		nomeT = (Terreno) fc.construirCasa("Terreno", pos);
-		//nomeT.setNome("");
-		nomeT.setGrupo("Baratheon");
-		nomeT.setPrecoTerreno(140);
-		nomeT.setAluguelTerreno(10);
-		nomeT.setAluguel1(50);
-		nomeT.setAluguel2(150);
-		nomeT.setAluguel3(450);
-		nomeT.setAluguel4(625);
-		nomeT.setHotel(new Hotel(750));
-		casas.add(nomeT);
-		
-		
-		p.x = 620;
-		p.y = 136;
-		vp = (VaPrisao) fc.construirCasa("VaPrisao", p);
-		//castel.setNome("Castel Winterfel");
-		casas.add(vp);
-		
-		
+		Posicao ntPos = new Posicao(tabuleiroWidth-l4xpadding, hvPos.y+hornVale.getImagem().height+vypadding); 
+		ImpostoRenda notToday = (ImpostoRenda) fc.construirCasa("ImpostoRenda", ntPos);
+		ntPos = notToday.getPosicao();
+		ntPos.x = ntPos.x - notToday.getImagem().width;
+		notToday.setPosicao(ntPos);
+		casas.add(notToday);
+
+		Posicao co4Pos = new Posicao(ntPos.x-l4xpadding, ntPos.y);
+		Compania comp4 = (Compania) fc.construirCasa("Compania", co4Pos);
+		co4Pos = comp4.getPosicao();
+		co4Pos.x = co4Pos.x - comp4.getImagem().width;
+		comp4.setPosicao(co4Pos);
+		casas.add(comp4);
+
+		Posicao shPos = new Posicao(co4Pos.x-l4xpadding, ntPos.y); 
+		Terreno sowsHorn = (Terreno) fc.construirCasa("Terreno", shPos);
+		shPos = sowsHorn.getPosicao();
+		shPos.x = shPos.x - sowsHorn.getImagem().width;
+		sowsHorn.setPosicao(shPos);
+		sowsHorn.setGrupo("Baratheon");
+		sowsHorn.setPrecoTerreno(160);
+		sowsHorn.setAluguelTerreno(12);
+		sowsHorn.setAluguel1(60);
+		sowsHorn.setAluguel2(180);
+		sowsHorn.setAluguel3(500);
+		sowsHorn.setAluguel4(700);
+		sowsHorn.setHotel(new Hotel(900));
+		casas.add(sowsHorn);
+
+		Posicao pSR5 = new Posicao(shPos.x-l4xpadding, ntPos.y); 
+		SorteReves sr5 = (SorteReves) fc.construirCasa("SorteReves", pSR5);
+		pSR5 = sr5.getPosicao();
+		pSR5.x = pSR5.x - sr5.getImagem().width;
+		sr5.setPosicao(pSR5);
+		casas.add(sr5);
+
+		Posicao hfPos = new Posicao(pSR5.x-l4xpadding, ntPos.y); 
+		Terreno hayford = (Terreno) fc.construirCasa("Terreno", hfPos);
+		hfPos = hayford.getPosicao();
+		hfPos.x = hfPos.x - hayford.getImagem().width;
+		hayford.setPosicao(hfPos);
+		hayford.setGrupo("Baratheon");
+		hayford.setPrecoTerreno(140);
+		hayford.setAluguelTerreno(10);
+		hayford.setAluguel1(50);
+		hayford.setAluguel2(150);
+		hayford.setAluguel3(450);
+		hayford.setAluguel4(625);
+		hayford.setHotel(new Hotel(750));
+		casas.add(hayford);
+
+		Posicao klPos = new Posicao(hfPos.x-l4xpadding, ntPos.y); 
+		Terreno kingsLanding = (Terreno) fc.construirCasa("Terreno", klPos);
+		klPos = kingsLanding.getPosicao();
+		klPos.x = klPos.x - kingsLanding.getImagem().width;
+		kingsLanding.setPosicao(klPos);
+		kingsLanding.setGrupo("Baratheon");
+		kingsLanding.setPrecoTerreno(140);
+		kingsLanding.setAluguelTerreno(10);
+		kingsLanding.setAluguel1(50);
+		kingsLanding.setAluguel2(150);
+		kingsLanding.setAluguel3(450);
+		kingsLanding.setAluguel4(625);
+		kingsLanding.setHotel(new Hotel(750));
+		casas.add(kingsLanding);
+
+		Posicao dgPos = new Posicao(klPos.x-l4xpadding, ntPos.y);
+		VaPrisao dungeonGate = (VaPrisao) fc.construirCasa("VaPrisao", dgPos);
+		dgPos = dungeonGate.getPosicao();
+		dgPos.x = dgPos.x - dungeonGate.getImagem().width;
+		dungeonGate.setPosicao(dgPos);
+		casas.add(dungeonGate);
+
 		// <---- QUARTA LINHA
+
+		Posicao bbPos = new Posicao(dgPos.x-l4xpadding, ntPos.y);
+		Terreno bitterbridge = (Terreno) fc.construirCasa("Terreno", bbPos);
+		bbPos = bitterbridge.getPosicao();
+		bbPos.x = bbPos.x - bitterbridge.getImagem().width;
+		bitterbridge.setPosicao(bbPos);
+		bitterbridge.setGrupo("Tyrell");
+		bitterbridge.setPrecoTerreno(260);
+		bitterbridge.setAluguelTerreno(22);
+		bitterbridge.setAluguel1(110);
+		bitterbridge.setAluguel2(330);
+		bitterbridge.setAluguel3(800);
+		bitterbridge.setAluguel4(975);
+		bitterbridge.setHotel(new Hotel(1150));
+		casas.add(bitterbridge);
+
+double l5xpadding = 15.555;
 		
+		Posicao co5Pos = new Posicao(l5xpadding, bbPos.y+bitterbridge.getImagem().height+vypadding);
+		Compania comp5 = (Compania) fc.construirCasa("Compania", co5Pos);
+		comp5.setPrecoCompania(200);
+		comp5.setTaxa(50);
+		// castel.setNome("Castel Winterfel");
+		casas.add(comp5);
+
+		Posicao ltPos = new Posicao(co5Pos.x + comp5.getImagem().width + l5xpadding, co5Pos.y);
+		Terreno longTable = (Terreno) fc.construirCasa("Terreno", ltPos);
+		longTable.setGrupo("Tyrell");
+		longTable.setPrecoTerreno(320);
+		longTable.setAluguelTerreno(28);
+		longTable.setAluguel1(150);
+		longTable.setAluguel2(450);
+		longTable.setAluguel3(1000);
+		longTable.setAluguel4(1200);
+		longTable.setHotel(new Hotel(1400));
+		casas.add(longTable);
+
+		Posicao chPos = new Posicao(ltPos.x + longTable.getImagem().width + l5xpadding, co5Pos.y);
+		Terreno ciderHall = (Terreno) fc.construirCasa("Terreno", chPos);
+		ciderHall.setGrupo("Tyrell");
+		ciderHall.setPrecoTerreno(300);
+		ciderHall.setAluguelTerreno(26);
+		ciderHall.setAluguel1(130);
+		ciderHall.setAluguel2(390);
+		ciderHall.setAluguel3(900);
+		ciderHall.setAluguel4(1100);
+		ciderHall.setHotel(new Hotel(1275));
+		casas.add(ciderHall);
+
+		Posicao co6Pos = new Posicao(chPos.x + ciderHall.getImagem().width + l5xpadding, co5Pos.y);
+		Compania comp6 = (Compania) fc.construirCasa("Compania", co6Pos);
+		casas.add(comp6);
 		
-		pos = new Posicao(558, 198);
-		//Terreno nomeT;
-		nomeT = (Terreno) fc.construirCasa("Terreno", pos);
-		//nomeT.setNome("");
-		nomeT.setGrupo("Tyrell");
-		nomeT.setPrecoTerreno(260);
-		nomeT.setAluguelTerreno(22);
-		nomeT.setAluguel1(110);
-		nomeT.setAluguel2(330);
-		nomeT.setAluguel3(800);
-		nomeT.setAluguel4(975);
-		nomeT.setHotel(new Hotel(1150));
-		casas.add(nomeT);
-		
-		
-		comPos = new Posicao(496, 198);
-		comp = (Compania) fc.construirCasa("Compania", comPos);
-		comp.setPrecoCompania(200);
-		comp.setTaxa(50);
-		//castel.setNome("Castel Winterfel");
-		casas.add(comp);
-	
-		
-		pos = new Posicao(434, 198);
-		//Terreno nomeT;
-		nomeT = (Terreno) fc.construirCasa("Terreno", pos);
-		//nomeT.setNome("");
-		nomeT.setGrupo("Tyrell");
-		nomeT.setPrecoTerreno(320);
-		nomeT.setAluguelTerreno(28);
-		nomeT.setAluguel1(150);
-		nomeT.setAluguel2(450);
-		nomeT.setAluguel3(1000);
-		nomeT.setAluguel4(1200);
-		nomeT.setHotel(new Hotel(1400));
-		casas.add(nomeT);
-	
-		
-		pos = new Posicao(372, 198);
-		//Terreno nomeT;
-		nomeT = (Terreno) fc.construirCasa("Terreno", pos);
-		//nomeT.setNome("");
-		nomeT.setGrupo("Tyrell");
-		nomeT.setPrecoTerreno(300);
-		nomeT.setAluguelTerreno(26);
-		nomeT.setAluguel1(130);
-		nomeT.setAluguel2(390);
-		nomeT.setAluguel3(900);
-		nomeT.setAluguel4(1100);
-		nomeT.setHotel(new Hotel(1275));
-		casas.add(nomeT);
-		
-		
-		comPos = new Posicao(310, 198);
-		comp = (Compania) fc.construirCasa("Compania", comPos);
-		comp.setPrecoCompania(200);
-		comp.setTaxa(50);
-		//castel.setNome("Castel Winterfel");
-		casas.add(comp);
-		
-		
-		pos = new Posicao(248, 198);
-		//Terreno nomeT;
-		nomeT = (Terreno) fc.construirCasa("Terreno", pos);
-		//nomeT.setNome("");
-		nomeT.setGrupo("Tyrell");
-		nomeT.setPrecoTerreno(300);
-		nomeT.setAluguelTerreno(26);
-		nomeT.setAluguel1(130);
-		nomeT.setAluguel2(390);
-		nomeT.setAluguel3(900);
-		nomeT.setAluguel4(1100);
-		nomeT.setHotel(new Hotel(1275));
-		casas.add(nomeT);
-		
-		p.x = 186;
-		p.y = 198;
-		sortRev = (SorteReves) fc.construirCasa("SorteReves", p);
-		//castel.setNome("Castel Winterfel");
-		casas.add(sortRev);
-		
-		
-		pos = new Posicao(124, 198);
-		//Terreno nomeT;
-		nomeT = (Terreno) fc.construirCasa("Terreno", pos);
-		//nomeT.setNome("");
-		nomeT.setGrupo("Martell");
-		nomeT.setPrecoTerreno(280);
-		nomeT.setAluguelTerreno(24);
-		nomeT.setAluguel1(120);
-		nomeT.setAluguel2(360);
-		nomeT.setAluguel3(850);
-		nomeT.setAluguel4(1025);
-		nomeT.setHotel(new Hotel(1200));
-		casas.add(nomeT);
-		
-		
-		pos = new Posicao(558, 198);
-		//Terreno nomeT;
-		nomeT = (Terreno) fc.construirCasa("Terreno", pos);
-		//nomeT.setNome("");
-		nomeT.setGrupo("Martell");
-		nomeT.setPrecoTerreno(260);
-		nomeT.setAluguelTerreno(22);
-		nomeT.setAluguel1(110);
-		nomeT.setAluguel2(330);
-		nomeT.setAluguel3(800);
-		nomeT.setAluguel4(975);
-		nomeT.setHotel(new Hotel(1150));
-		casas.add(nomeT);
-		
-		
+		Posicao hgPos = new Posicao(co6Pos.x + comp6.getImagem().width + l5xpadding, co5Pos.y);
+		Terreno highGarden = (Terreno) fc.construirCasa("Terreno", hgPos);
+		highGarden.setGrupo("Tyrell");
+		highGarden.setPrecoTerreno(300);
+		highGarden.setAluguelTerreno(26);
+		highGarden.setAluguel1(130);
+		highGarden.setAluguel2(390);
+		highGarden.setAluguel3(900);
+		highGarden.setAluguel4(1100);
+		highGarden.setHotel(new Hotel(1275));
+		casas.add(highGarden);
+
+		Posicao pSR6 = new Posicao(hgPos.x + highGarden.getImagem().width + l5xpadding, co5Pos.y); 
+		SorteReves sr6 = (SorteReves) fc.construirCasa("SorteReves", pSR6);
+		casas.add(sr6);
+
+		Posicao ggPos = new Posicao(pSR6.x + sr6.getImagem().width + l5xpadding, co5Pos.y);
+		Terreno godsGrace = (Terreno) fc.construirCasa("Terreno", ggPos);
+		godsGrace.setGrupo("Martell");
+		godsGrace.setPrecoTerreno(280);
+		godsGrace.setAluguelTerreno(24);
+		godsGrace.setAluguel1(120);
+		godsGrace.setAluguel2(360);
+		godsGrace.setAluguel3(850);
+		godsGrace.setAluguel4(1025);
+		godsGrace.setHotel(new Hotel(1200));
+		casas.add(godsGrace);
+
+		Posicao spPos = new Posicao(ggPos.x + godsGrace.getImagem().width + l5xpadding, co5Pos.y);
+		Terreno sunspear = (Terreno) fc.construirCasa("Terreno", spPos);
+		sunspear.setGrupo("Martell");
+		sunspear.setPrecoTerreno(260);
+		sunspear.setAluguelTerreno(22);
+		sunspear.setAluguel1(110);
+		sunspear.setAluguel2(330);
+		sunspear.setAluguel3(800);
+		sunspear.setAluguel4(975);
+		sunspear.setHotel(new Hotel(1150));
+		casas.add(sunspear);
+
 		return this.casas;
 	}
-	
-	
+
 }

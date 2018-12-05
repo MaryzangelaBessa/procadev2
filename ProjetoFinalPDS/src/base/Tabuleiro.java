@@ -77,7 +77,7 @@ public class Tabuleiro {
 		Terreno pike = (Terreno) fabricaCasas.construirCasa("Terreno", pikePos);
 		casas.add(pike);
 		
-		// Casas da segunda linha
+		// Casas Ada segunda linha
 		double l2xpadding = 9.5;
 		
 		Posicao ttPos = new Posicao(tabuleiroWidth-l2xpadding, pikePos.y+pike.getImagem().height+vypadding); 
