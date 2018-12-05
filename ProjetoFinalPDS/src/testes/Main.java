@@ -17,6 +17,7 @@ public class Main {
 		Dado d = new Dado();
 		IteradorCasa ic = IteradorCasa.getInstance();
 		ic.setCasas(casas);
+		
 		ConstrutorCartoes cc = new ConstrutorCartoes();
 		ArrayList<Cartao> cart = cc.construirCartoes();
 		IteradorCartoes icar = IteradorCartoes.getInstance();
