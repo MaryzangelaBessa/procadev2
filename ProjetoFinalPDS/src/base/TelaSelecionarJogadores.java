@@ -2,6 +2,7 @@ package base;
 
 import JGamePlay.GameImage;
 import JGamePlay.Mouse;
+import JGamePlay.Sprite;
 
 public class TelaSelecionarJogadores {
 

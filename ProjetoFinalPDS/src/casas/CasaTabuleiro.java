@@ -3,7 +3,6 @@ package casas;
 import java.util.ArrayList;
 
 import JGamePlay.GameImage;
-import JGamePlay.Text;
 import base.Jogador;
 import interfaces.Acao;
 import util.Posicao;
@@ -12,10 +11,17 @@ public abstract class CasaTabuleiro implements Acao {
 
 	protected GameImage imagem;
 	protected ArrayList<Posicao> lugaresJogadores;
+	protected Jogador[] lugaresOcupados;
 	protected Posicao posicao;
+	
 	
 	public CasaTabuleiro(Posicao posicao) {
 		this.posicao = posicao;
+		this.lugaresJogadores = new ArrayList<>();
+		this.lugaresOcupados = new Jogador[6];
+		for (int i = 0; i < lugaresOcupados.length; i++) {
+			this.lugaresOcupados[i] = null;
+		}
 	}
 	
 	public String euSou() {

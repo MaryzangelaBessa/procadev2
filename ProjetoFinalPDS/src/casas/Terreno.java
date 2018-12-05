@@ -1,12 +1,9 @@
 package casas;
 
-import java.awt.Color;
-import java.awt.Font;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 import JGamePlay.GameImage;
-import JGamePlay.Text;
 import base.Jogador;
 import base.JogoMain;
 import util.Posicao;
@@ -21,12 +18,9 @@ public class Terreno extends CasaTabuleiro {
 	private int precoHotel;
 	private ArrayList<CasaPropriedade> casas = new ArrayList<CasaPropriedade>();
 	private Hotel hotel = new Hotel();
-	private Text txtNome;
-	private Font font;
 
 	public Terreno(Posicao posicao) {
 		super(posicao);
-		this.font = new Font("Gothic Pixel", Font.TRUETYPE_FONT, 15);
 		this.imagem = new GameImage(JogoMain.filepath + "assets/land.png");
 		this.imagem.setDimension(125, 125);
 		this.imagem.x = posicao.x;
@@ -65,16 +59,11 @@ public class Terreno extends CasaTabuleiro {
 
 	public void desenhar() {
 		this.imagem.draw();
-		this.txtNome.draw();
 	}
 
 
 	public void setNome(String nome) {
-		int tx = (int) this.imagem.x;
-		int ty = (int) this.imagem.y;
-		this.txtNome = new Text(nome, tx + 60, ty + 70);
-		this.txtNome.setFont(font);
-		this.txtNome.setColor(Color.BLACK);
+
 	}
 
 	public void adicionarCasa(CasaPropriedade novaCasa) {
