@@ -33,7 +33,13 @@ public class ConstrutorCasas {
 		castleBlack.setNome("CASTLE BLACK");
 		castleBlack.setPrecoTerreno(100);
 		castleBlack.setAluguelTerreno(6);
+		castleBlack.setAluguel1(30);
+		castleBlack.setAluguel2(90);
+		castleBlack.setAluguel3(270);
+		castleBlack.setAluguel4(400);
+		castleBlack.setHotel(new Hotel(500));
 		castleBlack.setGrupo("Stark");
+		
 		casas.add(castleBlack);
 		
 		
@@ -280,8 +286,9 @@ public class ConstrutorCasas {
 		p.x = 558;
 		p.y = 198;
 		castel = (Terreno) fc.construirCasa("Terreno", p);
-		castleBlack.setPrecoTerreno(260);
-		castleBlack.setAluguelTerreno(22);
+		castel.setGrupo("tyrell");
+		castel.setPrecoTerreno(260);
+		castel.setAluguelTerreno(22);
 		//castel.setNome("Castel Winterfel");
 		casas.add(castel);
 		
@@ -297,16 +304,18 @@ public class ConstrutorCasas {
 		p.x = 434;
 		p.y = 198;
 		castel = (Terreno) fc.construirCasa("Terreno", p);
-		castleBlack.setPrecoTerreno(320);
-		castleBlack.setAluguelTerreno(28);
+		castel.setGrupo("tyrell");
+		castel.setPrecoTerreno(320);
+		castel.setAluguelTerreno(28);
 		//castel.setNome("Castel Winterfel");
 		casas.add(castel);
 		
 		p.x = 372;
 		p.y = 198;
 		castel = (Terreno) fc.construirCasa("Terreno", p);
-		castleBlack.setPrecoTerreno(300);
-		castleBlack.setAluguelTerreno(26);
+		castel.setGrupo("tyrell");
+		castel.setPrecoTerreno(300);
+		castel.setAluguelTerreno(26);
 		//castel.setNome("Castel Winterfel");
 		casas.add(castel);
 		
@@ -321,8 +330,9 @@ public class ConstrutorCasas {
 		p.x = 248;
 		p.y = 198;
 		castel = (Terreno) fc.construirCasa("Terreno", p);
-		castleBlack.setPrecoTerreno(300);
-		castleBlack.setAluguelTerreno(26);
+		castel.setGrupo("tyrell");
+		castel.setPrecoTerreno(300);
+		castel.setAluguelTerreno(26);
 		//castel.setNome("Castel Winterfel");
 		casas.add(castel);
 		
@@ -335,16 +345,18 @@ public class ConstrutorCasas {
 		p.x = 124;
 		p.y = 198;
 		castel = (Terreno) fc.construirCasa("Terreno", p);
-		castleBlack.setPrecoTerreno(280);
-		castleBlack.setAluguelTerreno(24);
+		castel.setGrupo("Martell");
+		castel.setPrecoTerreno(280);
+		castel.setAluguelTerreno(24);
 		//castel.setNome("Castel Winterfel");
 		casas.add(castel);
 		
 		p.x = 558;
 		p.y = 198;
 		castel = (Terreno) fc.construirCasa("Terreno", p);
-		castleBlack.setPrecoTerreno(260);
-		castleBlack.setAluguelTerreno(22);
+		castel.setGrupo("Martell");
+		castel.setPrecoTerreno(260);
+		castel.setAluguelTerreno(22);
 		//castel.setNome("Castel Winterfel");
 		casas.add(castel);
 		

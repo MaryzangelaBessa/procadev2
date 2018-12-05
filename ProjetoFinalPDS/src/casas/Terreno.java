@@ -12,20 +12,27 @@ import base.JogoMain;
 import util.Posicao;
 
 public class Terreno extends CasaTabuleiro {
+	private int aluguel1;
+	private int aluguel2;
+	private int aluguel3;
+	private int aluguel4;
+	
 	private boolean comprado; // titulo
+	private boolean compravel;
 	private String grupo;
 	private int aluguelTerreno;
 	private Jogador proprietario;
 	private int precoTerreno;
 	private int precoCasa;
 	private int precoHotel;
-	private ArrayList<CasaPropriedade> casas = new ArrayList<CasaPropriedade>();
-	private Hotel hotel = new Hotel();
+	private int qtd_casas;
+	private Hotel hotel;
 	private Text txtNome;
 	private Font font;
 
 	public Terreno(Posicao posicao) {
 		super(posicao);
+		this.qtd_casas = 0;
 		this.font = new Font("Gothic Pixel", Font.TRUETYPE_FONT, 15);
 		this.imagem = new GameImage(JogoMain.filepath + "assets/land.png");
 		this.imagem.setDimension(125, 125);
@@ -42,22 +49,27 @@ public class Terreno extends CasaTabuleiro {
 
 
 	public void cobrarAluguel(Jogador jogador) {
-		if (this.casas.size() == 0 && this.hotel == null) {
-			int novoSaldo = jogador.getSaldo() - this.aluguelTerreno;
+		if (this.qtd_casas == 0 && this.hotel == null) {
+			int novoSaldoJog = jogador.getSaldo() - this.aluguelTerreno;
+			jogador.setSaldo(novoSaldoJog);
+			
+			int novoSaldoProp = this.proprietario.getSaldo() + this.aluguelTerreno;
+			this.proprietario.setSaldo(novoSaldoProp);
+			
+		} else if (this.qtd_casas == 1) {
+			int novoSaldo = jogador.getSaldo() - aluguel1;
 			jogador.setSaldo(novoSaldo);
-		} else if (this.casas.size() == 1) {
-			int novoSaldo = jogador.getSaldo() - this.casas.get(0).getAluguel1();
+		} else if (this.qtd_casas == 2) {
+			int novoSaldo = jogador.getSaldo() - aluguel2;
 			jogador.setSaldo(novoSaldo);
-		} else if (this.casas.size() == 2) {
-			int novoSaldo = jogador.getSaldo() - this.casas.get(0).getAluguel2();
+		} else if (this.qtd_casas == 3) {
+			int novoSaldo = jogador.getSaldo() - aluguel3;
 			jogador.setSaldo(novoSaldo);
-		} else if (this.casas.size() == 3) {
-			int novoSaldo = jogador.getSaldo() - this.casas.get(0).getAluguel3();
+		} else if (this.qtd_casas == 4) {
+			int novoSaldo = jogador.getSaldo() - aluguel4;
 			jogador.setSaldo(novoSaldo);
-		}else if (this.casas.size() == 4) {
-			int novoSaldo = jogador.getSaldo() - this.casas.get(0).getAluguel4();
-			jogador.setSaldo(novoSaldo);
-		}else if (this.hotel != null) {
+		} 
+		else if (this.hotel != null) {
 			int novoSaldo = jogador.getSaldo() - this.hotel.getAluguelHotel();
 			jogador.setSaldo(novoSaldo);
 		}
@@ -77,21 +89,19 @@ public class Terreno extends CasaTabuleiro {
 		this.txtNome.setColor(Color.BLACK);
 	}
 
-	public void adicionarCasa(CasaPropriedade novaCasa) {
-		if (this.casas.size() == 4) {
+	public void adicionarCasa() {
+		if (this.qtd_casas == 4) {
 			return;
 		}
-		this.casas.add(novaCasa);
+		this.qtd_casas++;
 	}
 
-	public void adicionarHotel(Hotel hotel) {
-		if (this.casas.size() < 4) {
+	public void adicionarHotel() {
+		if (this.qtd_casas < 4) {
 			return;
 		}
-		for (int i = 0; i < this.casas.size(); i++) {
-			this.casas.remove(i);
-		}
-		this.setHotel(hotel);
+		this.qtd_casas = 0;
+		this.setHotel(new Hotel());
 	}
 
 	public boolean isComprado() {
@@ -162,11 +172,46 @@ public class Terreno extends CasaTabuleiro {
 			Scanner enter = new Scanner(System.in);
 			System.out.println("Gostaria de comprar este terreno?\n |1| Sim \n |2| Nao" );
 			String e = enter.nextLine();
-			if(e.equals("1")) this.comprarTerreno(jogador);
+			if(e.equals("1")) {
+				this.comprarTerreno(jogador);
+				this.compravel = false;
+			}
 		}else if(this.comprado && jogador != this.proprietario) {
 			System.out.println("Pague " + this.aluguelTerreno + " Para " + this.proprietario.getNome());
 		this.cobrarAluguel(jogador);
 		}
+	}
+
+	public int getAluguel1() {
+		return aluguel1;
+	}
+
+	public void setAluguel1(int aluguel1) {
+		this.aluguel1 = aluguel1;
+	}
+
+	public int getAluguel2() {
+		return aluguel2;
+	}
+
+	public void setAluguel2(int aluguel2) {
+		this.aluguel2 = aluguel2;
+	}
+
+	public int getAluguel3() {
+		return aluguel3;
+	}
+
+	public void setAluguel3(int aluguel3) {
+		this.aluguel3 = aluguel3;
+	}
+
+	public int getAluguel4() {
+		return aluguel4;
+	}
+
+	public void setAluguel4(int aluguel4) {
+		this.aluguel4 = aluguel4;
 	}
 
 	public String getGrupo() {

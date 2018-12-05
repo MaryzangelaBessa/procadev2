@@ -24,7 +24,7 @@ public class Main {
 
 		Tabuleiro tab = Tabuleiro.getInstance();
 
-		boolean jogar = true;
+		
 		int qtd_jogadores, valorDado1, valorDado2;
 		Scanner entrada = new Scanner(System.in);
 
@@ -45,19 +45,19 @@ public class Main {
 				entrada.nextLine();
 				
 				valorDado1 = d.jogarDado();
-				System.out.println(jogador.getNome() + " jogou o dado e saiu " + valorDado1);
+				System.out.println(jogador.getId() + " jogou o dado e saiu " + valorDado1);
 				valorDado2 = d.jogarDado();
-				System.out.println(jogador.getNome() + " jogou o dado novamente e saiu " + valorDado2);
+				System.out.println(jogador.getId() + " jogou o dado novamente e saiu " + valorDado2);
 				entrada.nextLine();
 
 				ic.andar(jogador, casas, valorDado1 + valorDado2);
 
 				System.out.println(
-						"O jogador " + jogador.getNome() + " está agora na casa " + jogador.getPosicaoAtual().euSou());
+						"O jogador " + jogador.getId() + " está agora na casa " + jogador.getPosicaoAtual().euSou());
 				entrada.nextLine();
 
 				jogador.getPosicaoAtual().executarAcao(jogador);
-				System.out.println(jogador.getNome() + " " + jogador.getSaldo() + "\n");
+				System.out.println(jogador.getId() + " " + jogador.getSaldo() + "\n");
 
 				// 
 				
