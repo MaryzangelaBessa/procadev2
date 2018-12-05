@@ -6,7 +6,7 @@ import cartoes.Cartao;
 import cartoes.CartaoReves;
 import cartoes.CartaoSorte;
 import cartoes.IteradorCartoes;
-import telas.JogoMain;
+import telas.ControladorJogo;
 import util.Posicao;
 import java.util.Random;
 
@@ -16,7 +16,7 @@ public class SorteReves extends CasaTabuleiro {
 
 	public SorteReves(Posicao posicao) {
 		super(posicao);
-		this.imagem = new GameImage(JogoMain.filepath + "assets/setback.png");
+		this.imagem = new GameImage(ControladorJogo.filepath + "assets/setback.png");
 		this.imagem.setDimension(25, 38);
 		this.imagem.x = posicao.x;
 		this.imagem.y = posicao.y;

@@ -11,15 +11,15 @@ public class TelaSelecionarJogadores {
 	private GameImage p4;
 	private GameImage p5;
 	private GameImage p6;
-	private Mouse mouse = JogoMain.janela.getMouse();
+	private Mouse mouse = ControladorJogo.janela.getMouse();
 	
 	public TelaSelecionarJogadores() {
-		this.bgSelectPlayers = new GameImage(JogoMain.filepath + "assets/select-players.png");
-		this.p2 = new GameImage(JogoMain.filepath + "assets/2p.png");
-		this.p3 = new GameImage(JogoMain.filepath + "assets/3p.png");
-		this.p4 = new GameImage(JogoMain.filepath + "assets/4p.png");
-		this.p5 = new GameImage(JogoMain.filepath + "assets/5p.png");
-		this.p6 = new GameImage(JogoMain.filepath + "assets/6p.png");
+		this.bgSelectPlayers = new GameImage(ControladorJogo.filepath + "assets/select-players.png");
+		this.p2 = new GameImage(ControladorJogo.filepath + "assets/2p.png");
+		this.p3 = new GameImage(ControladorJogo.filepath + "assets/3p.png");
+		this.p4 = new GameImage(ControladorJogo.filepath + "assets/4p.png");
+		this.p5 = new GameImage(ControladorJogo.filepath + "assets/5p.png");
+		this.p6 = new GameImage(ControladorJogo.filepath + "assets/6p.png");
 		this.setBackground();
 		this.setComponents(237, 487);
 	

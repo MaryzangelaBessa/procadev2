@@ -2,7 +2,7 @@ package casas;
 
 import java.util.ArrayList;
 
-import telas.JogoMain;
+import telas.ControladorJogo;
 import util.Posicao;
 
 public class ConstrutorCasas {
@@ -20,7 +20,7 @@ public class ConstrutorCasas {
 	
 	public ArrayList<CasaTabuleiro> construirCasas() {
 
-		int tabuleiroWidth = JogoMain.janela.getWidth();
+		int tabuleiroWidth = ControladorJogo.janela.getWidth();
 		int vypadding = 12;
 
 		// <----------- PRIMEIRA LINHA
@@ -79,9 +79,9 @@ public class ConstrutorCasas {
 
 		Posicao co1Pos = new Posicao(boPos.x + bolton.getImagem().width + l1xpadding, vypadding);
 		Compania comp1 = (Compania) fc.construirCasa("Compania", co1Pos);
-		comp1.setNome("Stark Beer Co");
 		comp1.setPrecoCompania(200);
 		comp1.setTaxa(50);
+		comp1.setNome("Stark Beer Co");
 		casas.add(comp1);
 
 		Posicao haPos = new Posicao(co1Pos.x + comp1.getImagem().width + l1xpadding, vypadding);
@@ -100,9 +100,9 @@ public class ConstrutorCasas {
 
 		Posicao co2Pos = new Posicao(haPos.x + nom.getImagem().width + l1xpadding, vypadding);
 		Compania comp2 = (Compania) fc.construirCasa("Compania", co2Pos);
-		comp2.setNome("Greijoy Sail");
 		comp2.setPrecoCompania(-200);
 		comp2.setTaxa(50);
+		comp2.setNome("Greijoy Sail");
 		casas.add(comp2);
 
 		Posicao pikePos = new Posicao(co2Pos.x + comp2.getImagem().width + l1xpadding, vypadding);
@@ -204,9 +204,9 @@ public class ConstrutorCasas {
 		co3Pos = comp3.getPosicao();
 		co3Pos.x = co3Pos.x - comp3.getImagem().width;
 		comp3.setPosicao(co3Pos);
-		comp3.setNome("Fly Ayrrin");
 		comp3.setPrecoCompania(150);
 		comp3.setTaxa(40);
+		comp3.setNome("Fly Ayrrin");
 		casas.add(comp3);
 
 		Posicao pSR3 = new Posicao(co3Pos.x - l2xpadding, ttPos.y);

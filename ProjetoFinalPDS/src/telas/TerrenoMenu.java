@@ -30,19 +30,19 @@ public class TerrenoMenu {
 	
 	public TerrenoMenu(Terreno terreno) {
 		this.terreno = terreno;
-		this.menuTerrenoBG = new GameImage(JogoMain.filepath + "assets/land-action-menu.png");
+		this.menuTerrenoBG = new GameImage(ControladorJogo.filepath + "assets/land-action-menu.png");
 		this.menuTerrenoBG.x = 164;
 		this.menuTerrenoBG.y = 76;
 		this.setTexts();
-		this.buyBtn = new GameImage(JogoMain.filepath + "assets/buy-land-btn.png");
+		this.buyBtn = new GameImage(ControladorJogo.filepath + "assets/buy-land-btn.png");
 		this.buyBtn.setDimension(98, 70);
 		this.buyBtn.x = 164+371; 
 		this.buyBtn.y = 76+422;
-		this.passBtn = new GameImage(JogoMain.filepath + "assets/pass-btn.png");
+		this.passBtn = new GameImage(ControladorJogo.filepath + "assets/pass-btn.png");
 		this.passBtn.setDimension(118, 70);
 		this.passBtn.x = 164+485; 
 		this.passBtn.y = 76+422;
-		this.mouse = JogoMain.janela.getMouse();
+		this.mouse = ControladorJogo.janela.getMouse();
 	}
 	
 	private void setTexts() {
@@ -98,7 +98,7 @@ public class TerrenoMenu {
 	
 	private void drawTxts() {
 		if(this.terreno.isComprado()) {
-			this.txtOwner.setText("You is the owner");
+			this.txtOwner.setText("You are the owner");
 		} else {
 			this.txtOwner.setText("Iron Bank property");
 		}
@@ -130,18 +130,14 @@ public class TerrenoMenu {
 		this.drawBtnActions();
 	}
 	
-//	public boolean buyClicked() {
-//		if(mouse.isOverObject(this.buyBtn) & mouse.isLeftButtonPressed()) {
-//			return true;
-//		}
-//		return false;
-//	}
-	
-	public boolean passClicked() {
-		if(mouse.isOverObject(this.passBtn) & mouse.isLeftButtonPressed()) {
-			return true;
+	public int obterEscolha() {
+		if(this.mouse.isOverObject(this.buyBtn) && this.mouse.isLeftButtonPressed()) {
+			return 1;
 		}
-		return false;
+		if(this.mouse.isOverObject(this.passBtn) && this.mouse.isLeftButtonPressed()) {
+			return 2;
+		}
+		return 0;
 	}
 	
 }

@@ -18,14 +18,14 @@ public class TelaSelecionarPersonagem {
 	private Jogador jogador;
 	
 	public TelaSelecionarPersonagem(ArrayList<Sprite> personagens, Jogador jogador) {
-		this.mouse = JogoMain.janela.getMouse();
+		this.mouse = ControladorJogo.janela.getMouse();
 		this.personagens = personagens;
 		this.jogador = jogador;
-		this.bgCharacters = new GameImage(JogoMain.filepath + "assets/character-selection.png");
+		this.bgCharacters = new GameImage(ControladorJogo.filepath + "assets/character-selection.png");
 		txtPlayer = new Text("Player " + jogador.getId(), 403, 332);
 		txtPlayer.setFont(new Font("Gothic Pixel", Font.TRUETYPE_FONT, 70));
 		this.setBackcground();
-		this.setLugarPersonagem(JogoMain.personagens.size());
+		this.setLugarPersonagem(this.personagens.size());
 		this.setPersonagemPadding();
 	}
 	
@@ -39,7 +39,7 @@ public class TelaSelecionarPersonagem {
 		int inix = 0;
 		int iniy = 539;
 		for (int i = 0; i < n; i++) {
-			GameImage novoLugar = new GameImage(JogoMain.filepath + "assets/character-space.png");
+			GameImage novoLugar = new GameImage(ControladorJogo.filepath + "assets/character-space.png");
 			novoLugar.setDimension(87, 87);
 			this.lugaresPersons.add(novoLugar);
 		}

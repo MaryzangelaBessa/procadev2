@@ -2,13 +2,13 @@ package casas;
 
 import JGamePlay.GameImage;
 import atores.Jogador;
-import telas.JogoMain;
+import telas.ControladorJogo;
 import util.Posicao;
 
 public class LucrosDividendos extends CasaTabuleiro {
 	public LucrosDividendos(Posicao posicao) {
 		super(posicao);
-		this.imagem = new GameImage(JogoMain.filepath + "assets/profits.png");
+		this.imagem = new GameImage(ControladorJogo.filepath + "assets/profits.png");
 		this.imagem.setDimension(49, 125);
 		this.imagem.x = posicao.x;
 		this.imagem.y = posicao.y;

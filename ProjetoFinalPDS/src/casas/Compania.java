@@ -1,11 +1,13 @@
 package casas;
 
+import java.awt.Color;
 import java.awt.Font;
 
 import JGamePlay.GameImage;
 import JGamePlay.Text;
 import atores.Jogador;
-import telas.JogoMain;
+import telas.CompaniaMenu;
+import telas.ControladorJogo;
 import util.Posicao;
 
 public class Compania extends CasaTabuleiro {
@@ -14,13 +16,14 @@ public class Compania extends CasaTabuleiro {
 	private boolean comprado;
 	private int precoCompania;
 	private String nome;
-	private Font fontNome = new Font("Gothic Pixel", Font.TRUETYPE_FONT, 20);
+	private Font fontNome = new Font("Gothic Pixel", Font.TRUETYPE_FONT, 14);
 	private Text txtNome;
+	private CompaniaMenu companiaMenu;
 
 	public Compania(Posicao posicao) {
 		super(posicao);
 		this.comprado = false;
-		this.imagem = new GameImage(JogoMain.filepath + "assets/company.png");
+		this.imagem = new GameImage(ControladorJogo.filepath + "assets/company.png");
 		this.imagem.setDimension(105, 114);
 		this.imagem.x = posicao.x;
 		this.imagem.y = posicao.y;
@@ -71,8 +74,25 @@ public class Compania extends CasaTabuleiro {
 	}
 
 	public void executarAcao(Jogador jogador) {
-		if (!comprado)
-			this.comprarCompania(jogador);
+		if (!comprado) {
+			boolean escolheu = false;
+			while(!escolheu) {
+				ControladorJogo.getInstance().showTabuleiro();
+				this.companiaMenu.desenharBuy();
+				int opcao = this.companiaMenu.obterEscolha();
+				if(opcao == 1) {
+					System.out.println("Comprou");
+					escolheu = true;
+				} 
+				if(opcao == 2) {
+					System.out.println("Passou a vez");
+					escolheu = true;
+				}
+				ControladorJogo.janela.display();
+			}
+			
+			this.companiaMenu.desenharBuy();
+		}
 		else
 			this.cobrarTaxa(jogador);
 	}
@@ -87,6 +107,8 @@ public class Compania extends CasaTabuleiro {
 		int ty = (int) this.imagem.y + 20;
 		this.txtNome = new Text(this.nome, tx, ty);
 		this.txtNome.setFont(fontNome);
+		this.txtNome.setColor(Color.WHITE);
+		this.companiaMenu = new CompaniaMenu(this);
 	}
 	
 	public void desenhar() {
