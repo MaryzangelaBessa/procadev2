@@ -9,6 +9,7 @@ public class AcaoReceber implements Acao{
 	}
 	@Override
 	public void executarAcao(Jogador jogador) {
+		System.out.println("Receba " + this.valor);
 		int novoSaldo = jogador.getSaldo() + this.valor;
 		jogador.setSaldo(novoSaldo);
 

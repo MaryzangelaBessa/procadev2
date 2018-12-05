@@ -131,7 +131,7 @@ public class ConstrutorCartoes {
 		c23.setAcaoRecebe(100);
 		cartoes.add(c23);
 		
-		CartaoReves c24 = (CartaoReves) f.criarCartao("Reves", "VocÊ achou interresante assistir "
+		CartaoReves c24 = (CartaoReves) f.criarCartao("Reves", "Você achou interresante assistir "
 				+ "a estreia da temporada de ballet. Compre os ingressos");
 		c24.setAcaoPagar(30);
 		cartoes.add(c24);

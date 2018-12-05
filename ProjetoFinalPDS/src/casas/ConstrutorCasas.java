@@ -29,8 +29,11 @@ public class ConstrutorCasas {
 		
 		Posicao cbPos = new Posicao(62, 12); 
 		Terreno castleBlack; 
-		castleBlack = (Terreno) fc.construirCasa("Terreno", cbPos);
+		castleBlack = (Terreno) fc.construirCasa("Terreno", cbPos);		
 		castleBlack.setNome("CASTLE BLACK");
+		castleBlack.setPrecoTerreno(100);
+		castleBlack.setAluguelTerreno(6);
+		castleBlack.setGrupo("Stark");
 		casas.add(castleBlack);
 		
 		
@@ -45,12 +48,18 @@ public class ConstrutorCasas {
 		Terreno castel;
 		castel = (Terreno) fc.construirCasa("Terreno", p);
 		castel.setNome("Castel Boldon");
+		castel.setGrupo("Stark");
+		castel.setPrecoTerreno(60);
+		castel.setAluguelTerreno(2);
 		casas.add(castel);
 		
 		p.x = 248;
 		p.y = 12;
 		castel = (Terreno) fc.construirCasa("Terreno", p);
 		castel.setNome("Castel Winterfel");
+		castel.setGrupo("Stark");
+		castel.setPrecoTerreno(60);
+		castel.setAluguelTerreno(4);
 		casas.add(castel);
 		
 		
@@ -64,7 +73,10 @@ public class ConstrutorCasas {
 		p.x = 372;
 		p.y = 12;
 		castel = (Terreno) fc.construirCasa("Terreno", p);
-		castel.setNome("Castel Winterfel");
+		castel.setNome("");
+		castel.setGrupo("Greyjoy");
+		castel.setPrecoTerreno(240);
+		castel.setAluguelTerreno(20);
 		casas.add(castel);
 		
 		p.x = 434;
@@ -77,13 +89,19 @@ public class ConstrutorCasas {
 		p.x = 496;
 		p.y = 12;
 		castel = (Terreno) fc.construirCasa("Terreno", p);
+		castel.setGrupo("Greyjoy");
+		castel.setPrecoTerreno(220);
+		castel.setAluguelTerreno(18);
 		//castel.setNome("Castel Winterfel");
 		casas.add(castel);
 		
 		p.x = 558;
 		p.y = 12;
 		castel = (Terreno) fc.construirCasa("Terreno", p);
+		castel.setGrupo("GreyJoy");
 		//castel.setNome("Castel Winterfel");
+		castel.setPrecoTerreno(220);
+		castel.setAluguelTerreno(18);
 		casas.add(castel);
 		
 		p.x = 620;
@@ -96,6 +114,9 @@ public class ConstrutorCasas {
 		p.x = 620;
 		p.y = 74;
 		castel = (Terreno) fc.construirCasa("Terreno", p);
+		castel.setGrupo("Ayrrin");
+		castel.setPrecoTerreno(200);
+		castel.setAluguelTerreno(16);
 		//castel.setNome("Castel Winterfel");
 		casas.add(castel);
 		
@@ -108,12 +129,18 @@ public class ConstrutorCasas {
 		p.x = 496;
 		p.y = 74;
 		castel = (Terreno) fc.construirCasa("Terreno", p);
+		castel.setGrupo("Ayrrin");
+		castel.setPrecoTerreno(180);
+		castel.setAluguelTerreno(14);
 		//castel.setNome("Castel Winterfel");
 		casas.add(castel);
 		
 		p.x = 434;
 		p.y = 74;
 		castel = (Terreno) fc.construirCasa("Terreno", p);
+		castel.setGrupo("Ayrrin");
+		castel.setPrecoTerreno(180);
+		castel.setAluguelTerreno(14);
 		//castel.setNome("Castel Winterfel");
 		casas.add(castel);
 		
@@ -135,6 +162,9 @@ public class ConstrutorCasas {
 		p.x = 248;
 		p.y = 74;
 		castel = (Terreno) fc.construirCasa("Terreno", p);
+		castel.setGrupo("Targaryen");
+		castel.setPrecoTerreno(350);
+		castel.setAluguelTerreno(35);
 		//castel.setNome("Castel Winterfel");
 		casas.add(castel);
 		
@@ -147,6 +177,9 @@ public class ConstrutorCasas {
 		p.x = 124;
 		p.y = 74;
 		castel = (Terreno) fc.construirCasa("Terreno", p);
+		castel.setGrupo("Targaryen");
+		castel.setPrecoTerreno(400);
+		castel.setAluguelTerreno(50);
 		//castel.setNome("Castel Winterfel");
 		casas.add(castel);
 		
@@ -161,18 +194,26 @@ public class ConstrutorCasas {
 		p.x = 62;
 		p.y = 136;
 		castel = (Terreno) fc.construirCasa("Terreno", p);
+		castel.setGrupo("");
+		castel.setGrupo("Lennister");
+		castel.setPrecoTerreno(120);
+		castel.setAluguelTerreno(8);
 		//castel.setNome("Castel Winterfel");
 		casas.add(castel);
 		
 		p.x = 124;
 		p.y = 136;
 		sortRev = (SorteReves) fc.construirCasa("SorteReves", p);
+		
 		//castel.setNome("Castel Winterfel");
 		casas.add(sortRev);
 		
 		p.x = 186;
 		p.y = 136;
 		castel = (Terreno) fc.construirCasa("Terreno", p);
+		castel.setGrupo("Lennster");
+		castel.setPrecoTerreno(100);
+		castel.setAluguelTerreno(6);
 		//castel.setNome("Castel Winterfel");
 		casas.add(castel);
 		
@@ -194,6 +235,9 @@ public class ConstrutorCasas {
 		p.x = 372;
 		p.y = 136;
 		castel = (Terreno) fc.construirCasa("Terreno", p);
+		castel.setGrupo("Baratheon");
+		castel.setPrecoTerreno(160);
+		castel.setAluguelTerreno(12);
 		//castel.setNome("Castel Winterfel");
 		casas.add(castel);
 		
@@ -207,6 +251,9 @@ public class ConstrutorCasas {
 		p.x = 496;
 		p.y = 136;
 		castel = (Terreno) fc.construirCasa("Terreno", p);
+		castel.setGrupo("Baratheon");
+		castel.setPrecoTerreno(140);
+		castel.setAluguelTerreno(10);
 		//castel.setNome("Castel Winterfel");
 		casas.add(castel);
 		
@@ -214,6 +261,9 @@ public class ConstrutorCasas {
 		p.x = 558;
 		p.y = 136;
 		castel = (Terreno) fc.construirCasa("Terreno", p);
+		castel.setGrupo("Baratheon");
+		castel.setPrecoTerreno(140);
+		castel.setAluguelTerreno(10);
 		//castel.setNome("Castel Winterfel");
 		casas.add(castel);
 		
@@ -230,6 +280,8 @@ public class ConstrutorCasas {
 		p.x = 558;
 		p.y = 198;
 		castel = (Terreno) fc.construirCasa("Terreno", p);
+		castleBlack.setPrecoTerreno(260);
+		castleBlack.setAluguelTerreno(22);
 		//castel.setNome("Castel Winterfel");
 		casas.add(castel);
 		
@@ -245,12 +297,16 @@ public class ConstrutorCasas {
 		p.x = 434;
 		p.y = 198;
 		castel = (Terreno) fc.construirCasa("Terreno", p);
+		castleBlack.setPrecoTerreno(320);
+		castleBlack.setAluguelTerreno(28);
 		//castel.setNome("Castel Winterfel");
 		casas.add(castel);
 		
 		p.x = 372;
 		p.y = 198;
 		castel = (Terreno) fc.construirCasa("Terreno", p);
+		castleBlack.setPrecoTerreno(300);
+		castleBlack.setAluguelTerreno(26);
 		//castel.setNome("Castel Winterfel");
 		casas.add(castel);
 		
@@ -265,6 +321,8 @@ public class ConstrutorCasas {
 		p.x = 248;
 		p.y = 198;
 		castel = (Terreno) fc.construirCasa("Terreno", p);
+		castleBlack.setPrecoTerreno(300);
+		castleBlack.setAluguelTerreno(26);
 		//castel.setNome("Castel Winterfel");
 		casas.add(castel);
 		
@@ -277,12 +335,16 @@ public class ConstrutorCasas {
 		p.x = 124;
 		p.y = 198;
 		castel = (Terreno) fc.construirCasa("Terreno", p);
+		castleBlack.setPrecoTerreno(280);
+		castleBlack.setAluguelTerreno(24);
 		//castel.setNome("Castel Winterfel");
 		casas.add(castel);
 		
 		p.x = 558;
 		p.y = 198;
 		castel = (Terreno) fc.construirCasa("Terreno", p);
+		castleBlack.setPrecoTerreno(260);
+		castleBlack.setAluguelTerreno(22);
 		//castel.setNome("Castel Winterfel");
 		casas.add(castel);
 		

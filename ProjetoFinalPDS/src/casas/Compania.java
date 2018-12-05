@@ -33,7 +33,6 @@ public class Compania extends CasaTabuleiro {
 	}
 
 	public void cobrarTaxa(Jogador jogador) { // rever
-
 		jogador.setSaldo(jogador.getSaldo() - this.taxa);
 		int novoSaldo = this.proprietario.getSaldo();
 		novoSaldo += this.taxa;
