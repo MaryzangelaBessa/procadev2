@@ -44,13 +44,25 @@ public class Controle {
 		}
 
 		ic.inicializar((PontoPartida) casas.get(0), jogadores);
-
+		Jogadas jogadas = new Jogadas(); 
 		while (jogar) {
 			for (Jogador jogador : jogadores) {
-				valorDado1 = d.jogarDado();
-				valorDado2 = d.jogarDado();
+				valorDado1 = 1;//d.jogarDado();
+				valorDado2 = 1;//d.jogarDado();
 				
-				
+				if(jogador.getSaldo() == 0) {
+					jogadas.falir(jogadores, jogador);
+					// falencia
+				}else if(jogador.isEstaPreso()) {
+					// linha preso
+					jogadas.linhaPreso(jogador, valorDado1, valorDado2);
+					int preso = jogador.getRodadasPreso();
+					preso++;
+					jogador.setRodadasPreso(preso);
+				}else {
+					// linha princiapal
+					jogadas.linhaPrincipal(jogador, casas, ic, valorDado1, valorDado2);
+				}
 				
 				
 				

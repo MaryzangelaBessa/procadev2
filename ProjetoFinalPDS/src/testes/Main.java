@@ -24,7 +24,7 @@ public class Main {
 
 		Tabuleiro tab = Tabuleiro.getInstance();
 
-		boolean jogar = true;
+		
 		int qtd_jogadores, valorDado1, valorDado2;
 		Scanner entrada = new Scanner(System.in);
 
@@ -39,31 +39,38 @@ public class Main {
 		}
 
 		ic.inicializar((PontoPartida) casas.get(0), jogadores);
-
-		while (jogadores.size() > 1) {
+		Jogador perdeu = null;
+		while (jogadores.size() != 1) {
 			for (Jogador jogador : jogadores) {
 				entrada.nextLine();
 				
 				valorDado1 = d.jogarDado();
-				System.out.println(jogador.getNome() + " jogou o dado e saiu " + valorDado1);
+				System.out.println(jogador.getId() + " jogou o dado e saiu " + valorDado1);
 				valorDado2 = d.jogarDado();
-				System.out.println(jogador.getNome() + " jogou o dado novamente e saiu " + valorDado2);
+				System.out.println(jogador.getId() + " jogou o dado novamente e saiu " + valorDado2);
 				entrada.nextLine();
 
 				ic.andar(jogador, casas, valorDado1 + valorDado2);
 
 				System.out.println(
-						"O jogador " + jogador.getNome() + " est� agora na casa " + jogador.getPosicaoAtual().euSou());
+						"O jogador " + jogador.getId() + " est� agora na casa " + jogador.getPosicaoAtual().euSou());
+
 				entrada.nextLine();
 
 				jogador.getPosicaoAtual().executarAcao(jogador);
-				System.out.println(jogador.getNome() + " " + jogador.getSaldo() + "\n");
+				System.out.println(jogador.getId() + " " + jogador.getSaldo() + "\n");
 
 				// 
+				if(jogador.getSaldo() <= 0) {
+					perdeu = jogador;
+					break;
+				}
 				
-
 			}
+			jogadores.remove(perdeu);
 		}
+		
+		System.out.println("Parab�ns " + jogadores.get(0).getId() + " voc� ganhou!");
 		entrada.close();
 	}
 
