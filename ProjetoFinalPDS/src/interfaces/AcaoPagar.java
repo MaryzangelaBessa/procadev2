@@ -10,6 +10,7 @@ public class AcaoPagar implements Acao {
 	}
 
 	public void executarAcao(Jogador jogador) {
+		System.out.println("Pague " + this.valor);
 		int novoSaldo = jogador.getSaldo() - this.valor;
 		jogador.setSaldo(novoSaldo);
 

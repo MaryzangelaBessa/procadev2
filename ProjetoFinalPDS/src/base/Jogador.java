@@ -17,7 +17,7 @@ public class Jogador {
 		this.id = id;
 		this.nome = nome;
 		this.saldo = 2458;
-		this.posicaoAtual = posicaoAtual;
+//		this.posicaoAtual = posicaoAtual;
 		this.duplasSeguidas = 0;
 		this.estaPreso = false;
 		this.rodadasPreso = 0;

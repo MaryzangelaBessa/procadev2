@@ -1,15 +1,20 @@
 package testes;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Scanner;
 
-import base.*;
-import cartoes.*;
-import casas.*;
+import base.Dado;
+import base.Jogador;
+import cartoes.Cartao;
+import cartoes.ConstrutorCartoes;
+import cartoes.IteradorCartoes;
+import casas.CasaTabuleiro;
+import casas.ConstrutorCasas;
+import casas.PontoPartida;
 import iterador.IteradorCasa;
 import tabuleiro.Tabuleiro;
 
-public class Main {
-	
+public class Controle {
 	public static void main(String[] args) {
 		ConstrutorCasas ccas = new ConstrutorCasas();
 		ArrayList<CasaTabuleiro> casas = ccas.construirCasas();
@@ -40,31 +45,18 @@ public class Main {
 
 		ic.inicializar((PontoPartida) casas.get(0), jogadores);
 
-		while (jogadores.size() > 1) {
+		while (jogar) {
 			for (Jogador jogador : jogadores) {
-				entrada.nextLine();
-				
 				valorDado1 = d.jogarDado();
-				System.out.println(jogador.getNome() + " jogou o dado e saiu " + valorDado1);
 				valorDado2 = d.jogarDado();
-				System.out.println(jogador.getNome() + " jogou o dado novamente e saiu " + valorDado2);
-				entrada.nextLine();
-
-				ic.andar(jogador, casas, valorDado1 + valorDado2);
-
-				System.out.println(
-						"O jogador " + jogador.getNome() + " está agora na casa " + jogador.getPosicaoAtual().euSou());
-				entrada.nextLine();
-
-				jogador.getPosicaoAtual().executarAcao(jogador);
-				System.out.println(jogador.getNome() + " " + jogador.getSaldo() + "\n");
-
-				// 
 				
-
+				
+				
+				
+				
+				
 			}
 		}
-		entrada.close();
-	}
 
+	}
 }

@@ -15,7 +15,7 @@ public class Teste {
 		ConstrutorCasas cc = new ConstrutorCasas();
 		ConstrutorCartoes conscart = new ConstrutorCartoes();
 		ArrayList<CasaTabuleiro> casas = cc.construirCasas();
-		Jogador j = new Jogador("AAA", casas.get(0));
+		Jogador j = new Jogador(1);
 		IteradorCasa IC = IteradorCasa.getInstance();
 		IC.setCasas(casas);
 		ArrayList<Cartao> cartoes = conscart.construirCartoes();
@@ -28,7 +28,7 @@ public class Teste {
 		while (true) {
 			//IC.andar(j, casas, 2);
 			//j.getPosicaoAtual().executarAcao(j);
-			casas.get(30).executarAcao(j);
+			casas.get(2).executarAcao(j);
 			System.out.println(j.getNome() + " " + j.getSaldo());
 			entrada.nextLine();
 		}

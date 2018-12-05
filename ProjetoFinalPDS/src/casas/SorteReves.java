@@ -39,13 +39,13 @@ public class SorteReves extends CasaTabuleiro {
 		int id_cartao = r.nextInt(30 - 1) + 1;
 		Cartao c =  ic.getCartao(id_cartao);
 		if(c instanceof CartaoReves) {
-			//((CartaoReves) c).getAcao().executarAcao(jogador);
+			System.out.println("Reves");
 			((CartaoReves) c).executarAcao(jogador);
-			//System.out.println(c.getClass());
+			
 		}else if(c instanceof CartaoSorte) {
-			//((CartaoSorte) c).getAcao().executarAcao(jogador);
+			System.out.println("Sorte");
 			((CartaoSorte) c).executarAcao(jogador);
-			//System.out.println(c.getClass());
+			
 		}
 		
 		

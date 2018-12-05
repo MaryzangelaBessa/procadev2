@@ -3,6 +3,7 @@ package casas;
 import java.awt.Color;
 import java.awt.Font;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import JGamePlay.GameImage;
 import JGamePlay.Text;
@@ -12,6 +13,7 @@ import util.Posicao;
 
 public class Terreno extends CasaTabuleiro {
 	private boolean comprado; // titulo
+	private String grupo;
 	private int aluguelTerreno;
 	private Jogador proprietario;
 	private int precoTerreno;
@@ -156,8 +158,23 @@ public class Terreno extends CasaTabuleiro {
 
 	@Override
 	public void executarAcao(Jogador jogador) {
-		// TODO Auto-generated method stub
-		
+		if(!this.comprado) {
+			Scanner enter = new Scanner(System.in);
+			System.out.println("Gostaria de comprar este terreno?\n |1| Sim \n |2| Nao" );
+			String e = enter.nextLine();
+			if(e.equals("1")) this.comprarTerreno(jogador);
+		}else if(this.comprado && jogador != this.proprietario) {
+			System.out.println("Pague " + this.aluguelTerreno + " Para " + this.proprietario.getNome());
+		this.cobrarAluguel(jogador);
+		}
+	}
+
+	public String getGrupo() {
+		return grupo;
+	}
+
+	public void setGrupo(String grupo) {
+		this.grupo = grupo;
 	}
 
 }
